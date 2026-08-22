@@ -23,10 +23,10 @@ DESCRIPTION=$*
 cd "$SITE_DIR"
 git add --all
 if git diff --cached --quiet; then
-  echo "There are no changes to commit or publish." >&2
-  exit 1
+  git commit --allow-empty -m "$DESCRIPTION"
+else
+  git commit -m "$DESCRIPTION"
 fi
-git commit -m "$DESCRIPTION"
 
 STAGING_DIR=$(mktemp -d "${TMPDIR:-/tmp}/flourish-netlify.XXXXXX")
 cleanup() {
