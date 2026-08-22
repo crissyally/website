@@ -1,0 +1,41 @@
+#!/bin/sh
+set -eu
+
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+SITE_DIR=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
+
+if [ ! -f "$SITE_DIR/.env" ]; then
+  echo "Missing $SITE_DIR/.env" >&2
+  exit 1
+fi
+
+set -a
+. "$SITE_DIR/.env"
+set +a
+: "${NETLIFY_AUTH_TOKEN:?NETLIFY_AUTH_TOKEN is missing from .env}"
+
+cd "$SITE_DIR"
+STAGING_DIR=$(mktemp -d "${TMPDIR:-/tmp}/flourish-netlify.XXXXXX")
+cleanup() {
+  rm -rf -- "$STAGING_DIR"
+}
+trap cleanup EXIT HUP INT TERM
+
+# Upload only public website files. Local credentials and deployment tooling
+# are deliberately left out of the staging copy.
+rsync -a \
+  --exclude '.env' \
+  --exclude '.git/' \
+  --exclude '.gitignore' \
+  --exclude '.netlify/' \
+  --exclude '.deploy/' \
+  --exclude 'node_modules/' \
+  --exclude '.DS_Store' \
+  "$SITE_DIR/" "$STAGING_DIR/"
+
+echo "Creating a draft preview. Production will not be changed."
+npx --yes netlify-cli deploy \
+  --dir "$STAGING_DIR" \
+  --no-build \
+  --context deploy-preview \
+  --message "Draft preview"
