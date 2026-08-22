@@ -37,5 +37,4 @@ echo "Creating a draft preview. Production will not be changed."
 npx --yes netlify-cli deploy \
   --dir "$STAGING_DIR" \
   --no-build \
-  --context deploy-preview \
   --message "Draft preview"
