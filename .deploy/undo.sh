@@ -14,6 +14,15 @@ set -a
 set +a
 : "${NETLIFY_AUTH_TOKEN:?NETLIFY_AUTH_TOKEN is missing from .env}"
 
+if ! command -v npx >/dev/null 2>&1 && [ -x "$HOME/.local/node-v24.19.0/bin/npx" ]; then
+  PATH="$HOME/.local/node-v24.19.0/bin:$PATH"
+  export PATH
+fi
+if ! command -v npx >/dev/null 2>&1; then
+  echo "npx is not available. Install Node.js first." >&2
+  exit 1
+fi
+
 cd "$SITE_DIR"
 if [ -n "$(git status --porcelain --untracked-files=normal)" ]; then
   echo "Undo stopped: commit or set aside your current changes first." >&2
