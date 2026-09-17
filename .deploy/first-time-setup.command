@@ -21,32 +21,54 @@ echo "Nothing here changes the website or publishes anything."
 
 # ---------------------------------------------------------------- 1. the folder
 say "Step 1 of 5 — finding the website folder"
-echo "  Looking... (this can take a few seconds)"
-SITE=""
-CANDS=()
-while IFS= read -r hit; do
-  d=$(dirname "$hit")
-  # only real working copies: must have the site AND saved history
-  [ -f "$d/index.html" ] && [ -d "$d/.git" ] && CANDS+=("$d")
-done < <(find "$HOME" -maxdepth 7 -type f -name "_redirects" -path "*lourish*" 2>/dev/null)
 
-if [ "${#CANDS[@]}" -eq 1 ]; then
-  SITE="${CANDS[0]}"
-elif [ "${#CANDS[@]}" -gt 1 ]; then
-  echo "  Found more than one copy. Pick the one Crissy actually works in:"
-  i=1; for c in "${CANDS[@]}"; do echo "     $i) $c"; i=$((i+1)); done
-  printf "%s" "  Type the number and press Return: "
-  read -r PICK
-  SITE="${CANDS[$((PICK-1))]}"
-fi
+# 1) a path passed in on the command line always wins
+SITE="${1:-}"
+
+# 2) the known location, plus the iCloud-synced variant of it
 if [ -z "$SITE" ]; then
-  echo "  Could not find it automatically."
-  echo "  Drag the website folder from Finder into this window, then press Return:"
-  read -r DROPPED
-  SITE=$(echo "$DROPPED" | sed "s/^'//; s/'$//; s/ *$//")
+  for guess in \
+    "$HOME/Documents/Flourish Rebrand/flourish-counseling-site" \
+    "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Documents/Flourish Rebrand/flourish-counseling-site" \
+    "$HOME/Desktop/Flourish Rebrand/flourish-counseling-site"
+  do
+    if [ -f "$guess/index.html" ] && [ -d "$guess/.git" ]; then SITE="$guess"; ok "Found it in the usual place."; break; fi
+  done
 fi
+
+# 3) otherwise search, following symlinks, because iCloud turns Documents into one
+if [ -z "$SITE" ]; then
+  echo "  Looking... (this can take a few seconds)"
+  CANDS=()
+  while IFS= read -r hit; do
+    d=$(dirname "$hit")
+    [ -f "$d/index.html" ] && [ -d "$d/.git" ] && CANDS+=("$d")
+  done < <(find -L "$HOME/Documents" "$HOME/Desktop" "$HOME" -maxdepth 7 -type f -name "_redirects" 2>/dev/null)
+  if [ "${#CANDS[@]}" -eq 1 ]; then
+    SITE="${CANDS[0]}"
+  elif [ "${#CANDS[@]}" -gt 1 ]; then
+    echo "  Found more than one copy. Pick the one Crissy actually works in:"
+    i=1; for c in "${CANDS[@]}"; do echo "     $i) $c"; i=$((i+1)); done
+    printf "%s" "  Type the number and press Return: "
+    read -r PICK
+    SITE="${CANDS[$((PICK-1))]}"
+  fi
+fi
+
+# 4) last resort: let a human point at it
+if [ -z "$SITE" ]; then
+  echo ""
+  echo "  Could not find it automatically."
+  echo "  This is usually because Terminal has not been allowed to read Documents yet."
+  echo "  Drag the 'flourish-counseling-site' folder from Finder into this window, then press Return:"
+  read -r DROPPED
+  # Terminal escapes spaces with a backslash when you drag; undo that, and any quoting
+  SITE=$(printf '%s' "$DROPPED" | sed -e "s/^[[:space:]]*//" -e "s/[[:space:]]*$//" -e "s/^'//" -e "s/'$//" -e 's/^"//' -e 's/"$//' -e 's/\\ / /g')
+fi
+
+[ -n "$SITE" ] || stop "No folder given."
 [ -d "$SITE" ] || stop "That is not a folder: $SITE"
-[ -f "$SITE/index.html" ] || stop "No index.html in: $SITE"
+[ -f "$SITE/index.html" ] || stop "No index.html inside: $SITE"
 cd "$SITE" || stop "Could not open: $SITE"
 ok "Using: $SITE"
 git rev-parse --git-dir >/dev/null 2>&1 || stop "This folder has no saved history. Kevin needs to look."
