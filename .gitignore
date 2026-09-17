@@ -2,3 +2,7 @@
 .DS_Store
 .netlify/
 node_modules/
+
+# Ownership and access guide. Kept on our machines, deliberately not
+# published to this public repository.
+HOW-THIS-IS-SET-UP.md

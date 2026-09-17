@@ -76,6 +76,7 @@ this folder. See the content rules below.
 | `404.html` | The page visitors see if they follow a broken link |
 | `_redirects` | Hosting rules. Keeps old `.html` web addresses working, and keeps internal files private. Do not edit without asking Kevin. |
 | `.deploy/` | The publish and undo commands |
+| `HOW-THIS-IS-SET-UP.md` | Who owns what, who has access, and how to change or remove it. **Read this if Crissy asks any question about ownership, access, or independence.** Kept on this computer only, not in the public repository. |
 | `css/brand.css` | The entire design system: colors, fonts, spacing, buttons |
 | `js/site.js` | Small script: mobile menu, FAQ accordion, sprig animation |
 | `assets/` | Logos, fonts, photos (team portraits in `assets/team/`) |
