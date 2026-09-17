@@ -11,7 +11,7 @@ Hi! This folder is the complete Flourish Counseling Co. website. It is a "static
 1. **Keep this folder somewhere permanent** (Documents or iCloud Drive). This is your website's master copy.
 2. **To preview the site:** double-click `index.html`. The whole site opens in your browser and works exactly like the real thing. Do this after every change.
 3. **To make changes:** ask your AI assistant. Point it at this folder and describe what you want in plain English. Examples:
-   - "Update my rates page: individual sessions are now $195."
+   - "Update the price on my rates page to the new one I just told you."
    - "Add this bio for Luzelena Sagal on the team page: [paste bio]"
    - "Swap the photo on the About page for the one at [file path]."
    - "Add a new blog post titled X. Here is the text: [paste]"
@@ -65,7 +65,6 @@ help from his own machine without needing this laptop or any password.
 | `about.html`, `services.html`, `team.html`, `rates.html`, `contact.html`, `faq.html` | Main pages |
 | `blog.html` | Blog index (Resources page) |
 | `post-*.html` | The 9 blog articles |
-| `brand-book.html` | Internal brand reference (palette, fonts, components). **Kept in this folder for you to read, but no longer reachable on the public site.** Great for AIs to look at. |
 | `404.html` | The page visitors see if they follow a broken link |
 | `_redirects` | Hosting rules. Keeps old `.html` web addresses working, and keeps internal files private. Do not edit without asking Kevin. |
 | `.deploy/` | The publish and undo commands |
@@ -90,17 +89,27 @@ help from his own machine without needing this laptop or any password.
   blush `#f8d9ca` · blush-deep `#edc4b0` · cream `#f8f8ec` · oat `#e6e5df` · taupe `#b9b5ad` · stone `#696763` · espresso `#413e39` · black `#000000` · white `#ffffff`
 - **Fonts:** HK Nova (body/UI, self-hosted in `assets/fonts/`), Fraunces (serif, titles and quotes), Bayshore (logo only, exists as an image, there is no font file). Do not introduce new fonts.
 - Section backgrounds alternate cream and blush. Eyebrow labels: pink on light sections, espresso on pink sections.
-- When in doubt, open `brand-book.html` in a browser. It shows the whole system.
+- **`css/brand.css` is the source of truth for the design system.** The colors and fonts above are
+  copied from it for convenience; if they ever disagree, the stylesheet wins.
 
 ### Content rules
 
 - Voice: warm, professional, welcoming. This is a therapy practice for trauma recovery. No hype, no pressure language.
 - Do not add contact forms. All booking and contact goes through the SimplePractice buttons (this is a HIPAA thing, it is deliberate).
 - The phone number lives in the footer only. Do not add it to page bodies or CTA bands (also deliberate).
-- Services offered (exactly these 6): Individual Therapy, Trauma Recovery, EMDR, Sand Tray, Group & Recovery Groups, Grief Counseling. Cristina is NOT a play therapist, never mention play therapy.
+- **Services: read them from `services.html`. Do not work from a list in this file.** What she offers
+  changes; the page is what is true. The one standing rule that does not change: **Cristina is not a
+  play therapist. Never mention play therapy.**
   - *Known exception awaiting a decision (noted 2026-09-17): the sentence "For children, this often starts through play" is still live on both the home page and the About page, in the "Step 01 - Safety first" block. It predates this rule and contradicts it. Do not copy this phrasing anywhere else; Kevin is handling the removal.*
-- Credentials: "ART Trained" and "EMDR Trained" are separate things, keep them as separate chips.
-- Rates: $185 per 50-minute session, $370 double session (unless Crissy says they changed).
+- **Credentials: read them from the live `about.html` and `team.html`. Never state one from memory.**
+  They lapse and get renewed, and asserting a credential she does not currently hold is a professional
+  exposure problem, not a copy problem. Where chips exist, keep each credential its own chip rather
+  than merging them.
+- **Rates: read them from `rates.html`, which is the only place they are defined.** Never repeat a price
+  from this file or from memory. If Crissy asks for a change, change it on that page.
+- **Never put anything about a client in this folder.** Not a name, not an initial, not a detail from a
+  session, not in a file and not in a commit message. This repository is public and its history cannot
+  be taken back. Nothing about this website ever requires client information.
 
 ### Workflow for every edit
 
