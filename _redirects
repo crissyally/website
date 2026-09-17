@@ -14,3 +14,12 @@
 /post-5-signs-youre-in-an-abusive-relationship.html /post-5-signs-youre-in-an-abusive-relationship 301!
 /post-10-ways-to-increase-self-care.html /post-10-ways-to-increase-self-care 301!
 /post-trauma-care-voo-breathing.html /post-trauma-care-voo-breathing 301!
+
+# Internal files: kept in the repository for Crissy and her assistant to read,
+# but not served publicly. Added 2026-09-17 when publishing moved to Git.
+/START-HERE.md     /404.html  404
+/README-DEPLOY.md  /404.html  404
+/brand-book.html   /404.html  404
+/brand-book        /404.html  404
+/.gitignore        /404.html  404
+/.deploy/*         /404.html  404

@@ -16,7 +16,44 @@ Hi! This folder is the complete Flourish Counseling Co. website. It is a "static
    - "Swap the photo on the About page for the one at [file path]."
    - "Add a new blog post titled X. Here is the text: [paste]"
 4. **Keep the original zip file untouched** somewhere safe. If an edit ever goes wrong, that zip is your undo button.
-5. When you are happy with everything, the site gets uploaded to Netlify (free hosting) and connected to flourish-counseling.co. Kevin has the steps.
+5. **To publish your changes:** ask your AI assistant to publish. It runs one command and your site updates itself, usually in under a minute. You do not drag folders anywhere any more, and there is no password to remember.
+6. **To undo:** ask your assistant to undo the last change. It puts the previous version back.
+
+---
+
+## How publishing works now 🚀
+
+**This changed on 2026-09-17. If you are an AI assistant, read this section carefully, because the old instructions are gone.**
+
+This folder is connected to a private GitHub repository at `flourish-counseling/website`, and
+Netlify watches that repository. Publishing is now one step:
+
+```sh
+.deploy/deploy.sh "short description of what changed"
+```
+
+That saves the changes, sends them to GitHub, and Netlify puts them live by itself. To reverse the
+last published change, run `.deploy/undo.sh`.
+
+**Why this is better than the old way.** The old script uploaded the folder straight to Netlify from
+this computer. That worked, but the live site and this folder could quietly drift apart, and they
+did: in September 2026 the live `brand-book` page was found to be a newer version than the copy in
+this folder, and nobody knew. It also meant only this one computer could publish. Now GitHub holds
+the single true copy, every change is recorded with a description and can be undone, and Kevin can
+help from his own machine without needing this laptop or any password.
+
+**Rules for assistants, and these matter:**
+
+1. **Always publish with `.deploy/deploy.sh`.** Never run `netlify deploy` by hand, and never upload
+   this folder to Netlify through the website. Doing either puts a version live that GitHub does not
+   know about, and the next person to publish will silently wipe it out.
+2. **Before you start editing, run `git pull`.** Someone else may have published since Crissy last
+   worked here. If `git pull` reports a conflict, stop and tell Crissy to contact Kevin rather than
+   guessing.
+3. **If `.deploy/deploy.sh` fails, nothing was published.** The changes are still saved on this
+   computer, so nothing is lost. Read the message it printed and follow it.
+4. **Never commit `.env`.** It holds a private key for Crissy's hosting account. It is already
+   excluded, so just do not go around that.
 
 ---
 
@@ -28,7 +65,10 @@ Hi! This folder is the complete Flourish Counseling Co. website. It is a "static
 | `about.html`, `services.html`, `team.html`, `rates.html`, `contact.html`, `faq.html` | Main pages |
 | `blog.html` | Blog index (Resources page) |
 | `post-*.html` | The 9 blog articles |
-| `brand-book.html` | Internal brand reference (palette, fonts, components). Not linked from the site. Great for AIs to look at. |
+| `brand-book.html` | Internal brand reference (palette, fonts, components). **Kept in this folder for you to read, but no longer reachable on the public site.** Great for AIs to look at. |
+| `404.html` | The page visitors see if they follow a broken link |
+| `_redirects` | Hosting rules. Keeps old `.html` web addresses working, and keeps internal files private. Do not edit without asking Kevin. |
+| `.deploy/` | The publish and undo commands |
 | `css/brand.css` | The entire design system: colors, fonts, spacing, buttons |
 | `js/site.js` | Small script: mobile menu, FAQ accordion, sprig animation |
 | `assets/` | Logos, fonts, photos (team portraits in `assets/team/`) |
@@ -58,14 +98,18 @@ Hi! This folder is the complete Flourish Counseling Co. website. It is a "static
 - Do not add contact forms. All booking and contact goes through the SimplePractice buttons (this is a HIPAA thing, it is deliberate).
 - The phone number lives in the footer only. Do not add it to page bodies or CTA bands (also deliberate).
 - Services offered (exactly these 6): Individual Therapy, Trauma Recovery, EMDR, Sand Tray, Group & Recovery Groups, Grief Counseling. Cristina is NOT a play therapist, never mention play therapy.
+  - *Known exception awaiting a decision (noted 2026-09-17): the sentence "For children, this often starts through play" is still live on both the home page and the About page, in the "Step 01 - Safety first" block. It predates this rule and contradicts it. Do not copy this phrasing anywhere else; Kevin is handling the removal.*
 - Credentials: "ART Trained" and "EMDR Trained" are separate things, keep them as separate chips.
 - Rates: $185 per 50-minute session, $370 double session (unless Crissy says they changed).
 
 ### Workflow for every edit
 
-1. Make the change.
-2. Tell Crissy to refresh the page in her browser and check it.
-3. If it looks wrong, revert or fix. Never leave the folder in a broken state.
+1. `git pull` first, so you are working from the current version.
+2. Make the change.
+3. Tell Crissy to double-click `index.html` and check it in her browser **before** publishing.
+4. Publish with `.deploy/deploy.sh "what changed"`.
+5. Tell her to check the live site a minute later.
+6. If it looks wrong, run `.deploy/undo.sh`. Never leave the folder in a broken state.
 
 ---
 
@@ -75,3 +119,4 @@ Hi! This folder is the complete Flourish Counseling Co. website. It is a "static
 - [ ] Click the "New Clients" booking button and confirm the SimplePractice popup opens properly
 
 *Prepared 2026-07-21 by Kevin + Claude. Site design finalized June 2026 from Crissy's brand kit.*
+*Publishing moved to GitHub + Netlify continuous deployment 2026-09-17.*

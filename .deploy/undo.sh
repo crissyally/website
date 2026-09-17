@@ -1,59 +1,36 @@
 #!/bin/sh
+# Undo the last published change and put the previous version back.
+#
+#   .deploy/undo.sh
+#
+# This does not delete history. It adds a new change that reverses the last one,
+# so you can always undo the undo.
 set -eu
 
 SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 SITE_DIR=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
-
-if [ ! -f "$SITE_DIR/.env" ]; then
-  echo "Missing $SITE_DIR/.env" >&2
-  exit 1
-fi
-
-set -a
-. "$SITE_DIR/.env"
-set +a
-: "${NETLIFY_AUTH_TOKEN:?NETLIFY_AUTH_TOKEN is missing from .env}"
-
-if ! command -v npx >/dev/null 2>&1 && [ -x "$HOME/.local/node-v24.19.0/bin/npx" ]; then
-  PATH="$HOME/.local/node-v24.19.0/bin:$PATH"
-  export PATH
-fi
-if ! command -v npx >/dev/null 2>&1; then
-  echo "npx is not available. Install Node.js first." >&2
-  exit 1
-fi
-
 cd "$SITE_DIR"
+
 if [ -n "$(git status --porcelain --untracked-files=normal)" ]; then
-  echo "Undo stopped: commit or set aside your current changes first." >&2
+  echo "Undo stopped: you have unsaved edits in this folder." >&2
+  echo "Publish them first, or set them aside, then try again." >&2
   exit 1
 fi
 if ! git rev-parse --verify HEAD^ >/dev/null 2>&1; then
-  echo "Undo stopped: there is no earlier commit to restore." >&2
+  echo "Undo stopped: there is no earlier version to go back to." >&2
   exit 1
 fi
 
-REVERTED_DESCRIPTION=$(git log -1 --pretty=%s)
+REVERTED=$(git log -1 --pretty=%s)
 git revert --no-edit HEAD
 
-STAGING_DIR=$(mktemp -d "${TMPDIR:-/tmp}/flourish-netlify.XXXXXX")
-cleanup() {
-  rm -rf -- "$STAGING_DIR"
-}
-trap cleanup EXIT HUP INT TERM
+echo "Sending to GitHub..."
+if ! git push; then
+  echo "Could not reach GitHub, so the site was NOT changed." >&2
+  echo "The undo is saved on this computer. Run .deploy/deploy.sh \"undo\" when you are back online." >&2
+  exit 1
+fi
 
-rsync -a \
-  --exclude '.env' \
-  --exclude '.git/' \
-  --exclude '.gitignore' \
-  --exclude '.netlify/' \
-  --exclude '.deploy/' \
-  --exclude 'node_modules/' \
-  --exclude '.DS_Store' \
-  "$SITE_DIR/" "$STAGING_DIR/"
-
-npx --yes netlify-cli deploy \
-  --dir "$STAGING_DIR" \
-  --no-build \
-  --prod \
-  --message "Undo: $REVERTED_DESCRIPTION"
+echo ""
+echo "Undone: $REVERTED"
+echo "Netlify is republishing the previous version now."
