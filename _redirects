@@ -17,9 +17,9 @@
 
 # Internal files: kept in the repository for Crissy and her assistant to read,
 # but not served publicly. Added 2026-09-17 when publishing moved to Git.
-/START-HERE.md     /404.html  404
-/README-DEPLOY.md  /404.html  404
-/brand-book.html   /404.html  404
-/brand-book        /404.html  404
-/.gitignore        /404.html  404
-/.deploy/*         /404.html  404
+/START-HERE.md     /404.html  404!
+/README-DEPLOY.md  /404.html  404!
+/brand-book.html   /404.html  404!
+/brand-book        /404.html  404!
+/.gitignore        /404.html  404!
+/.deploy/*         /404.html  404!
