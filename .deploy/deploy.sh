@@ -45,5 +45,9 @@ if ! git push; then
 fi
 
 echo ""
-echo "Done. Netlify is publishing now, usually under a minute."
-echo "  Your site: https://flourish-counseling.co"
+if "$SCRIPT_DIR/verify-live.sh"; then
+  echo "  Your site: https://flourish-counseling.co"
+  exit 0
+else
+  exit 1
+fi
