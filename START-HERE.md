@@ -25,22 +25,29 @@ Hi! This folder is the complete Flourish Counseling Co. website. It is a "static
 
 **This changed on 2026-09-17. If you are an AI assistant, read this section carefully, because the old instructions are gone.**
 
-This folder is connected to a private GitHub repository at `flourish-counseling/website`, and
-Netlify watches that repository. Publishing is now one step:
+This folder is connected to a GitHub repository at `crissyally/website`, and Netlify watches that
+repository. Publishing is now one step:
 
 ```sh
 .deploy/deploy.sh "short description of what changed"
 ```
 
-That saves the changes, sends them to GitHub, and Netlify puts them live by itself. To reverse the
-last published change, run `.deploy/undo.sh`.
+That saves the changes, sends them to GitHub, and Netlify puts them live by itself, usually in under
+a minute. To reverse the last published change, run `.deploy/undo.sh`. **No password, token or
+account login is involved in either one.**
 
-**Why this is better than the old way.** The old script uploaded the folder straight to Netlify from
+**Why this is better than the old way.** The old script uploaded this folder straight to Netlify from
 this computer. That worked, but the live site and this folder could quietly drift apart, and they
-did: in September 2026 the live `brand-book` page was found to be a newer version than the copy in
+did: in September 2026 the live `brand-book` page turned out to be a newer version than the copy in
 this folder, and nobody knew. It also meant only this one computer could publish. Now GitHub holds
 the single true copy, every change is recorded with a description and can be undone, and Kevin can
 help from his own machine without needing this laptop or any password.
+
+**The repository is public.** Anyone can read it, including its full history. That is fine, because
+everything in it is either already on the public website or is a harmless deploy script. It does mean
+one thing is permanent: **anything committed here can never be taken back.** Deleting a file later
+does not remove it from the history. So never put a password, a key, or anything about a client into
+this folder. See the content rules below.
 
 **Rules for assistants, and these matter:**
 
@@ -52,8 +59,9 @@ help from his own machine without needing this laptop or any password.
    guessing.
 3. **If `.deploy/deploy.sh` fails, nothing was published.** The changes are still saved on this
    computer, so nothing is lost. Read the message it printed and follow it.
-4. **Never commit `.env`.** It holds a private key for Crissy's hosting account. It is already
-   excluded, so just do not go around that.
+4. **Never commit `.env`.** Publishing no longer needs it, but it still exists for
+   `.deploy/preview.sh` and it holds a private key to Crissy's hosting account. It is already
+   excluded by `.gitignore`. Do not go around that, and never paste its contents anywhere.
 
 ---
 
