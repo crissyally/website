@@ -51,6 +51,17 @@ this folder. See the content rules below.
 
 **Rules for assistants, and these matter:**
 
+0. **Publish once, at the end.** Make all of Crissy's changes, let her check them, then publish a
+   single time. Do not publish after each small edit.
+
+   This is not tidiness, it is a hard limit. Her hosting plan allows **300 credits a month and each
+   publish costs 15**, which is **20 publishes a month in total**. If they run out, Netlify
+   **takes the website offline** until the next billing period, which starts on the 29th. In
+   September 2026 nine publishes in one afternoon used more than half the month's allowance.
+
+   If she wants to see a change before it goes live, she can open `index.html` in her browser, which
+   is free and instant. Only a real publish costs anything.
+
 1. **Always publish with `.deploy/deploy.sh`.** Never run `netlify deploy` by hand, and never upload
    this folder to Netlify through the website. Doing either puts a version live that GitHub does not
    know about, and the next person to publish will silently wipe it out.
