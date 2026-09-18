@@ -74,10 +74,12 @@ Analytics for a therapy practice.
 **Crissy sees her own numbers** at `dash.cloudflare.com`, signing in as `cristina12886@gmail.com`,
 under Analytics then Web analytics. Page views, visits, which pages, and where people came from.
 
-If she asks this assistant how many people visited, the honest answer is that the numbers are in
-that dashboard rather than in this folder, and either she can look or Kevin can pull them. Nothing
-here reads them. That is deliberate: it would mean keeping an access key on this computer, and there
-is no good reason to when she can simply look.
+**If she asks how many people visited, run `.deploy/traffic.sh`.** It prints visits, page views,
+the most visited pages, and where people came from. `.deploy/traffic.sh 30` covers the last 30 days.
+
+If it says no traffic key is set up, that is not a fault and nothing is broken. It means the
+one-time setup described in `HOW-THIS-IS-SET-UP.md` has not been done yet. Point her at that, or at
+her Cloudflare dashboard. **Do not guess a number, and never tell her it cannot be found out.**
 
 **Two things worth knowing when reading it.** It only counts from 17 September onwards, so anything
 earlier shows nothing and that is not a fault. And a page will not appear at all if its script was
