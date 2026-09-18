@@ -65,6 +65,26 @@ this folder. See the content rules below.
 
 ---
 
+## Where the visitor numbers live
+
+Since 17 September 2026 the site counts visitors using **Cloudflare Web Analytics**. It is free, it
+uses no cookies, and it needs no "we use cookies" banner, which is why it was chosen over Google
+Analytics for a therapy practice.
+
+**Crissy sees her own numbers** at `dash.cloudflare.com`, signing in as `cristina12886@gmail.com`,
+under Analytics then Web analytics. Page views, visits, which pages, and where people came from.
+
+If she asks this assistant how many people visited, the honest answer is that the numbers are in
+that dashboard rather than in this folder, and either she can look or Kevin can pull them. Nothing
+here reads them. That is deliberate: it would mean keeping an access key on this computer, and there
+is no good reason to when she can simply look.
+
+**Two things worth knowing when reading it.** It only counts from 17 September onwards, so anything
+earlier shows nothing and that is not a fault. And a page will not appear at all if its script was
+removed, which is why the footer scripts are on the do-not-touch list above.
+
+---
+
 ## What each file is
 
 | File / folder | What it is |
@@ -89,7 +109,17 @@ this folder. See the content rules below.
 ### DO NOT touch these (they break things)
 
 1. **The SimplePractice booking embed.** Anywhere you see `simplepractice`, `clientsecure.me`, or a `scope-id` attribute in the HTML: leave it exactly as is. This is the live appointment-booking system. If a page edit requires moving it, copy it byte-for-byte.
-2. **File names.** Do not rename or move any `.html` file or anything in `assets/`. Pages link to each other by these exact names.
+2. **The three scripts in every page's footer.** Leave all of them exactly where they are:
+   - `static.cloudflareinsights.com/beacon.min.js` counts visitors. Removing it from a page makes
+     that page invisible in Crissy's traffic reports, silently.
+   - `member.psychologytoday.com/verified-seal.js` draws her Psychology Today verified badge.
+   - The SimplePractice script above.
+
+   None of them are decoration and none should be "cleaned up." If you rewrite a page, carry all
+   three across byte for byte.
+3. **File names.** Do not rename or move any `.html` file or anything in `assets/`. Pages link to each other by these exact names.
+4. **`_redirects` and `sitemap.xml`.** These control web addresses and how Google sees the site.
+   Change them only as part of adding or removing a page, following the checklist below.
 3. **`css/brand.css` design tokens.** Content edits should never require changing this file. Only touch it if Crissy explicitly asks for a design change, and then change the minimum possible.
 
 ### Brand rules (strict)
@@ -120,11 +150,40 @@ this folder. See the content rules below.
   session, not in a file and not in a commit message. This repository is public and its history cannot
   be taken back. Nothing about this website ever requires client information.
 
+### Making a NEW page
+
+Getting this wrong is how a page ends up invisible to Google, which has already happened once on
+this site and took six weeks to spot. Follow all of it.
+
+1. **Start by copying an existing page**, not from a blank file. That gives you the navigation, the
+   footer, and all three scripts above without having to remember them.
+2. Update `<title>`, the meta description, and the `og:` and `twitter:` tags.
+3. **Set the canonical link to the clean address, with no `.html` on the end.** For a file called
+   `grief.html` the canonical is `https://flourish-counseling.co/grief`. Set `og:url` to the same
+   thing. If the canonical and the real address disagree, Google treats the page as a duplicate and
+   quietly refuses to list it. That is the exact bug that cost six weeks.
+4. Add the page to `sitemap.xml`, using that same clean address.
+5. Add one line to `_redirects` so the old-style address still works:
+   `/grief.html /grief 301!`
+6. Link to it from somewhere a visitor can reach, usually the navigation or `blog.html`. A page
+   nothing links to is a page nobody finds.
+7. Publish as normal, then tell Crissy it is worth asking Google to look at it. She can do that in
+   Search Console under URL Inspection, and it genuinely speeds things up: five of six pages
+   requested that way in September were indexed within a day, while pages left alone had still not
+   been crawled weeks later.
+
+### Deleting a page
+
+Remove the file, remove its `sitemap.xml` entry, remove any links to it, and add a redirect sending
+its address somewhere sensible rather than leaving a dead end.
+
 ### Workflow for every edit
 
 1. `git pull` first, so you are working from the current version.
 2. Make the change.
 3. Tell Crissy to double-click `index.html` and check it in her browser **before** publishing.
+   Note that the visitor counter and the Psychology Today badge will not work when opened this way,
+   because the page is not being served from the real address. That is normal and not a fault.
 4. Publish with `.deploy/deploy.sh "what changed"`.
 5. Tell her to check the live site a minute later.
 6. If it looks wrong, run `.deploy/undo.sh`. Never leave the folder in a broken state.
