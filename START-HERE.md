@@ -167,6 +167,9 @@ this site and took six weeks to spot. Follow all of it.
 4. Add the page to `sitemap.xml`, using that same clean address.
 5. Add one line to `_redirects` so the old-style address still works:
    `/grief.html /grief 301!`
+   **Keep the exclamation mark.** Without it the rule is ignored whenever a real file sits at that
+   address, which is exactly the case here, and it fails silently with no error anywhere. That
+   caught us out once already.
 6. Link to it from somewhere a visitor can reach, usually the navigation or `blog.html`. A page
    nothing links to is a page nobody finds.
 7. Publish as normal, then tell Crissy it is worth asking Google to look at it. She can do that in
