@@ -22,7 +22,11 @@ url_for() {
   esac
 }
 
-CHANGED=$(git diff --name-only HEAD~1 HEAD 2>/dev/null \
+# --diff-filter=d skips files DELETED in this commit. Without it, deleting a page
+# makes this script poll the address of the page that was just removed, wait the full
+# two and a half minutes, and then report a failure on a deploy that actually worked.
+# That happened on 2026-09-19 when a post was renamed.
+CHANGED=$(git diff --name-only --diff-filter=d HEAD~1 HEAD 2>/dev/null \
           | grep -E '\.(html|css|js|xml|txt|png|jpg|jpeg|svg|webp)$' \
           | grep -v '^\.' || true)
 
