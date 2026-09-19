@@ -1,3 +1,19 @@
+# --- seo:canonical-host (one-hop consolidation) ---
+# Netlify's default chain is http://www -> https://www -> https://apex, which is two
+# hops. Google follows it, but consolidates slower across an extra hop. These rules
+# send every host variant straight to the apex in a single 301.
+http://www.flourish-counseling.co/*   https://flourish-counseling.co/:splat  301!
+https://www.flourish-counseling.co/*  https://flourish-counseling.co/:splat  301!
+http://flourish-counseling.co/*       https://flourish-counseling.co/:splat  301!
+# --- /seo:canonical-host ---
+
+# --- seo:somatic-slug ---
+# The somatic article was rewritten to drop the "Somatic Experiencing" framing, which
+# changed its address. The old one was never crawled by Google, so nothing is lost, but
+# anything already linking to it must not 404.
+/post-somatic-experiencing-for-treatment-of-ptsd-symptoms  /post-somatic-therapy-for-trauma  301!
+# --- /seo:somatic-slug ---
+
 /about.html /about 301!
 /services.html /services 301!
 /team.html /team 301!

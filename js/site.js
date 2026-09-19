@@ -15,7 +15,8 @@
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(entries){
       entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-    },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
-    els.forEach(function(el,i){el.style.transitionDelay=(Math.min(i%3,2)*0.08)+'s';io.observe(el);});
+    },{threshold:0,rootMargin:'0px 0px 20% 0px'});
+    window.__flourishReveal=true;
+    els.forEach(function(el,i){el.style.transitionDelay=(Math.min(i%3,2)*0.04)+'s';io.observe(el);});
   } else { els.forEach(function(el){el.classList.add('in');}); }
 })();
