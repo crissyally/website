@@ -11,6 +11,12 @@ SITE_DIR=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
 
 [ -f "$SITE_DIR/.env" ] && { set -a; . "$SITE_DIR/.env"; set +a; }
 
+# Kevin's machines keep a separate read key (one line, mode 600) instead of a .env here.
+KEY_FILE="$HOME/second-brain-scripts/netlify-token"
+if [ -z "${NETLIFY_AUTH_TOKEN:-}" ] && [ -r "$KEY_FILE" ]; then
+  NETLIFY_AUTH_TOKEN=$(tr -d '[:space:]' < "$KEY_FILE")
+fi
+
 if [ -z "${NETLIFY_AUTH_TOKEN:-}" ]; then
   echo "No Netlify key is set up on this computer, so the budget cannot be checked here." >&2
   echo "" >&2
