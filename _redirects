@@ -36,5 +36,6 @@ http://flourish-counseling.co/*       https://flourish-counseling.co/:splat  301
 /START-HERE.md     /404.html  404!
 /README-DEPLOY.md  /404.html  404!
 /HOW-THIS-IS-SET-UP.md /404.html  404!
+/AGENTS.md         /404.html  404!
 /.gitignore        /404.html  404!
 /.deploy/*         /404.html  404!

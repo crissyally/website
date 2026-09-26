@@ -33,6 +33,32 @@ if git diff --cached --quiet; then
   echo "No changes to publish. The site is already up to date."
   exit 0
 fi
+
+# Budget gate. Every publish costs 15 of 300 monthly credits and the site goes OFFLINE at 0.
+# A "[skip ci]" commit is not a publish and costs nothing, so it skips the check.
+case "$DESCRIPTION" in
+  *"[skip ci]"*) ;;
+  *)
+    set +e
+    "$SCRIPT_DIR/budget.sh"
+    BUDGET=$?
+    set -e
+    echo ""
+    if [ "$BUDGET" -eq 3 ]; then
+      git reset -q
+      echo "NOT published: this would dip into the safety reserve and risk taking the site offline." >&2
+      echo "Your changes are saved on this computer. Publish after the reset date above." >&2
+      exit 1
+    elif [ "$BUDGET" -ne 0 ] && [ "${BUDGET_CHECKED:-}" != "yes" ]; then
+      git reset -q
+      echo "NOT published: the publishing budget could not be checked." >&2
+      echo "Look at Billing in Netlify first. If at least 45 credits are left," >&2
+      echo "run this again as:  BUDGET_CHECKED=yes .deploy/deploy.sh \"$DESCRIPTION\"" >&2
+      exit 1
+    fi
+    ;;
+esac
+
 git commit -m "$DESCRIPTION"
 
 echo "Sending to GitHub..."

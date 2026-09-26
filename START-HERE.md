@@ -62,6 +62,16 @@ this folder. See the content rules below.
    If she wants to see a change before it goes live, she can open `index.html` in her browser, which
    is free and instant. Only a real publish costs anything.
 
+   **Check the budget before deciding to publish, every time (rule added 2026-09-26).** Run
+   `.deploy/budget.sh`. It asks Netlify how many credits are left and works out how many publishes
+   remain, holding back a **safety reserve of 30 credits** that is never spent, so the site can never
+   hit 0 and go offline. **Tell Crissy the number and the reset date first, then decide together
+   whether this change is worth one of them** or should wait and be grouped with the next batch.
+   `.deploy/deploy.sh` runs the same check itself and refuses to publish if it would touch the
+   reserve or if the budget cannot be read. Never work around that refusal: if it says the budget
+   could not be checked, look at Billing in Netlify, and only if at least 45 credits are left run
+   `BUDGET_CHECKED=yes .deploy/deploy.sh "..."`. Credits reset once a month; `budget.sh` prints the date.
+
 1. **Always publish with `.deploy/deploy.sh`.** Never run `netlify deploy` by hand, and never upload
    this folder to Netlify through the website. Doing either puts a version live that GitHub does not
    know about, and the next person to publish will silently wipe it out.
@@ -108,7 +118,8 @@ removed, which is why the footer scripts are on the do-not-touch list above.
 | `post-*.html` | The 9 blog articles |
 | `404.html` | The page visitors see if they follow a broken link |
 | `_redirects` | Hosting rules. Keeps old `.html` web addresses working, and keeps internal files private. Do not edit without asking Kevin. |
-| `.deploy/` | The publish and undo commands |
+| `.deploy/` | The publish and undo commands, plus `budget.sh` (publishes left this month) and `traffic.sh` (visitor numbers) |
+| `AGENTS.md` | Short pointer that tells an AI assistant to read this file first |
 | `HOW-THIS-IS-SET-UP.md` | Who owns what, who has access, and how to change or remove it. **Read this if Crissy asks any question about ownership, access, or independence.** |
 | `css/brand.css` | The entire design system: colors, fonts, spacing, buttons |
 | `js/site.js` | Small script: mobile menu, FAQ accordion, sprig animation |
@@ -152,7 +163,6 @@ removed, which is why the footer scripts are on the do-not-touch list above.
 - **Services: read them from `services.html`. Do not work from a list in this file.** What she offers
   changes; the page is what is true. The one standing rule that does not change: **Cristina is not a
   play therapist. Never mention play therapy.**
-  - *Known exception awaiting a decision (noted 2026-09-17): the sentence "For children, this often starts through play" is still live on both the home page and the About page, in the "Step 01 - Safety first" block. It predates this rule and contradicts it. Do not copy this phrasing anywhere else; Kevin is handling the removal.*
 - **Credentials: read them from the live `about.html` and `team.html`. Never state one from memory.**
   They lapse and get renewed, and asserting a credential she does not currently hold is a professional
   exposure problem, not a copy problem. Where chips exist, keep each credential its own chip rather
@@ -200,7 +210,8 @@ its address somewhere sensible rather than leaving a dead end.
 3. Tell Crissy to double-click `index.html` and check it in her browser **before** publishing.
    Note that the visitor counter and the Psychology Today badge will not work when opened this way,
    because the page is not being served from the real address. That is normal and not a fault.
-4. Publish with `.deploy/deploy.sh "what changed"`.
+4. Run `.deploy/budget.sh`, tell Crissy how many publishes are left, and agree it is worth one.
+   Then publish with `.deploy/deploy.sh "what changed"`.
 5. Tell her to check the live site a minute later.
 6. If it looks wrong, run `.deploy/undo.sh`. Never leave the folder in a broken state.
 
