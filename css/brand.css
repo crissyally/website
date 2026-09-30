@@ -126,7 +126,7 @@ header.scrolled{background:rgba(248,248,236,.92);backdrop-filter:blur(12px);box-
 .nav-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto}
 .nav-actions .btn{padding:.7rem 1.15rem;font-size:.72rem}
 .menu-btn{display:none;background:none;border:0;color:var(--espresso);font-size:1.6rem;cursor:pointer;line-height:1}
-@media(max-width:1040px){.nav-links{display:none}.menu-btn{display:block;flex:0 0 auto}}
+@media(max-width:1180px){.nav-links{display:none}.menu-btn{display:block;flex:0 0 auto}}
 @media(max-width:620px){
   .nav{gap:8px}
   .nav .logo img{height:32px}

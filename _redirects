@@ -16,6 +16,7 @@ http://flourish-counseling.co/*       https://flourish-counseling.co/:splat  301
 
 /about.html /about 301!
 /services.html /services 301!
+/events.html /events 301!
 /team.html /team 301!
 /rates.html /rates 301!
 /blog.html /blog 301!
