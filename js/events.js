@@ -77,12 +77,39 @@
     document.head.appendChild(script);
   }
 
+  // Event structured data for Google and AI search (added Mon 10/05): built from the same live feed.
+  function eventSchema(events){
+    var items=events.filter(function(event){return event&&event.name&&event.start&&event.start.utc;}).map(function(event){
+      var price=event.free?'0':String(event.price||'').replace(/[^0-9.]/g,'');
+      var item={
+        '@context':'https://schema.org','@type':'Event',
+        name:event.name,
+        description:event.summary||event.description||'',
+        startDate:event.start.utc,
+        eventStatus:'https://schema.org/EventScheduled',
+        eventAttendanceMode:event.online?'https://schema.org/OnlineEventAttendanceMode':'https://schema.org/OfflineEventAttendanceMode',
+        location:event.online?{'@type':'VirtualLocation',url:event.url}:{'@type':'Place',name:(event.venue&&event.venue.name)||'Flourish Counseling Co.',address:(event.venue&&event.venue.address)||'2431 Aloma Ave., Suite 111, Winter Park, FL 32792'},
+        organizer:{'@type':'Organization',name:'Flourish Counseling Co.',url:'https://flourish-counseling.co/'},
+        isAccessibleForFree:Boolean(event.free),
+        url:event.url
+      };
+      if(event.end&&event.end.utc)item.endDate=event.end.utc;
+      if(event.image)item.image=[event.image];
+      if(price)item.offers={'@type':'Offer',url:event.url,price:price,priceCurrency:'USD',availability:event.soldOut?'https://schema.org/SoldOut':'https://schema.org/InStock'};
+      return item;
+    });
+    if(!items.length)return;
+    var tag=document.createElement('script');
+    tag.type='application/ld+json';tag.id='events-schema';
+    tag.textContent=JSON.stringify(items);
+    document.head.appendChild(tag);
+  }
+
   function showEmpty(){
     list.innerHTML='<div class="events-empty reveal in"><span class="eyebrow">Check Back Soon</span><h2 class="t-title mt-s">No upcoming events are scheduled.</h2><p>Follow Flourish Counseling Co. on Eventbrite to hear when registration opens for something new.</p><a class="btn btn-solid" href="'+profileUrl+'" target="_blank" rel="noopener">Follow on Eventbrite</a></div>';
   }
 
   if(location.protocol!=='http:'&&location.protocol!=='https:'){
-    directLinks([{id:'2002459943596',url:'https://www.eventbrite.com/e/understanding-anxiety-tickets-2002459943596?aff=oddtdtcreator'}]);
     return;
   }
 
@@ -91,11 +118,10 @@
     .then(function(data){
       var events=Array.isArray(data.events)?data.events:[];
       if(!events.length){showEmpty();}
-      else{list.innerHTML=events.map(eventMarkup).join('');connectCheckout(events);}
+      else{list.innerHTML=events.map(eventMarkup).join('');connectCheckout(events);eventSchema(events);}
       if(status){status.innerHTML='Event details are synced with <a href="'+profileUrl+'" target="_blank" rel="noopener">Eventbrite</a> and refresh automatically.';}
     })
     .catch(function(){
-      directLinks([{id:'2002459943596',url:'https://www.eventbrite.com/e/understanding-anxiety-tickets-2002459943596?aff=oddtdtcreator'}]);
       if(status){status.innerHTML='Live updates are temporarily unavailable. You can still register through <a href="'+profileUrl+'" target="_blank" rel="noopener">Eventbrite</a>.';}
     });
 })();
