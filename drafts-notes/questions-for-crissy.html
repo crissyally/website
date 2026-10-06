@@ -1,0 +1,592 @@
+<title>Six New Pages</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blush:#f8d9ca; --blush-deep:#edc4b0; --cream:#f8f8ec; --oat:#e6e5df;
+    --taupe:#b9b5ad; --stone:#696763; --espresso:#413e39; --white:#fff;
+    --rule:rgba(65,62,57,.10); --rule-soft:rgba(65,62,57,.06);
+    --shadow:rgba(65,62,57,.10);
+    --serif:"Fraunces",Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--cream); color:var(--espresso);
+    font-family:var(--sans); font-size:16.5px; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:660px; margin:0 auto; padding-inline:22px; padding-block:0}
+
+  /* ---------- masthead ---------- */
+  .masthead{padding-block:clamp(2.6rem,8vw,4.4rem) clamp(1.6rem,4vw,2.4rem)}
+  .eyebrow{
+    font-size:.7rem; font-weight:700; letter-spacing:.17em; text-transform:uppercase;
+    color:var(--blush-deep); margin:0 0 1.1rem;
+  }
+  h1{
+    font-family:var(--serif); font-weight:400; text-wrap:balance;
+    font-size:clamp(2.1rem,6.4vw,3.05rem); line-height:1.1;
+    margin:0 0 1.2rem; letter-spacing:-.01em;
+  }
+  .standfirst{font-size:1.06rem; color:var(--stone); margin:0 0 1.1rem; max-width:34em}
+  .standfirst strong{color:var(--espresso); font-weight:600}
+
+  /* ---------- the reassurance note ---------- */
+  .assurance{
+    background:var(--white); border:1px solid var(--rule);
+    border-left:3px solid var(--blush-deep);
+    border-radius:14px; padding:20px 22px; margin-block:1.9rem 0;
+  }
+  .assurance p{margin:0}
+  .assurance p + p{margin-top:.7rem}
+  .assurance strong{font-weight:600}
+
+  /* ---------- timing strip ---------- */
+  .facts{
+    display:flex; flex-wrap:wrap; gap:10px; margin-block:1.6rem 0; padding:0; list-style:none;
+  }
+  .facts li{
+    font-size:.82rem; letter-spacing:.02em; color:var(--stone);
+    background:var(--oat); border-radius:999px; padding:7px 15px;
+  }
+
+  /* ---------- sections ---------- */
+  section{padding-block:clamp(2.2rem,6vw,3.2rem)}
+  section + section{border-top:1px solid var(--rule-soft)}
+  .sec-label{
+    font-family:var(--serif); font-weight:400; font-size:clamp(1.4rem,4vw,1.85rem);
+    line-height:1.2; margin:0 0 .5rem; text-wrap:balance;
+  }
+  .sec-note{color:var(--stone); font-size:.96rem; margin:0 0 2rem; max-width:36em}
+
+  /* ---------- a question ---------- */
+  .q{margin-bottom:2.4rem}
+  .q:last-child{margin-bottom:0}
+  .q-head{display:flex; gap:13px; align-items:baseline; margin-bottom:.55rem}
+  .q-num{
+    flex:none; font-family:var(--serif); font-size:1.02rem; color:var(--blush-deep);
+    font-variant-numeric:tabular-nums; width:1.3em;
+  }
+  .q-ask{font-size:1.09rem; font-weight:600; margin:0; text-wrap:balance; letter-spacing:-.005em}
+  .q-body{margin-left:calc(1.3em + 13px)}
+  .q-body.flush{margin-left:0}
+  .q-why{color:var(--stone); font-size:.95rem; margin:0 0 1rem}
+  .q-why em{font-style:italic; color:var(--espresso)}
+
+  /* ---------- answers ---------- */
+  .opts{display:flex; flex-direction:column; gap:9px; margin:0; padding:0; border:0}
+  .opts.inline{flex-direction:row; flex-wrap:wrap; gap:9px}
+
+  .opt{
+    display:flex; align-items:flex-start; gap:11px; cursor:pointer;
+    background:var(--white); border:1px solid var(--rule); border-radius:12px;
+    padding:13px 16px; transition:border-color .16s ease, background .16s ease;
+  }
+  .opts.inline .opt{flex:0 1 auto; padding:9px 16px; border-radius:999px; align-items:center}
+  .opt:hover{border-color:var(--blush-deep)}
+  .opt input{
+    appearance:none; -webkit-appearance:none; flex:none; margin:0;
+    width:19px; height:19px; border:1.5px solid var(--taupe); border-radius:50%;
+    background:var(--white); transition:border-color .16s ease, box-shadow .16s ease;
+    position:relative; top:2px;
+  }
+  .opts.inline .opt input{top:0}
+  .opt input:checked{
+    border-color:var(--blush-deep);
+    box-shadow:inset 0 0 0 4.5px var(--blush);
+  }
+  .opt input:focus-visible{outline:2px solid var(--blush-deep); outline-offset:2px}
+  .opt:has(input:checked){border-color:var(--blush-deep); background:rgba(248,217,202,.20)}
+  .opt span{font-size:.97rem; line-height:1.5}
+  .opt .sub{display:block; color:var(--stone); font-size:.88rem; margin-top:.15rem}
+
+  /* ---------- statement checklist ---------- */
+  .statements{display:flex; flex-direction:column; gap:11px}
+  .stmt{
+    background:var(--white); border:1px solid var(--rule); border-radius:12px; padding:15px 17px;
+  }
+  .stmt-text{font-size:.97rem; margin:0 0 .75rem; line-height:1.55}
+  .yn{display:flex; gap:8px; flex-wrap:wrap}
+  .yn label{
+    cursor:pointer; font-size:.85rem; letter-spacing:.02em;
+    border:1px solid var(--rule); border-radius:999px; padding:5px 15px;
+    transition:border-color .16s ease, background .16s ease, color .16s ease;
+  }
+  .yn input{appearance:none; -webkit-appearance:none; position:absolute; opacity:0; width:0; height:0}
+  .yn label:hover{border-color:var(--blush-deep)}
+  .yn label:has(input:checked){background:var(--espresso); color:var(--cream); border-color:var(--espresso)}
+  .yn label:has(input:focus-visible){outline:2px solid var(--blush-deep); outline-offset:2px}
+
+  /* ---------- free text ---------- */
+  .write-in{
+    width:100%; font-family:var(--sans); font-size:.95rem; color:var(--espresso);
+    background:var(--white); border:1px solid var(--rule); border-radius:10px;
+    padding:11px 14px; margin-top:9px; resize:vertical; min-height:44px; line-height:1.5;
+  }
+  .write-in:focus{outline:2px solid var(--blush-deep); outline-offset:1px; border-color:transparent}
+  .write-in::placeholder{color:var(--taupe)}
+
+  /* ---------- towns ---------- */
+  .towns{display:flex; flex-wrap:wrap; gap:9px}
+  .town{
+    cursor:pointer; font-size:.92rem; border:1px solid var(--rule); border-radius:999px;
+    padding:8px 17px; background:var(--white); transition:all .16s ease;
+  }
+  .town input{appearance:none; -webkit-appearance:none; position:absolute; opacity:0; width:0; height:0}
+  .town:has(input:checked){
+    background:var(--oat); color:var(--taupe); text-decoration:line-through; border-color:transparent;
+  }
+  .town:has(input:focus-visible){outline:2px solid var(--blush-deep); outline-offset:2px}
+
+  /* ---------- later / parked ---------- */
+  .later{display:flex; flex-direction:column; gap:14px}
+  .later-item{border-left:2px solid var(--oat); padding-left:17px}
+  .later-item h3{font-size:.99rem; font-weight:600; margin:0 0 .3rem}
+  .later-item p{margin:0; color:var(--stone); font-size:.94rem}
+
+  .parked{
+    background:var(--blush); border-radius:14px; padding:24px 24px 26px; margin-top:.4rem;
+  }
+  .parked h3{font-family:var(--serif); font-weight:400; font-size:1.25rem; margin:0 0 .6rem}
+  .parked p{margin:0; font-size:.97rem; line-height:1.6}
+  .parked p + p{margin-top:.7rem}
+
+  /* ---------- finish ---------- */
+  .finish{
+    background:var(--espresso); color:var(--cream); border-radius:16px;
+    padding:clamp(24px,5vw,34px); margin-block:clamp(2.2rem,6vw,3rem) clamp(3rem,8vw,4.5rem);
+  }
+  .finish h2{font-family:var(--serif); font-weight:400; font-size:1.5rem; margin:0 0 .6rem; color:var(--cream)}
+  .finish p{margin:0 0 1.4rem; color:rgba(248,248,236,.72); font-size:.97rem}
+  .btn{
+    font-family:var(--sans); font-size:.93rem; font-weight:600; letter-spacing:.02em;
+    background:var(--blush); color:var(--espresso); border:0; border-radius:999px;
+    padding:13px 26px; cursor:pointer; transition:transform .12s ease, background .16s ease;
+  }
+  .btn:hover{background:var(--white)}
+  .btn:active{transform:scale(.98)}
+  .btn:focus-visible{outline:2px solid var(--blush); outline-offset:3px}
+  .btn-note{display:block; margin-top:.9rem; font-size:.85rem; color:rgba(248,248,236,.55)}
+  .answers-out{
+    margin-top:1rem; background:rgba(248,248,236,.07); border-color:rgba(248,248,236,.22);
+    color:var(--cream); font-size:.88rem; line-height:1.55;
+  }
+  .answers-out:focus{outline:2px solid var(--blush); outline-offset:1px}
+
+  .colophon{
+    text-align:center; color:var(--taupe); font-size:.84rem;
+    padding-bottom:clamp(2rem,6vw,3rem); margin:0;
+  }
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Flourish Counseling Co.</p>
+    <h1>Six new pages for your website</h1>
+    <p class="standfirst">Six pages are written and ready, one for each thing you offer. Right now your website describes all six in about two sentences each. These give each one a real page.</p>
+    <p class="standfirst"><strong>Nothing is published yet, and nothing publishes until you say so.</strong></p>
+
+    <ul class="facts">
+      <li>About fifteen minutes</li>
+      <li>Mostly yes or no</li>
+      <li>No need to read the pages</li>
+    </ul>
+
+    <div class="assurance">
+      <p>Almost everything on these pages is general: what EMDR is, what grief does to people. About twenty sentences are claims about <strong>you and your practice</strong>, and those are the only ones that need your eyes. They are all below.</p>
+      <p><strong>"No" and "not really" are good answers.</strong> If something here is not true of how you work, say so and it comes off the page. Nothing needs to be stretched to make a better website. It is your license on the page.</p>
+    </div>
+  </header>
+
+  <!-- ============ BLOCKERS ============ -->
+  <section>
+    <h2 class="sec-label">First, the four that hold everything up</h2>
+    <p class="sec-note">Nothing can publish until these four have an answer. Everything after them is quick.</p>
+
+    <div class="q">
+      <div class="q-head">
+        <span class="q-num">1</span>
+        <p class="q-ask">Is there a recovery group running right now?</p>
+      </div>
+      <div class="q-body">
+        <p class="q-why">The groups page is written as an interest page. It never says a group is open, and gives no start date, size, or fee.</p>
+        <fieldset class="opts">
+          <label class="opt"><input type="radio" name="groups" value="running"><span>A group is running or forming<span class="sub">Tell us what you want the page to say about it</span></span></label>
+          <label class="opt"><input type="radio" name="groups" value="interest"><span>Nothing is open, but the interest-page version is fine<span class="sub">Expect the occasional inquiry when nothing is running</span></span></label>
+          <label class="opt"><input type="radio" name="groups" value="hold"><span>Leave the groups page off for now<span class="sub">The other five publish without it</span></span></label>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head">
+        <span class="q-num">2</span>
+        <p class="q-ask">The sand tray page says these things. Are they true of your room?</p>
+      </div>
+      <div class="q-body">
+        <p class="q-why">These describe how you run it, so they need to be true of <em>your</em> practice rather than how it is usually done.</p>
+        <div class="statements">
+          <div class="stmt">
+            <p class="stmt-text">You offer it to <strong>adult</strong> clients, inside normal individual sessions.</p>
+            <div class="yn">
+              <label><input type="radio" name="sand1" value="yes">Yes</label>
+              <label><input type="radio" name="sand1" value="no">No</label>
+              <label><input type="radio" name="sand1" value="almost">Not quite</label>
+            </div>
+          </div>
+          <div class="stmt">
+            <p class="stmt-text"><strong>In person only</strong>, because it needs the physical tray.</p>
+            <div class="yn">
+              <label><input type="radio" name="sand2" value="yes">Yes</label>
+              <label><input type="radio" name="sand2" value="no">No</label>
+              <label><input type="radio" name="sand2" value="almost">Not quite</label>
+            </div>
+          </div>
+          <div class="stmt">
+            <p class="stmt-text">You stay alongside the client rather than interpreting their scene for them, and they keep authorship of what it means.</p>
+            <div class="yn">
+              <label><input type="radio" name="sand3" value="yes">Yes</label>
+              <label><input type="radio" name="sand3" value="no">No</label>
+              <label><input type="radio" name="sand3" value="almost">Not quite</label>
+            </div>
+          </div>
+          <div class="stmt">
+            <p class="stmt-text">Nothing built is kept, photographed, or shown to anyone.</p>
+            <div class="yn">
+              <label><input type="radio" name="sand4" value="yes">Yes</label>
+              <label><input type="radio" name="sand4" value="no">No</label>
+              <label><input type="radio" name="sand4" value="almost">Not quite</label>
+            </div>
+          </div>
+          <div class="stmt">
+            <p class="stmt-text">A client can decline the tray without explaining.</p>
+            <div class="yn">
+              <label><input type="radio" name="sand5" value="yes">Yes</label>
+              <label><input type="radio" name="sand5" value="no">No</label>
+              <label><input type="radio" name="sand5" value="almost">Not quite</label>
+            </div>
+          </div>
+        </div>
+        <textarea class="write-in" name="sandnote" placeholder="Anything to correct about how sand tray is described"></textarea>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head">
+        <span class="q-num">3</span>
+        <p class="q-ask">How strongly should we describe EMDR?</p>
+      </div>
+      <div class="q-body">
+        <p class="q-why">Your website currently calls EMDR <em>"a proven, structured therapy."</em> The new pages soften that to <em>"extensively researched and widely used."</em></p>
+        <fieldset class="opts">
+          <label class="opt"><input type="radio" name="emdr" value="soft"><span>Keep it soft, and soften the old line to match</span></label>
+          <label class="opt"><input type="radio" name="emdr" value="strong"><span>Use the stronger wording everywhere</span></label>
+          <label class="opt"><input type="radio" name="emdr" value="leave"><span>Leave them different</span></label>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head">
+        <span class="q-num">4</span>
+        <p class="q-ask">Should we name RTM?</p>
+      </div>
+      <div class="q-body">
+        <p class="q-why">Reconsolidation of Traumatic Memories. Your About page mentions it, but your credential badges do not. It appears twice in the new pages. Almost nobody locally offers it, so it is worth naming if it is current.</p>
+        <fieldset class="opts">
+          <label class="opt"><input type="radio" name="rtm" value="keep"><span>Current, keep it<span class="sub">It probably deserves a badge alongside your others too</span></span></label>
+          <label class="opt"><input type="radio" name="rtm" value="drop"><span>Dormant, take both mentions out</span></label>
+        </fieldset>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUICK ONES ============ -->
+  <section>
+    <h2 class="sec-label">Then the quick ones</h2>
+    <p class="sec-note">Each of these is one factual claim that appears somewhere on the pages.</p>
+
+    <div class="q">
+      <div class="q-head"><span class="q-num">5</span><p class="q-ask">Should the pages name you, or speak as the practice?</p></div>
+      <div class="q-body">
+        <p class="q-why">Three pages say "Cristina Ally, LMHC is trained in..." The rest say "we" and "Flourish." With Luzelena in the practice now, either could be right.</p>
+        <fieldset class="opts inline">
+          <label class="opt"><input type="radio" name="voice" value="name"><span>Name me where it is about my training</span></label>
+          <label class="opt"><input type="radio" name="voice" value="practice"><span>Speak as the practice throughout</span></label>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><span class="q-num">6</span><p class="q-ask">Any towns to take off?</p></div>
+      <div class="q-body">
+        <p class="q-why">Every page lists these. Tap any you would not realistically see a client from, and they come off.</p>
+        <div class="towns">
+          <label class="town"><input type="checkbox" name="town" value="Winter Park">Winter Park</label>
+          <label class="town"><input type="checkbox" name="town" value="Orlando">Orlando</label>
+          <label class="town"><input type="checkbox" name="town" value="Maitland">Maitland</label>
+          <label class="town"><input type="checkbox" name="town" value="Baldwin Park">Baldwin Park</label>
+          <label class="town"><input type="checkbox" name="town" value="Oviedo">Oviedo</label>
+          <label class="town"><input type="checkbox" name="town" value="Casselberry">Casselberry</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><span class="q-num">7</span><p class="q-ask">Is everything available by telehealth?</p></div>
+      <div class="q-body">
+        <p class="q-why">Every page except sand tray and groups says sessions are available online anywhere in Florida. EMDR and ART protocol sessions are the most likely exceptions.</p>
+        <fieldset class="opts inline">
+          <label class="opt"><input type="radio" name="tele" value="all"><span>True for everything</span></label>
+          <label class="opt"><input type="radio" name="tele" value="except"><span>There are exceptions</span></label>
+        </fieldset>
+        <textarea class="write-in" name="telenote" placeholder="Which ones are in person only"></textarea>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><span class="q-num">8</span><p class="q-ask">Session length: vague or specific?</p></div>
+      <div class="q-body">
+        <p class="q-why">Protocol sessions are described as "extended sessions" rather than a number, so the page does not go stale if your scheduling changes. Your portal currently offers 110 minutes.</p>
+        <fieldset class="opts inline">
+          <label class="opt"><input type="radio" name="length" value="vague"><span>Keep it vague</span></label>
+          <label class="opt"><input type="radio" name="length" value="110"><span>Say 110 minutes</span></label>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><span class="q-num">9</span><p class="q-ask">Who leads the groups?</p></div>
+      <div class="q-body">
+        <p class="q-why">The groups page says they are led by a licensed therapist. Since Luzelena is a graduate intern, confirming this means you.</p>
+        <fieldset class="opts inline">
+          <label class="opt"><input type="radio" name="leads" value="yes"><span>Yes, I lead them</span></label>
+          <label class="opt"><input type="radio" name="leads" value="reword"><span>Needs rewording</span></label>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><span class="q-num">10</span><p class="q-ask">Three lines that are already on your About page, but read differently on a service page</p></div>
+      <div class="q-body">
+        <div class="statements">
+          <div class="stmt">
+            <p class="stmt-text">"Cristina has led recovery groups for women across the Orlando area for years, and women's trauma recovery is the center of her practice."</p>
+            <div class="yn">
+              <label><input type="radio" name="line1" value="ok">Fine as is</label>
+              <label><input type="radio" name="line1" value="change">Change it</label>
+            </div>
+          </div>
+          <div class="stmt">
+            <p class="stmt-text">"Flourish runs closed recovery groups for adult women, including women recovering from sexual abuse."</p>
+            <div class="yn">
+              <label><input type="radio" name="line2" value="ok">Fine as is</label>
+              <label><input type="radio" name="line2" value="change">Change it</label>
+            </div>
+          </div>
+          <div class="stmt">
+            <p class="stmt-text">Your work with survivors of human trafficking, mentioned on the groups page as well as in your bio.</p>
+            <div class="yn">
+              <label><input type="radio" name="line3" value="ok">Fine as is</label>
+              <label><input type="radio" name="line3" value="change">Keep it to my bio only</label>
+            </div>
+          </div>
+        </div>
+        <textarea class="write-in" name="linesnote" placeholder="How you would rather put any of these"></textarea>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><span class="q-num">11</span><p class="q-ask">Adult survivors of childhood abuse: name it, or leave it implied?</p></div>
+      <div class="q-body">
+        <p class="q-why">The trauma page has a short section about adults carrying something that started in childhood. It is written about adult clients only, not about treating children. Hardly anyone local has a page on this.</p>
+        <fieldset class="opts inline">
+          <label class="opt"><input type="radio" name="survivors" value="plain"><span>Say it plainly</span></label>
+          <label class="opt"><input type="radio" name="survivors" value="implied"><span>Leave it under "trauma"</span></label>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-head"><span class="q-num">12</span><p class="q-ask">Is this how you explain self-pay?</p></div>
+      <div class="q-body">
+        <p class="q-why">The individual therapy page explains it the same way your rates page does: you choose your own therapist, no diagnosis is submitted to an insurer, confidentiality stays intact, no session limits, superbill on request. No figures are quoted.</p>
+        <fieldset class="opts inline">
+          <label class="opt"><input type="radio" name="selfpay" value="ok"><span>That is how I would put it</span></label>
+          <label class="opt"><input type="radio" name="selfpay" value="change"><span>I would change it</span></label>
+        </fieldset>
+        <textarea class="write-in" name="selfpaynote" placeholder="What you would change"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOT NOW ============ -->
+  <section>
+    <h2 class="sec-label">Two things you do not have to decide now</h2>
+    <div class="later">
+      <div class="later-item">
+        <h3>Family therapy</h3>
+        <p>Your booking portal offers a 110 minute family therapy appointment, but family work is not one of the six services and has no page. Either the portal option comes off, or it gets a page eventually. No rush.</p>
+      </div>
+      <div class="later-item">
+        <h3>Photos</h3>
+        <p>Each page reuses an existing photo from your site. A real photo of your actual sand tray shelf would be a genuine upgrade over a stock one, whenever that is easy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARKED ============ -->
+  <section>
+    <h2 class="sec-label">And one that is entirely yours</h2>
+    <div class="parked">
+      <h3>The faith-integrated page</h3>
+      <p>A seventh page about faith-integrated counseling is written, but it is parked. Kevin mentioned you were not sure yet, which is a completely reasonable place to be.</p>
+      <p>It is built so it can sit indefinitely without affecting anything else, and the other pages publish without it. Nobody needs an answer. Raise it if and when you want to.</p>
+    </div>
+  </section>
+
+  <div class="finish">
+    <h2>That is everything</h2>
+    <p>Tap the button and your answers are copied as plain text, ready to paste into a message. Nothing is sent from this page.</p>
+    <button class="btn" id="copy" type="button">Copy my answers</button>
+    <span class="btn-note" id="status">Your answers are saved on this device as you go.</span>
+    <textarea id="answers" class="write-in answers-out" hidden readonly rows="12" aria-label="Your answers, ready to copy"></textarea>
+  </div>
+
+  <p class="colophon">Prepared 19 September 2026</p>
+</div>
+
+<script>
+(function(){
+  var KEY = 'flourish-service-page-questions';
+
+  var LABELS = {
+    groups:'1. Is a group running?', sand1:'2a. Adults, inside individual sessions',
+    sand2:'2b. In person only', sand3:'2c. Stays alongside, client keeps authorship',
+    sand4:'2d. Nothing kept or photographed', sand5:'2e. Can decline without explaining',
+    sandnote:'2. Sand tray notes', emdr:'3. EMDR wording', rtm:'4. Name RTM?',
+    voice:'5. Name you, or the practice', town:'6. Towns to remove',
+    tele:'7. Telehealth', telenote:'7. Telehealth exceptions',
+    length:'8. Session length', leads:'9. Who leads groups',
+    line1:'10a. Recovery groups line', line2:'10b. Closed groups line',
+    line3:'10c. Human trafficking line', linesnote:'10. Notes on those lines',
+    survivors:'11. Adult survivors of childhood abuse', selfpay:'12. Self-pay explanation',
+    selfpaynote:'12. What to change'
+  };
+
+  var TEXT = {
+    running:'A group is running or forming', interest:'Interest page is fine', hold:'Leave the groups page off',
+    yes:'Yes', no:'No', almost:'Not quite',
+    soft:'Keep it soft, soften the old line too', strong:'Stronger wording everywhere', leave:'Leave them different',
+    keep:'Current, keep it', drop:'Dormant, take it out',
+    name:'Name me where it is about my training', practice:'Speak as the practice',
+    all:'True for everything', except:'There are exceptions',
+    vague:'Keep it vague', '110':'Say 110 minutes',
+    reword:'Needs rewording', ok:'Fine as is', change:'Change it',
+    plain:'Say it plainly', implied:'Leave it under trauma'
+  };
+
+  var fields = Array.prototype.slice.call(
+    document.querySelectorAll('input[type=radio], input[type=checkbox], textarea')
+  );
+
+  function save(){
+    var out = {};
+    fields.forEach(function(f){
+      if (f.type === 'radio') { if (f.checked) out[f.name] = f.value; }
+      else if (f.type === 'checkbox') { if (f.checked) (out[f.name] = out[f.name] || []).push(f.value); }
+      else if (f.value.trim()) { out[f.name] = f.value.trim(); }
+    });
+    try { localStorage.setItem(KEY, JSON.stringify(out)); } catch (e) {}
+    return out;
+  }
+
+  function restore(){
+    var saved;
+    try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { return; }
+    fields.forEach(function(f){
+      var v = saved[f.name];
+      if (v === undefined) return;
+      if (f.type === 'radio') f.checked = (v === f.value);
+      else if (f.type === 'checkbox') f.checked = (Array.isArray(v) && v.indexOf(f.value) > -1);
+      else f.value = v;
+    });
+  }
+
+  fields.forEach(function(f){
+    f.addEventListener('change', save);
+    if (f.tagName === 'TEXTAREA') f.addEventListener('input', save);
+  });
+
+  restore();
+
+  document.getElementById('copy').addEventListener('click', function(){
+    var out = save();
+    var order = Object.keys(LABELS);
+    var lines = ['Answers on the six new service pages', ''];
+    var answered = 0;
+
+    order.forEach(function(k){
+      var v = out[k];
+      if (v === undefined) return;
+      answered++;
+      if (Array.isArray(v)) v = v.join(', ');
+      lines.push(LABELS[k] + ': ' + (TEXT[v] || v));
+    });
+
+    if (!answered) { lines.push('(nothing answered yet)'); }
+    else {
+      var missing = order.filter(function(k){
+        return out[k] === undefined && k.indexOf('note') === -1 && k !== 'town';
+      });
+      if (missing.length) lines.push('', 'Still to answer: ' + missing.map(function(k){
+        return LABELS[k].split('.')[0];
+      }).join(', '));
+    }
+
+    var text = lines.join('\n');
+    var status = document.getElementById('status');
+
+    var out_box = document.getElementById('answers');
+
+    function done(ok){
+      if (ok) {
+        status.textContent = 'Copied. Paste it into a message to Kevin.';
+        out_box.hidden = true;
+        return;
+      }
+      // Some phone browsers refuse the clipboard. Put the text on the page so it
+      // can still be selected and copied by hand, rather than saying "copy it"
+      // with nothing to copy.
+      status.textContent = 'Copying is blocked in this browser. Your answers are below, ready to select and copy.';
+      out_box.value = text;
+      out_box.hidden = false;
+      out_box.focus();
+      out_box.select();
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ fallback(); });
+    } else { fallback(); }
+
+    function fallback(){
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      done(ok);
+    }
+  });
+})();
+</script>

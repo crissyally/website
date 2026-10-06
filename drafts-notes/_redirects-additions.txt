@@ -1,0 +1,72 @@
+# ============================================================================
+# Flourish Counseling Co. - _redirects additions for the six service pages
+# Prepared 2026-09-11; Christian counseling added 2026-09-19. APPEND these lines to the site's existing _redirects file.
+# Do not replace that file. Do not reorder what is already in it: Netlify applies
+# the FIRST matching rule, so appending is the safe operation.
+#
+# Format is Netlify's:   <from path>   <to path>   <status code>
+# Blank lines and lines starting with # are ignored by Netlify.
+# ============================================================================
+
+
+# ---------------------------------------------------------------------------
+# 1. REQUIRED. Clean-URL 301s for the six new files.
+#
+# This matches the convention already in use on the site (established 2026-09-02):
+# every .html address 301s to its extensionless form, so Google never sees two
+# addresses for the same page. Without these lines the pages still work, but
+# /services/emdr.html would stay reachable as a duplicate of /services/emdr.
+# ---------------------------------------------------------------------------
+/services/individual-therapy.html    /services/individual-therapy    301
+/services/trauma-recovery.html       /services/trauma-recovery       301
+/services/emdr.html                  /services/emdr                  301
+/services/sand-tray.html             /services/sand-tray             301
+/services/grief-counseling.html      /services/grief-counseling      301
+/services/christian-counseling.html  /services/christian-counseling  301
+
+# GATED: only add the next line if recovery-groups.html is actually deployed.
+# See README-DEPLOY.md, "Publishing without the groups page".
+/services/recovery-groups.html       /services/recovery-groups       301
+
+
+# ---------------------------------------------------------------------------
+# 2. RECOMMENDED. Old flourishcounseling.co paths.
+#
+# These were real URLs on the previous site. They are still indexed in places,
+# still linked from a few directories, and still occasionally typed. A redirect
+# costs nothing and catches anyone who arrives with an old path. Each one below
+# was confirmed to exist in the Wayback archive of the old site; nothing here is
+# a guessed URL.
+# ---------------------------------------------------------------------------
+/individual-therapy                  /services/individual-therapy    301
+/counseling-for-trauma               /services/trauma-recovery       301
+/emdr                                /services/emdr                  301
+/grief-bereavement-counseling        /services/grief-counseling      301
+/services-provided                   /services                       301
+/telehealth-services                 /services                       301
+
+# Deliberately pointed at the hub, not at a service page:
+#   /play-therapy       the practice no longer does child play therapy, so this
+#                       traffic should land on the full list and self-select
+#                       rather than be routed into an adult page.
+#   /family-counseling  family counseling is not one of the six pages.
+/play-therapy                        /services                       301
+/family-counseling                   /services                       301
+
+# GATED with the groups page. If recovery-groups.html is not deployed, point
+# these two at /services instead, or leave them out entirely.
+/group-therapy                       /services/recovery-groups       301
+/groups                              /services/recovery-groups       301
+
+
+# ---------------------------------------------------------------------------
+# 3. NOT INCLUDED, on purpose.
+#
+# No redirect is written for /sex-therapy, /obsessive-compulsive-disorder-ocd-counseling,
+# /personal-addiction-counseling, /counseling-for-friends-family-of-addicts,
+# /add-adhd-counseling, /anger-management, /social-anxiety-disorder-counseling,
+# /emotion-focused-therapy, or /mindfulness-based-therapy. Those were pages on the
+# old site for services that are not on the current /services list. Redirecting them
+# somewhere would keep advertising services the practice may no longer offer. They
+# should 404, which is the correct signal, unless Cristina says otherwise.
+# ---------------------------------------------------------------------------

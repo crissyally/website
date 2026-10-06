@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Flourish Counseling Co. - sitemap additions for the service pages.
+  Prepared 2026-09-11; Christian counseling added 2026-09-19.
+
+  This is NOT a replacement sitemap. Copy the <url> blocks below into the existing
+  sitemap.xml, immediately after the /services line, keeping them inside the
+  existing <urlset> ... </urlset>. The live sitemap has 17 URLs today; it will have
+  24 after this, fewer if the groups or Christian counseling pages are held back.
+
+  Two rules the existing sitemap already follows, and these lines follow too:
+    1. Clean URLs only. Never the .html form.
+    2. One <lastmod> per URL, in YYYY-MM-DD form.
+
+  Also update the <lastmod> on the existing /services entry in the same edit, since
+  that page is being replaced by services-hub-rewrite.html.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://flourish-counseling.co/services/individual-therapy</loc><lastmod>2026-09-11</lastmod></url>
+  <url><loc>https://flourish-counseling.co/services/trauma-recovery</loc><lastmod>2026-09-11</lastmod></url>
+  <url><loc>https://flourish-counseling.co/services/emdr</loc><lastmod>2026-09-11</lastmod></url>
+  <url><loc>https://flourish-counseling.co/services/sand-tray</loc><lastmod>2026-09-11</lastmod></url>
+  <url><loc>https://flourish-counseling.co/services/grief-counseling</loc><lastmod>2026-09-11</lastmod></url>
+
+  <!-- GATED: include ONLY if christian-counseling.html is deployed. See question A8. -->
+  <url><loc>https://flourish-counseling.co/services/christian-counseling</loc><lastmod>2026-09-19</lastmod></url>
+
+  <!-- GATED: include this line ONLY if recovery-groups.html is actually deployed.
+       A sitemap entry for a page that is not live is a crawl error.
+       See README-DEPLOY.md, "Publishing without the groups page". -->
+  <url><loc>https://flourish-counseling.co/services/recovery-groups</loc><lastmod>2026-09-11</lastmod></url>
+</urlset>
