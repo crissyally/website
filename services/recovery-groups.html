@@ -166,6 +166,54 @@
 <!-- seo:jsflag -->
 <script>document.documentElement.classList.add('js');setTimeout(function(){if(window.__flourishReveal)return;var e=document.querySelectorAll('.reveal');for(var i=0;i<e.length;i++)e[i].classList.add('in');},2500);</script>
 <!-- /seo:jsflag -->
+<style>
+.glance{background:#fff;border:1px solid var(--espresso-12);border-radius:var(--r);padding:22px 26px;margin:0 0 36px}
+.glance h2{font-family:var(--serif);font-weight:400;font-size:1.3rem;margin:0 0 8px}
+.glance ul{list-style:none;margin:0;padding:0}
+.glance li{padding:8px 0;border-top:1px solid var(--espresso-08);margin:0}
+.glance li:first-child{border-top:none}
+.glance b{font-weight:500}
+.faq-list{max-width:760px;margin:0 auto}
+.faq-list details{border-top:1px solid var(--espresso-12);padding:16px 2px}
+.faq-list details:last-child{border-bottom:1px solid var(--espresso-12)}
+.faq-list summary{cursor:pointer;font-family:var(--serif);font-size:1.15rem;list-style:none}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";float:right;color:var(--stone)}
+.faq-list details[open] summary::after{content:"\2013"}
+.faq-list details p{margin:10px 0 0;color:var(--stone)}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Who are the recovery groups for?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Women who want to heal alongside others who understand. Groups are small and closed, so the same faces gather each week and trust can grow."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I join a group?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Let us know you're interested through the client portal, and we'll reach out when the next group is forming."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does a group cost?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Group fees are shared when each group opens. Individual sessions are $185 for 50 minutes, self-pay."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -177,6 +225,7 @@
       <a href="/about">About</a>
       <a href="/team">Our Team</a>
       <a href="/services" class="active">Services</a>
+  <a href="/events">Events</a>
       <a href="/rates">Rates</a>
       <a href="/blog">Resources</a>
       <a href="/faq">FAQ</a>
@@ -197,6 +246,7 @@
   <a href="/about">About</a>
   <a href="/team">Our Team</a>
   <a href="/services">Services</a>
+  <a href="/events">Events</a>
   <a href="/rates">Rates</a>
   <a href="/blog">Resources</a>
   <a href="/faq">FAQ</a>
@@ -218,6 +268,18 @@
 <section class="section cream">
   <div class="wrap">
     <div class="svc reveal">
+
+<div class="glance reveal">
+  <h2>At a glance</h2>
+  <ul>
+    <li><b>Who it's for:</b> Women looking for support and connection in a small, closed group</li>
+    <li><b>Where:</b> Winter Park, near Orlando</li>
+    <li><b>With:</b> Cristina Ally, LMHC, NCC, who has led recovery groups for women across the Orlando area</li>
+    <li><b>Fees:</b> $185 per 50-minute session, self-pay for individual sessions; group fees are shared when a group opens. Superbills are available for out-of-network reimbursement, and HSA and FSA cards are welcome.</li>
+    <li><b>First step:</b> a short phone consultation, about 10 minutes, to see if it feels like a good fit. You can request one through the <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">client portal</a>.</li>
+  </ul>
+</div>
+
 
 <div class="pullout">
   <p><b>How groups run at Flourish.</b> Groups form periodically rather than running continuously, and a closed group cannot add members once it has begun. There may or may not be one forming right now. The interest list is how you hear about the next one first, and registering your interest commits you to nothing.</p>
@@ -290,6 +352,17 @@
   </div>
 </section>
 
+<section class="section cream">
+  <div class="wrap">
+    <div class="shead reveal center"><span class="eyebrow">Questions</span><h2 class="t-section">Common questions about recovery groups</h2></div>
+    <div class="faq-list reveal">
+    <details><summary>Who are the recovery groups for?</summary><p>Women who want to heal alongside others who understand. Groups are small and closed, so the same faces gather each week and trust can grow.</p></details>
+    <details><summary>How do I join a group?</summary><p>Let us know you're interested through the <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">client portal</a>, and we'll reach out when the next group is forming.</p></details>
+    <details><summary>What does a group cost?</summary><p>Group fees are shared when each group opens. Individual sessions are $185 for 50 minutes, self-pay.</p></details>
+    </div>
+  </div>
+</section>
+
 <section class="cta-band">
   <div class="inner reveal">
     <span class="eyebrow" style="color:var(--blush)">Begin When You're Ready</span>
@@ -319,7 +392,8 @@
         <!-- End Verification -->
       </div>
     </div>
-    <div><h4>Explore</h4><a href="/about">About</a><a href="/services">Services</a><a href="/team">Our Team</a><a href="/rates">Rates &amp; Insurance</a><a href="/faq">FAQ</a><a href="/blog">Blog &amp; Resources</a><a href="/contact">Contact</a></div>
+    <div><h4>Explore</h4><a href="/about">About</a><a href="/services">Services</a>
+  <a href="/events">Events</a><a href="/team">Our Team</a><a href="/rates">Rates &amp; Insurance</a><a href="/faq">FAQ</a><a href="/blog">Blog &amp; Resources</a><a href="/contact">Contact</a></div>
     <div><h4>Clients</h4><a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">Request Appointment</a><a href="https://flourish-counseling.clientsecure.me/sign-in" target="_blank" rel="noopener">Client Portal Sign-in</a><a href="/rates">Good Faith Estimate</a></div>
   </div>
   <div class="foot-bottom"><span>&copy; 2026 Flourish Counseling Co. &middot; Winter Park, FL</span><span>Cristina Ally, Licensed Mental Health Counselor (LMHC)</span></div>

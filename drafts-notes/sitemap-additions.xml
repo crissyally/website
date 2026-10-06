@@ -28,5 +28,7 @@
   <!-- GATED: include this line ONLY if recovery-groups.html is actually deployed.
        A sitemap entry for a page that is not live is a crawl error.
        See README-DEPLOY.md, "Publishing without the groups page". -->
+    <url><loc>https://flourish-counseling.co/services/trauma-therapy-for-women</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://flourish-counseling.co/post-when-talking-to-chatgpt-isnt-enough</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://flourish-counseling.co/services/recovery-groups</loc><lastmod>2026-09-11</lastmod></url>
 </urlset>

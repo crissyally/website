@@ -18,10 +18,29 @@ page to show when someone searches for that service in Winter Park:
 | `services/sand-tray.html` | /services/sand-tray |
 | `services/recovery-groups.html` | /services/recovery-groups (held back unless a group is running or forming) |
 | `services/christian-counseling.html` | /services/christian-counseling (only if Crissy wants it) |
-| `services.html` | /services, rewritten as a menu that links to the seven pages |
+| `services/trauma-therapy-for-women.html` | /services/trauma-therapy-for-women (new 10/06: the page her ideal client's searches should land on) |
+| `services.html` | /services, rewritten as a menu that links to the pages |
+| `post-when-talking-to-chatgpt-isnt-enough.html` | a new blog post (also added to the top of `blog.html`) |
 
 `drafts-notes/` holds the questions (`PRE-PUBLISH-QUESTIONS.md`, and the same thing as a readable page,
 `questions-for-crissy.html`) and the redirect and sitemap lines to add when publishing.
+
+## What was added on Tue 10/06 (for search engines and AI assistants)
+
+Every page keeps its original writing. Added, in the same look:
+- **"At a glance" box** near the top: who it's for, where, who you'll see, fees, and the first step. AI
+  assistants quote facts like these almost word for word.
+- **A short FAQ** near the bottom, written the way people ask, with matching hidden FAQ labels for search
+  engines. The EMDR FAQ cites the WHO (2013) and VA/DoD (2023) guidelines.
+- **A gentle women-first framing** in "Who it's for" and in one FAQ answer, matching the site title.
+- **The Events link** in each page's menu and footer, to match the live site.
+- **New: "Trauma Therapy for Women"**, and **new: the ChatGPT post**, including a weekly AI-journal summary
+  prompt clients can bring to sessions.
+
+**Please check these assumptions** (they're in the new boxes and FAQs): sand tray is in person only; groups
+are small, closed groups for women and fees are shared when a group opens; on the Christian counseling page,
+faith is welcome but never required; "Who it's for" on each page; every FAQ answer. Change anything that
+isn't true or doesn't sound like you.
 
 ## For Crissy
 
@@ -37,8 +56,8 @@ publish only with `.deploy/deploy.sh`).
 
 These drafts were built on 2026-09-11, before later site changes. Before publishing:
 
-1. **Match the current header and footer** from `index.html`: the menu now has an **Events** link, and the
-   footer links changed. Copy them across exactly; keep the Psychology Today verification seal block.
+1. **Header and footer:** the Events link was added on 10/06. Still compare once against `index.html` and keep
+   the Psychology Today verification seal block.
 2. **Match the current structured data pattern** (each page's `<script type="application/ld+json">`), as on
    `about.html` and `index.html`.
 3. **Consult wording:** the free phone consult is **10 minutes** ("Initial Phone Consultation - No
@@ -50,7 +69,8 @@ These drafts were built on 2026-09-11, before later site changes. Before publish
    SERVICE, EXAMINATION, OR TREATMENT.
    Simplest: say "a short phone consultation" without "free", or add the notice once near the button.
 4. **Keep "Women's Counseling"** in titles where it already appears; Crissy's preferred clients are women.
-5. **Each page should answer a few real questions** near the bottom, in the words people type into
+5. **Each page already has a short FAQ (added 10/06).** Keep answers short and direct, and keep the matching
+   FAQ labels in the page head in sync if you edit them. Original note: near the bottom, in the words people type into
    ChatGPT or Google (for example "Do you offer EMDR in Winter Park?", "Can I book online?", "Is
    telehealth available anywhere in Florida?"). Short, direct first sentences help AI assistants quote them.
 6. **Add the lines in `drafts-notes/_redirects-additions.txt` and `drafts-notes/sitemap-additions.xml`**

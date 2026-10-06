@@ -23,6 +23,8 @@
 /services/sand-tray.html             /services/sand-tray             301
 /services/grief-counseling.html      /services/grief-counseling      301
 /services/christian-counseling.html  /services/christian-counseling  301
+/services/trauma-therapy-for-women.html  /services/trauma-therapy-for-women  301
+/post-when-talking-to-chatgpt-isnt-enough.html  /post-when-talking-to-chatgpt-isnt-enough  301
 
 # GATED: only add the next line if recovery-groups.html is actually deployed.
 # See README-DEPLOY.md, "Publishing without the groups page".
