@@ -77,7 +77,7 @@ These drafts were built on 2026-09-11, before later site changes. Before publish
    ChatGPT or Google (for example "Do you offer EMDR in Winter Park?", "Can I book online?", "Is
    telehealth available anywhere in Florida?"). Short, direct first sentences help AI assistants quote them.
 6. **Add the lines in `drafts-notes/_redirects-additions.txt` and `drafts-notes/sitemap-additions.xml`**
-   to `_redirects` and `sitemap.xml`, then delete `drafts-notes/` and this README before publishing.
+   to `_redirects` and `sitemap.xml`, then delete `drafts-notes/`, this README, `REVIEW-WITH-CRISSY.md` and the drafts-branch note at the top of `AGENTS.md` before publishing.
 7. **Preview:** the pages use root paths (`/assets/...`), so double-clicking a file shows it unstyled. Run
    `python3 -m http.server 8000` in this folder and open `http://localhost:8000/services/emdr.html`.
 8. **Publish (Kevin and Mo only, after Crissy's review and the publishing checks):** merge this branch into

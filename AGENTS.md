@@ -1,5 +1,10 @@
 # For AI assistants working on this website
 
+> **On the `drafts/specialty-pages` branch: never publish, never merge into `main`, never run `.deploy/`.**
+> Follow `REVIEW-WITH-CRISSY.md`, end every commit message with `[skip ci]`, and push only this branch.
+> (Kevin and Mo remove this note when the drafts are published.)
+
+
 Read `START-HERE.md` in full before changing anything. It holds every rule for this folder.
 
 The one rule that can take the website offline if it is broken:
