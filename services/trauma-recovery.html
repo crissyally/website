@@ -22,103 +22,234 @@
 <meta name="twitter:image" content="https://flourish-counseling.co/assets/photos/hero-calm.jpg">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Service",
+   "@id": "https://flourish-counseling.co/services/trauma-recovery#service",
+   "name": "Trauma Therapy and Trauma Recovery",
+   "serviceType": "Trauma therapy",
+   "category": [
+    "Trauma therapy",
+    "EMDR therapy",
+    "Accelerated Resolution Therapy (ART)",
+    "Reconsolidation of Traumatic Memories"
+   ],
+   "description": "Trauma recovery for adults in Winter Park and Orlando, Florida, using structured trauma-resolution protocols including EMDR and Accelerated Resolution Therapy, with secure telehealth available statewide.",
+   "url": "https://flourish-counseling.co/services/trauma-recovery",
+   "audience": {
+    "@type": "PeopleAudience",
+    "audienceType": "Adults, especially women, healing from abuse and other trauma, including adult survivors of childhood abuse"
+   },
+   "provider": {
+    "@id": "https://flourish-counseling.co/#practice"
+   },
+   "areaServed": [
     {
-      "@type": "Service",
-      "@id": "https://flourish-counseling.co/services/trauma-recovery#service",
-      "name": "Trauma Therapy and Trauma Recovery",
-      "serviceType": "Trauma therapy",
-      "url": "https://flourish-counseling.co/services/trauma-recovery",
-      "description": "Trauma recovery for adults in Winter Park and Orlando, Florida, using structured trauma-resolution protocols including EMDR and Accelerated Resolution Therapy, with secure telehealth available statewide.",
-      "provider": {
-        "@type": "ProfessionalService",
-        "@id": "https://flourish-counseling.co/#practice",
-        "name": "Flourish Counseling Co.",
-        "url": "https://flourish-counseling.co/",
-        "telephone": "+1-407-630-7529",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "2431 Aloma Ave., Suite 111",
-          "addressLocality": "Winter Park",
-          "addressRegion": "FL",
-          "postalCode": "32792",
-          "addressCountry": "US"
-        }
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Winter Park"
-        },
-        {
-          "@type": "City",
-          "name": "Orlando"
-        },
-        {
-          "@type": "State",
-          "name": "Florida"
-        }
-      ],
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "Adults"
-      },
-      "category": "Mental health counseling",
-      "availableChannel": [
-        {
-          "@type": "ServiceChannel",
-          "name": "In-person sessions",
-          "serviceLocation": {
-            "@type": "Place",
-            "name": "Flourish Counseling Co.",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "2431 Aloma Ave., Suite 111",
-              "addressLocality": "Winter Park",
-              "addressRegion": "FL",
-              "postalCode": "32792",
-              "addressCountry": "US"
-            }
-          },
-          "servicePhone": "+1-407-630-7529",
-          "serviceUrl": "https://flourish-counseling.clientsecure.me/"
-        },
-        {
-          "@type": "ServiceChannel",
-          "name": "Telehealth, anywhere in Florida",
-          "availableLanguage": {
-            "@type": "Language",
-            "name": "English"
-          },
-          "serviceUrl": "https://flourish-counseling.clientsecure.me/"
-        }
-      ]
+     "@type": "City",
+     "name": "Winter Park"
     },
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://flourish-counseling.co/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://flourish-counseling.co/services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Trauma Recovery",
-          "item": "https://flourish-counseling.co/services/trauma-recovery"
-        }
-      ]
+     "@type": "City",
+     "name": "Orlando"
+    },
+    {
+     "@type": "State",
+     "name": "Florida",
+     "description": "Secure telehealth for clients anywhere in Florida"
     }
-  ]
+   ],
+   "availableChannel": [
+    {
+     "@type": "ServiceChannel",
+     "name": "In person",
+     "serviceLocation": {
+      "@type": "Place",
+      "name": "Flourish Counseling Co.",
+      "address": {
+       "@type": "PostalAddress",
+       "streetAddress": "2431 Aloma Ave., Suite 111",
+       "addressLocality": "Winter Park",
+       "addressRegion": "FL",
+       "postalCode": "32792",
+       "addressCountry": "US"
+      }
+     },
+     "servicePhone": "+1-407-630-7529"
+    },
+    {
+     "@type": "ServiceChannel",
+     "name": "Secure telehealth anywhere in Florida",
+     "availableLanguage": {
+      "@type": "Language",
+      "name": "English"
+     },
+     "serviceUrl": "https://flourish-counseling.clientsecure.me/"
+    }
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Approaches used in trauma recovery",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "EMDR therapy",
+       "url": "https://flourish-counseling.co/services/emdr"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Accelerated Resolution Therapy (ART)"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Reconsolidation of Traumatic Memories"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Sand tray therapy",
+       "url": "https://flourish-counseling.co/services/sand-tray"
+      }
+     }
+    ]
+   },
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "50-minute therapy session",
+     "price": "185",
+     "priceCurrency": "USD",
+     "eligibleQuantity": {
+      "@type": "QuantitativeValue",
+      "value": 50,
+      "unitCode": "MIN"
+     },
+     "description": "$185 per 50-minute session, self-pay. A superbill is available on request for possible out-of-network reimbursement. HSA and FSA cards are accepted."
+    },
+    {
+     "@type": "Offer",
+     "name": "10-minute phone consultation",
+     "url": "https://flourish-counseling.clientsecure.me/",
+     "description": "The first step: a 10-minute phone consultation to see if we're a good fit, requested through the client portal."
+    }
+   ],
+   "potentialAction": {
+    "@type": "ReserveAction",
+    "name": "Request a 10-minute phone consultation",
+    "target": "https://flourish-counseling.clientsecure.me/"
+   }
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://flourish-counseling.co/#practice",
+   "name": "Flourish Counseling Co.",
+   "url": "https://flourish-counseling.co/",
+   "telephone": "+1-407-630-7529",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2431 Aloma Ave., Suite 111",
+    "addressLocality": "Winter Park",
+    "addressRegion": "FL",
+    "postalCode": "32792",
+    "addressCountry": "US"
+   },
+   "areaServed": [
+    {
+     "@type": "City",
+     "name": "Winter Park"
+    },
+    {
+     "@type": "City",
+     "name": "Orlando"
+    },
+    {
+     "@type": "State",
+     "name": "Florida",
+     "description": "Secure telehealth for clients anywhere in Florida"
+    }
+   ],
+   "paymentAccepted": "Self-pay; HSA and FSA cards accepted; superbill on request",
+   "currenciesAccepted": "USD",
+   "founder": {
+    "@id": "https://flourish-counseling.co/about#cristina"
+   },
+   "employee": {
+    "@id": "https://flourish-counseling.co/about#cristina"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://flourish-counseling.co/about#cristina",
+   "name": "Cristina Ally",
+   "honorificSuffix": "LMHC, NCC",
+   "jobTitle": "Licensed Mental Health Counselor",
+   "url": "https://flourish-counseling.co/about",
+   "description": "Licensed Mental Health Counselor and National Certified Counselor, trained in EMDR, Accelerated Resolution Therapy (ART), and the Reconsolidation of Traumatic Memories. Owner of Flourish Counseling Co.",
+   "worksFor": {
+    "@id": "https://flourish-counseling.co/#practice"
+   },
+   "knowsAbout": [
+    "Trauma therapy",
+    "EMDR",
+    "Accelerated Resolution Therapy",
+    "Reconsolidation of Traumatic Memories",
+    "Sand tray therapy"
+   ],
+   "hasCredential": [
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "license",
+     "name": "Licensed Mental Health Counselor (LMHC), Florida"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "certification",
+     "name": "National Certified Counselor (NCC)"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "EMDR trained"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "Accelerated Resolution Therapy (ART) trained"
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://flourish-counseling.co/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Services",
+     "item": "https://flourish-counseling.co/services"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Trauma Recovery",
+     "item": "https://flourish-counseling.co/services/trauma-recovery"
+    }
+   ]
+  }
+ ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -173,6 +304,7 @@
 {
  "@context": "https://schema.org",
  "@type": "FAQPage",
+ "@id": "https://flourish-counseling.co/services/trauma-recovery#faq",
  "mainEntity": [
   {
    "@type": "Question",
@@ -264,7 +396,12 @@
     <p class="crumb reveal"><a href="/services">Services</a><span class="sep">/</span>Trauma Recovery</p>
     <span class="eyebrow reveal">Trauma Recovery</span>
     <h1 class="t-title reveal">Trauma recovery that doesn't require reliving it.</h1>
-    <p class="reveal">Trauma therapy for adults in Winter Park and Orlando, and by secure telehealth anywhere in Florida.</p>
+    <p class="reveal">A safe, steady place to work through what happened, in Winter Park and Orlando, and by secure telehealth anywhere in Florida.</p>
+    <div class="cta-row reveal mt-m" style="display:flex;gap:14px;flex-wrap:wrap">
+      <a class="btn btn-solid spwidget-button" href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener"
+         data-spwidget-scope-id="4885eedf-a778-413e-b03f-e95c99540f27" data-spwidget-scope-uri="flourish-counseling"
+         data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b" data-spwidget-type="OAR" data-spwidget-scope-global data-spwidget-autobind>Request an appointment</a>
+    </div>
   </div>
 </section>
 
@@ -272,35 +409,20 @@
   <div class="wrap">
     <div class="svc reveal">
 
-<div class="glance reveal">
-  <h2>At a glance</h2>
-  <ul>
-    <li><b>Who it's for:</b> Adults, especially women, healing from abuse and other trauma</li>
-    <li><b>Where:</b> Our Winter Park office on Aloma Avenue, near Orlando, or secure telehealth anywhere in Florida</li>
-    <li><b>With:</b> Cristina Ally, LMHC, NCC, trained in Accelerated Resolution Therapy (ART) and EMDR</li>
-    <li><b>Fees:</b> $185 per 50-minute session, self-pay, with a superbill on request for out-of-network reimbursement. HSA and FSA cards are welcome.</li>
-    <li><b>First step:</b> A 10-minute phone consultation. Request one through the <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">client portal</a>.</li>
-  </ul>
-</div>
-
-
 <p class="lead-in">Most people go through something traumatic at some point: a car accident, abuse or neglect, the sudden death of someone they love, violence, war, a natural disaster. Many recover over time, carried by the people around them, and find their own resilience on the other side.</p>
 
-<p>For others, it doesn't stay in the past. Long after it's over, they're still living with deep emotional pain, fear, confusion, or post-traumatic stress. If that's where you are, you don't have to keep carrying it alone, and a therapist can help in ways that are hard to manage on your own.</p>
+<p>For others, it doesn't stay in the past. Long after it's over, they're still living with deep emotional pain, fear, confusion, or post-traumatic stress. If that's where you are, you don't have to keep carrying it alone. A therapist can help in ways that are hard to manage on your own, and I'd be glad to be that person for you.</p>
 
 <h2>When trauma doesn't fade on its own</h2>
-<p>Trauma doesn't follow a schedule, and an event doesn't have to be "big enough" to count. What matters is what you're living with now. For some people that looks like:</p>
-<ul>
-  <li>Avoiding places, sights, sounds, or situations because they bring it all back</li>
-  <li>Nightmares, flashbacks, or thoughts that show up when you don't want them</li>
-  <li>Always being on guard, quick to anger, or unable to sleep</li>
-  <li>Losing interest in things you used to love, or feeling numb</li>
-  <li>Gaps in your memory, or habits that changed after it happened and never changed back</li>
-</ul>
-<p>If you're recognizing yourself in that list, naming what's happening is a good place to start, and it often makes things feel more workable.</p>
+<p>I work with adults, especially women, who are healing from abuse and other trauma. Trauma doesn't follow a schedule, and an event doesn't have to be "big enough" to count. What matters is what you're living with now.</p>
+<p>Maybe you avoid places, sights, sounds, or situations because they bring it all back. Maybe it's nightmares or flashbacks, or thoughts that show up when you don't want them. You might always feel on guard, quick to anger, or unable to sleep. Some people lose interest in things they used to love, or feel numb. Others notice gaps in their memory, or habits that changed after it happened and never changed back.</p>
+<p>If you're recognizing yourself here, naming what's happening is a good place to start, and it often makes things feel more workable.</p>
+
+<h3>Adult survivors of childhood abuse</h3>
+<p>A lot of my work is with adults carrying something that started long before they had words for it. The event may be decades old, but what you concluded from it about safety, about trust, about whether it was somehow your fault, can still shape your days. Those beliefs can change, and working on them is often some of the most meaningful work we'll do together.</p>
 
 <h2>Healing from trauma doesn't require reliving it</h2>
-<p>This is the fear that keeps a lot of people from ever reaching out, so I want to answer it directly. You don't have to retell your story endlessly to be free of it. The work tends to unfold in three movements.</p>
+<p>This is the fear that keeps a lot of people from ever reaching out, so I want to answer it directly. You don't have to retell your story endlessly to put it down. The work tends to unfold in three movements.</p>
 
 <h3>Safety first</h3>
 <p>Before anything else, we build trust and give you tools to stay grounded. You set the pace, nothing happens before you're ready, and "not yet" is always an okay answer.</p>
@@ -314,21 +436,30 @@
 <h2>The tools I use</h2>
 <p>I'm trained in Accelerated Resolution Therapy (ART), EMDR, and the Reconsolidation of Traumatic Memories, and I enjoy using these tools to resolve traumatic memories for my clients.</p>
 <p><a href="/services/emdr">EMDR</a> (Eye Movement Desensitization and Reprocessing) uses bilateral stimulation to help the brain reprocess memories that got stuck, so they can finally feel like the past. ART is a structured protocol, usually done in an extended session, for working through a specific traumatic memory. RTM, the Reconsolidation of Traumatic Memories, is another structured protocol that works toward the same goal by a different route.</p>
-<p>Which one fits depends on you and what you're carrying, and we decide that together. We don't begin any of them until the groundwork is in place.</p>
+<p>Which one fits depends on you and what you're carrying, and we'll decide that together. We don't begin any of them until the groundwork is in place.</p>
 
 <h2>The work around the work</h2>
 <p>Resolving a memory is one part of trauma recovery, and usually not all of it. I also make room for the things trauma tends to hurt along the way: letting people close, boundaries, what a healthy relationship is supposed to feel like, patterns of revictimization, codependency, self-esteem, and the family-of-origin pieces underneath. That part is slower than a protocol session, and we take the time it needs.</p>
 <p>When words aren't the easiest way in, we can use <a href="/services/sand-tray">sand tray</a> inside your individual sessions.</p>
 
-<h2>Adult survivors of childhood abuse</h2>
-<p>A lot of my work is with adults carrying something that started long before they had words for it. The event may be decades old, but what you concluded from it about safety, about trust, about whether it was somehow your fault, can still shape your days. Those beliefs can change, and working on them is often some of the most meaningful work we'll do together.</p>
+<h2>A little about me</h2>
+<p>I'm Cristina, and I'm the owner of Flourish. I'm passionate about walking alongside trauma survivors, and my work has included serving survivors of human trafficking and leading recovery groups for women across the Orlando area. <a href="/about">Read more about me</a>.</p>
+<p>You have the right to find the right therapist for you, and the first step is smaller than it looks. Take your time, and be patient with yourself on the way in.</p>
 
 <div class="pullout">
   <p><b>You set the pace, from the first session to the last.</b> Nothing in this work happens before you're ready for it.</p>
 </div>
 
-<h2>Start when you're ready</h2>
-<p>You have the right to find the right therapist for you, and the first step is smaller than it looks. You can <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">request an appointment</a> through the client portal whenever you're ready.</p>
+<div class="glance reveal">
+  <h2>The practical details</h2>
+  <ul>
+    <li><b>Who I see:</b> Adults, especially women, healing from abuse and other trauma.</li>
+    <li><b>Where:</b> In person at 2431 Aloma Ave., Suite 111, Winter Park, near Orlando, or by secure telehealth anywhere in Florida.</li>
+    <li><b>Who you'll see:</b> Cristina Ally, Licensed Mental Health Counselor (LMHC) and National Certified Counselor (NCC), trained in Accelerated Resolution Therapy (ART), EMDR, and the Reconsolidation of Traumatic Memories.</li>
+    <li><b>Fees:</b> $185 per 50-minute session, self-pay, with a superbill on request for out-of-network reimbursement. HSA and FSA cards are welcome.</li>
+    <li><b>How to start:</b> A 10-minute phone consultation. You can request one through the <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">client portal</a>.</li>
+  </ul>
+</div>
 
 <p class="related-reading">Related reading: <a href="/post-how-to-begin-healing-after-personal-trauma">How to Begin Healing After Personal Trauma</a> &middot; <a href="/post-do-you-have-c-ptsd">Do You Have C-PTSD?</a> &middot; <a href="/post-when-to-worry-recognizing-signs-of-trauma-in-your-loved-ones">Recognizing Signs of Trauma in Your Loved Ones</a></p>
 
@@ -341,7 +472,7 @@
     <div class="reveal">
       <span class="eyebrow muted">Where We Meet</span>
       <h2 class="t-section mt-s">Winter Park, Orlando, or anywhere in Florida.</h2>
-      <p class="lead mt-m">Trauma sessions are available in person at the Winter Park office, 2431 Aloma Ave., Suite 111, a short drive from Orlando, Maitland, Baldwin Park, Oviedo, and Casselberry. They're also available by secure, private telehealth to clients anywhere in Florida.</p>
+      <p class="lead mt-m">You can see me in person at the Winter Park office, 2431 Aloma Ave., Suite 111, a short drive from Orlando, Maitland, Baldwin Park, Oviedo, and Casselberry. If coming in feels like too much right now, we can meet by secure, private telehealth from anywhere in Florida.</p>
       <p class="note mt-s"><b>All sessions are self-pay.</b> A superbill can be provided on request for possible out-of-network reimbursement. See <a href="/rates" style="color:var(--espresso)">rates &amp; insurance</a> for current fees, or read our <a href="/faq" style="color:var(--espresso)">FAQ</a>.</p>
     </div>
     <div class="reveal">
