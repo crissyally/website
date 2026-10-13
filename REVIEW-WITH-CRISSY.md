@@ -73,7 +73,7 @@ This part matters most: her website publishes automatically whenever `main` chan
 plan has a small monthly publish limit.
 
 - Save only on this branch, `drafts/specialty-pages`. **Never merge into `main`, never push to `main`,
-  and never run anything in `.deploy/`.**
+  never open a pull request, and never run anything in `.deploy/`.**
 - End every save message with `[skip ci]`, so the host doesn't build or spend a publish. For example:
   `git commit -am "Crissy's review: EMDR page [skip ci]"` then `git push origin drafts/specialty-pages`.
 - Save after each page, so nothing is lost if she stops partway.
