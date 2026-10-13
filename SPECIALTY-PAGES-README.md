@@ -1,5 +1,8 @@
 # Draft specialty pages (for Crissy and her assistant)
 
+> **Reviewing with Crissy? Use `REVIEW-WITH-CRISSY.md`.** Do not publish from this branch. Kevin and Mo
+> check her reviewed pages against the publishing rules and publish them with her afterwards.
+
 **Status: drafts only. Nothing here is live.** This is a separate branch called
 `drafts/specialty-pages`. The live site only changes when these pages are merged into `main` and
 published with `.deploy/deploy.sh`, and that happens only when Crissy is happy with them.
@@ -47,7 +50,7 @@ isn't true or doesn't sound like you.
 1. Read each page and change anything that doesn't sound like you. Your words beat ours every time.
 2. Answer the questions in `drafts-notes/PRE-PUBLISH-QUESTIONS.md`, section A. A few are about how you
    practice (sand tray, groups, the Christian counseling page), so only you can answer them.
-3. When you're happy, ask your assistant to publish them.
+3. When you're happy, tell Kevin. He and Mo check everything and publish it with you.
 
 ## For the assistant helping her
 
@@ -77,6 +80,7 @@ These drafts were built on 2026-09-11, before later site changes. Before publish
    to `_redirects` and `sitemap.xml`, then delete `drafts-notes/` and this README before publishing.
 7. **Preview:** the pages use root paths (`/assets/...`), so double-clicking a file shows it unstyled. Run
    `python3 -m http.server 8000` in this folder and open `http://localhost:8000/services/emdr.html`.
-8. **Publish:** merge this branch into `main` (`git checkout main && git merge drafts/specialty-pages`), check
-   `.deploy/budget.sh`, then `.deploy/deploy.sh "Add specialty pages"`. Pages left out (groups or Christian
-   counseling) should be removed from `services/`, `services.html`, `_redirects` and `sitemap.xml` first.
+8. **Publish (Kevin and Mo only, after Crissy's review and the publishing checks):** merge this branch into
+   `main`, check `.deploy/budget.sh`, then `.deploy/deploy.sh "Add specialty pages"`. Pages left out (groups or
+   Christian counseling) should be removed from `services/`, `services.html`, `_redirects` and `sitemap.xml`
+   first. Crissy's assistant does not run this step.
