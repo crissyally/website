@@ -44,94 +44,188 @@
 <meta name="twitter:image" content="https://flourish-counseling.co/assets/photos/welcome-calm.jpg">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Service",
+   "@id": "https://flourish-counseling.co/services/recovery-groups#service",
+   "name": "Therapist-Led Recovery Groups for Women",
+   "serviceType": "Group psychotherapy",
+   "category": [
+    "Group psychotherapy",
+    "Recovery groups for women"
+   ],
+   "description": "Therapist-led recovery groups for adult women in Winter Park and Orlando, Florida, including closed recovery groups for survivors of sexual abuse. Groups form periodically and interest can be registered at any time.",
+   "url": "https://flourish-counseling.co/services/recovery-groups",
+   "audience": {
+    "@type": "PeopleAudience",
+    "suggestedGender": "female",
+    "audienceType": "Adult women looking for support and connection in a small, closed, therapist-led group"
+   },
+   "provider": {
+    "@id": "https://flourish-counseling.co/#practice"
+   },
+   "areaServed": [
     {
-      "@type": "Service",
-      "@id": "https://flourish-counseling.co/services/recovery-groups#service",
-      "name": "Therapist-Led Recovery Groups for Women",
-      "serviceType": "Group psychotherapy",
-      "url": "https://flourish-counseling.co/services/recovery-groups",
-      "description": "Therapist-led recovery groups for adult women in Winter Park and Orlando, Florida, including closed recovery groups for survivors of sexual abuse. Groups form periodically and interest can be registered at any time.",
-      "provider": {
-        "@type": "ProfessionalService",
-        "@id": "https://flourish-counseling.co/#practice",
-        "name": "Flourish Counseling Co.",
-        "url": "https://flourish-counseling.co/",
-        "telephone": "+1-407-630-7529",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "2431 Aloma Ave., Suite 111",
-          "addressLocality": "Winter Park",
-          "addressRegion": "FL",
-          "postalCode": "32792",
-          "addressCountry": "US"
-        }
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Winter Park"
-        },
-        {
-          "@type": "City",
-          "name": "Orlando"
-        },
-        {
-          "@type": "State",
-          "name": "Florida"
-        }
-      ],
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "Adults"
-      },
-      "category": "Mental health counseling",
-      "availableChannel": [
-        {
-          "@type": "ServiceChannel",
-          "name": "In-person sessions",
-          "serviceLocation": {
-            "@type": "Place",
-            "name": "Flourish Counseling Co.",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "2431 Aloma Ave., Suite 111",
-              "addressLocality": "Winter Park",
-              "addressRegion": "FL",
-              "postalCode": "32792",
-              "addressCountry": "US"
-            }
-          },
-          "servicePhone": "+1-407-630-7529",
-          "serviceUrl": "https://flourish-counseling.clientsecure.me/"
-        }
-      ]
+     "@type": "City",
+     "name": "Winter Park"
     },
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://flourish-counseling.co/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://flourish-counseling.co/services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Recovery Groups",
-          "item": "https://flourish-counseling.co/services/recovery-groups"
-        }
-      ]
+     "@type": "City",
+     "name": "Orlando"
     }
-  ]
+   ],
+   "availableChannel": [
+    {
+     "@type": "ServiceChannel",
+     "name": "In person",
+     "serviceLocation": {
+      "@type": "Place",
+      "name": "Flourish Counseling Co.",
+      "address": {
+       "@type": "PostalAddress",
+       "streetAddress": "2431 Aloma Ave., Suite 111",
+       "addressLocality": "Winter Park",
+       "addressRegion": "FL",
+       "postalCode": "32792",
+       "addressCountry": "US"
+      }
+     },
+     "servicePhone": "+1-407-630-7529"
+    }
+   ],
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "Recovery group",
+     "description": "Groups form periodically. The group fee is shared when a group opens. Joining the interest list doesn't commit you to anything."
+    },
+    {
+     "@type": "Offer",
+     "name": "50-minute individual therapy session",
+     "price": "185",
+     "priceCurrency": "USD",
+     "eligibleQuantity": {
+      "@type": "QuantitativeValue",
+      "value": 50,
+      "unitCode": "MIN"
+     },
+     "description": "Individual sessions are $185 per 50-minute session, self-pay. A superbill is available on request. HSA and FSA cards are accepted."
+    },
+    {
+     "@type": "Offer",
+     "name": "10-minute phone consultation",
+     "url": "https://flourish-counseling.clientsecure.me/",
+     "description": "The first step: a 10-minute phone consultation to see if we're a good fit, requested through the client portal."
+    }
+   ],
+   "potentialAction": {
+    "@type": "ReserveAction",
+    "name": "Register interest with a 10-minute phone consultation",
+    "target": "https://flourish-counseling.clientsecure.me/"
+   }
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://flourish-counseling.co/#practice",
+   "name": "Flourish Counseling Co.",
+   "url": "https://flourish-counseling.co/",
+   "telephone": "+1-407-630-7529",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2431 Aloma Ave., Suite 111",
+    "addressLocality": "Winter Park",
+    "addressRegion": "FL",
+    "postalCode": "32792",
+    "addressCountry": "US"
+   },
+   "areaServed": [
+    {
+     "@type": "City",
+     "name": "Winter Park"
+    },
+    {
+     "@type": "City",
+     "name": "Orlando"
+    },
+    {
+     "@type": "State",
+     "name": "Florida",
+     "description": "Secure telehealth for clients anywhere in Florida"
+    }
+   ],
+   "paymentAccepted": "Self-pay; HSA and FSA cards accepted; superbill on request",
+   "currenciesAccepted": "USD",
+   "founder": {
+    "@id": "https://flourish-counseling.co/about#cristina"
+   },
+   "employee": {
+    "@id": "https://flourish-counseling.co/about#cristina"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://flourish-counseling.co/about#cristina",
+   "name": "Cristina Ally",
+   "honorificSuffix": "LMHC, NCC",
+   "jobTitle": "Licensed Mental Health Counselor",
+   "url": "https://flourish-counseling.co/about",
+   "description": "Licensed Mental Health Counselor and National Certified Counselor, trained in EMDR, Accelerated Resolution Therapy (ART), and the Reconsolidation of Traumatic Memories. Owner of Flourish Counseling Co.",
+   "worksFor": {
+    "@id": "https://flourish-counseling.co/#practice"
+   },
+   "knowsAbout": [
+    "Trauma therapy",
+    "EMDR",
+    "Accelerated Resolution Therapy",
+    "Reconsolidation of Traumatic Memories",
+    "Sand tray therapy"
+   ],
+   "hasCredential": [
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "license",
+     "name": "Licensed Mental Health Counselor (LMHC), Florida"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "certification",
+     "name": "National Certified Counselor (NCC)"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "EMDR trained"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "Accelerated Resolution Therapy (ART) trained"
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://flourish-counseling.co/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Services",
+     "item": "https://flourish-counseling.co/services"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Recovery Groups",
+     "item": "https://flourish-counseling.co/services/recovery-groups"
+    }
+   ]
+  }
+ ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -186,6 +280,7 @@
 {
  "@context": "https://schema.org",
  "@type": "FAQPage",
+ "@id": "https://flourish-counseling.co/services/recovery-groups#faq",
  "mainEntity": [
   {
    "@type": "Question",
@@ -193,6 +288,14 @@
    "acceptedAnswer": {
     "@type": "Answer",
     "text": "Adult women who want to heal alongside others who understand. The groups I lead are small and closed, so the same faces gather each week and trust has time to grow."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is a group running right now?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Groups form from time to time, so there may or may not be one forming right now. Once a closed group has started, it can't add new members. Joining the interest list is how you hear about the next one first, and it doesn't commit you to anything."
    }
   },
   {
@@ -262,23 +365,17 @@
     <span class="eyebrow reveal">Group &amp; Recovery Groups</span>
     <h1 class="t-title reveal">Some of this work feels lighter with other people in the room.</h1>
     <p class="reveal">Therapist-led recovery groups for adult women in Winter Park and the greater Orlando area. Groups form periodically, and you can register your interest at any time.</p>
+    <div class="cta-row reveal mt-m" style="display:flex;gap:14px;flex-wrap:wrap">
+      <a class="btn btn-solid spwidget-button" href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener"
+         data-spwidget-scope-id="4885eedf-a778-413e-b03f-e95c99540f27" data-spwidget-scope-uri="flourish-counseling"
+         data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b" data-spwidget-type="OAR" data-spwidget-scope-global data-spwidget-autobind>Register your interest</a>
+    </div>
   </div>
 </section>
 
 <section class="section cream">
   <div class="wrap">
     <div class="svc reveal">
-
-<div class="glance reveal">
-  <h2>At a glance</h2>
-  <ul>
-    <li><b>Who it's for:</b> Women looking for support and connection in a small, closed group</li>
-    <li><b>Where:</b> Winter Park, near Orlando</li>
-    <li><b>With:</b> Cristina Ally, LMHC, NCC, who has led recovery groups for women across the Orlando area</li>
-    <li><b>Fees:</b> Group fees are shared when a group opens. Individual sessions are $185 per 50 minutes, self-pay, with a superbill on request; HSA and FSA cards welcome.</li>
-    <li><b>First step:</b> A 10-minute phone consultation, requested through the <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">client portal</a>.</li>
-  </ul>
-</div>
 
 <!-- CONFIRM (PRE-PUBLISH A2, B4, B7): no group is running as of 2026-10-11. This page describes the
      groups Cristina offers and has led, per her About page ("leading recovery groups for women across
@@ -287,32 +384,19 @@
      leads them herself (the intern can't be described as a therapist), and (3) the interest-list
      framing is how she wants it. -->
 
-<div class="pullout">
-  <p><b>How groups work at Flourish.</b> Groups form from time to time, and once a closed group has started, it can't add new members. There may or may not be one forming right now. Joining the interest list is how you hear about the next one first, and it doesn't commit you to anything.</p>
-</div>
+<p class="lead-in">Are you carrying something you've never said out loud? Do you wish you had a non-judgmental ear from someone who actually knows what this is like, because they've been there too? Do you wish you felt less alone in it? If so, a small group of women walking the same road might be a gentle place to start.</p>
 
-<h2>Why a group</h2>
-<p>Are you carrying something you've never said out loud? Do you wish you had a non-judgmental ear from someone who actually knows what this is like, because they've been there too? Do you wish you felt less alone in it?</p>
+<h2>Who the groups are for</h2>
+<p>The groups I offer are closed recovery groups for adult women, including women recovering from sexual abuse.</p>
+<p>A group might be right for you if you keep circling the same problem alone, or you wish you could trust someone with what you're carrying. Maybe you want to stop feeling like the only one, and you'd like, for once, to feel understood. Maybe you're interested in therapy and want something that feels lower-pressure than sitting one to one. Or maybe you're looking for skilled help, and also for people.</p>
+
+<h2>How a group works</h2>
 <p>In group therapy, sessions happen together with a few other people and a therapist guiding the work. Members share their experience, support each other, and are supported by people who understand it from the inside. Trauma and loss tend to leave people feeling isolated, and a group can be a gentle answer to that.</p>
-
-<h2>A group may be right for you if</h2>
-<ul>
-  <li>You keep circling the same problem alone</li>
-  <li>You wish you could trust someone with what you're carrying</li>
-  <li>You want to stop feeling like the only one</li>
-  <li>You're interested in therapy and want something that feels lower-pressure than sitting one to one</li>
-  <li>You wish you felt understood</li>
-  <li>You're looking for skilled help, and also for people</li>
-</ul>
-<p>Groups at Flourish are led by a licensed therapist, and they're structured work with a clear focus.</p>
+<p>Groups at Flourish are led by a licensed therapist, and they're structured work with a clear focus. Closed means the group starts and finishes together with the same members throughout, which makes it possible to say hard things in a later week that nobody could have said in the first one.</p>
 
 <h2>What makes a group work</h2>
 <p>Group work helps you find connection with other people and their experience. In guided sessions you learn more about yourself and what helps you feel better, while being supported by women who understand what you're going through because they're going through it too.</p>
 <p>Something else can happen that's harder to put into words. Watching another woman say the thing you've never said out loud, and watching the room receive it with care, can be healing in its own way.</p>
-
-<h2>Recovery groups for women</h2>
-<p>The groups I offer are closed recovery groups for adult women, including women recovering from sexual abuse. Closed means the group starts and finishes together with the same members throughout, which makes it possible to say hard things in a later week that nobody could have said in the first one.</p>
-<p>I'm passionate about walking alongside trauma survivors and leading groups, and I've led recovery groups for women across the Orlando area. My work has also included serving survivors of human trafficking.</p>
 <p>Recovery after sexual abuse has its own shape, and much of it is about what came afterward: what you concluded about yourself, what you learned to tolerate, how close you let people get, what a boundary is, and what safety is supposed to feel like. Doing that alongside other women who already understand the parts you'd otherwise have to explain can take some of the weight off.</p>
 
 <h2>Who a group isn't for, at least not yet</h2>
@@ -320,8 +404,25 @@
 <p>Group work and individual sessions can go side by side and support each other. The best way to find out what's right for you is to talk it through, which is why joining starts with a conversation.</p>
 
 <h2>How to register your interest</h2>
+<div class="pullout">
+  <p><b>How groups work at Flourish.</b> Groups form from time to time, and once a closed group has started, it can't add new members. There may or may not be one forming right now. Joining the interest list is how you hear about the next one first, and it doesn't commit you to anything.</p>
+</div>
 <p>You can <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">request an appointment</a> through the client portal and say that you're interested in a group. That puts you on the interest list for the next one, and it starts a conversation about whether group work fits what you're carrying right now. If it doesn't, I'll tell you honestly and we'll talk about what might.</p>
-<p>All sessions at Flourish are self-pay, and the fee for a group is confirmed when the group forms. See <a href="/rates">rates &amp; insurance</a> for how we handle payment and superbills.</p>
+
+<h2>A little about me</h2>
+<p>I'm Cristina, and I'm the owner of Flourish. I'm passionate about walking alongside trauma survivors and leading groups, and I've led recovery groups for women across the Orlando area. My work has also included serving survivors of human trafficking. <a href="/about">Read more about me</a>.</p>
+<p>If you're curious about a group, even a little, I'd love to talk it through with you.</p>
+
+<div class="glance reveal">
+  <h2>The practical details</h2>
+  <ul>
+    <li><b>Who I see:</b> Adult women looking for support and connection in a small, closed group.</li>
+    <li><b>Where:</b> In person at 2431 Aloma Ave., Suite 111, Winter Park, near Orlando.</li>
+    <li><b>Who you'll see:</b> Cristina Ally, Licensed Mental Health Counselor (LMHC) and National Certified Counselor (NCC), who has led recovery groups for women across the Orlando area.</li>
+    <li><b>Fees:</b> All sessions are self-pay, and the group fee is confirmed when a group forms. Individual sessions are $185 per 50 minutes, with a superbill on request; HSA and FSA cards welcome. See <a href="/rates">rates &amp; insurance</a>.</li>
+    <li><b>How to start:</b> A 10-minute phone consultation, requested through the <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">client portal</a>.</li>
+  </ul>
+</div>
 
     </div>
   </div>
@@ -332,7 +433,7 @@
     <div class="reveal">
       <span class="eyebrow muted">Where We Meet</span>
       <h2 class="t-section mt-s">Groups meet in person in Winter Park.</h2>
-      <p class="lead mt-m">Groups meet at the Winter Park office, 2431 Aloma Ave., Suite 111, a short drive from Orlando, Maitland, Baldwin Park, Oviedo, and Casselberry. Individual counseling is also available by secure telehealth to clients anywhere in Florida.</p>
+      <p class="lead mt-m">Groups meet at the Winter Park office, 2431 Aloma Ave., Suite 111, a short drive from Orlando, Maitland, Baldwin Park, Oviedo, and Casselberry. If you'd like individual counseling alongside a group, or before one, I also see clients by secure telehealth anywhere in Florida.</p>
       <p class="note mt-s"><b>All sessions are self-pay.</b> A superbill can be provided on request for possible out-of-network reimbursement. See <a href="/rates" style="color:var(--espresso)">rates &amp; insurance</a> for current fees, or read our <a href="/faq" style="color:var(--espresso)">FAQ</a>.</p>
     </div>
     <div class="reveal">
@@ -364,6 +465,7 @@
     <div class="shead reveal center"><span class="eyebrow">Questions</span><h2 class="t-section">Common questions about recovery groups</h2></div>
     <div class="faq-list reveal">
     <details><summary>Who are the recovery groups for?</summary><p>Adult women who want to heal alongside others who understand. The groups I lead are small and closed, so the same faces gather each week and trust has time to grow.</p></details>
+    <details><summary>Is a group running right now?</summary><p>Groups form from time to time, so there may or may not be one forming right now. Once a closed group has started, it can't add new members. Joining the interest list is how you hear about the next one first, and it doesn't commit you to anything.</p></details>
     <details><summary>How do I join a group?</summary><p>Let me know you're interested through the <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">client portal</a>, and I'll reach out when the next group is forming. We'll also have a short conversation first about whether a group fits where you are right now.</p></details>
     <details><summary>What does a group cost?</summary><p>I share the group fee when each group opens. Individual sessions are $185 for 50 minutes, self-pay, and I can provide a superbill on request.</p></details>
     </div>
