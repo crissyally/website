@@ -22,94 +22,182 @@
 <meta name="twitter:image" content="https://flourish-counseling.co/assets/photos/cozy-reading.jpg">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Service",
+   "@id": "https://flourish-counseling.co/services/sand-tray#service",
+   "name": "Sand Tray Therapy for Adults",
+   "serviceType": "Sand tray therapy",
+   "category": [
+    "Sand tray therapy",
+    "Expressive arts therapy"
+   ],
+   "description": "Sand tray therapy for adults in Winter Park and Orlando, Florida: an expressive, hands-on modality used inside individual counseling to work with material that is difficult to put into words.",
+   "url": "https://flourish-counseling.co/services/sand-tray",
+   "audience": {
+    "@type": "PeopleAudience",
+    "audienceType": "Adults who find some things hard to put into words; no art experience needed"
+   },
+   "provider": {
+    "@id": "https://flourish-counseling.co/#practice"
+   },
+   "areaServed": [
     {
-      "@type": "Service",
-      "@id": "https://flourish-counseling.co/services/sand-tray#service",
-      "name": "Sand Tray Therapy for Adults",
-      "serviceType": "Sand tray therapy",
-      "url": "https://flourish-counseling.co/services/sand-tray",
-      "description": "Sand tray therapy for adults in Winter Park and Orlando, Florida: an expressive, hands-on modality used inside individual counseling to work with material that is difficult to put into words.",
-      "provider": {
-        "@type": "ProfessionalService",
-        "@id": "https://flourish-counseling.co/#practice",
-        "name": "Flourish Counseling Co.",
-        "url": "https://flourish-counseling.co/",
-        "telephone": "+1-407-630-7529",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "2431 Aloma Ave., Suite 111",
-          "addressLocality": "Winter Park",
-          "addressRegion": "FL",
-          "postalCode": "32792",
-          "addressCountry": "US"
-        }
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Winter Park"
-        },
-        {
-          "@type": "City",
-          "name": "Orlando"
-        },
-        {
-          "@type": "State",
-          "name": "Florida"
-        }
-      ],
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "Adults"
-      },
-      "category": "Mental health counseling",
-      "availableChannel": [
-        {
-          "@type": "ServiceChannel",
-          "name": "In-person sessions",
-          "serviceLocation": {
-            "@type": "Place",
-            "name": "Flourish Counseling Co.",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "2431 Aloma Ave., Suite 111",
-              "addressLocality": "Winter Park",
-              "addressRegion": "FL",
-              "postalCode": "32792",
-              "addressCountry": "US"
-            }
-          },
-          "servicePhone": "+1-407-630-7529",
-          "serviceUrl": "https://flourish-counseling.clientsecure.me/"
-        }
-      ]
+     "@type": "City",
+     "name": "Winter Park"
     },
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://flourish-counseling.co/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://flourish-counseling.co/services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Sand Tray",
-          "item": "https://flourish-counseling.co/services/sand-tray"
-        }
-      ]
+     "@type": "City",
+     "name": "Orlando"
     }
-  ]
+   ],
+   "availableChannel": [
+    {
+     "@type": "ServiceChannel",
+     "name": "In person",
+     "serviceLocation": {
+      "@type": "Place",
+      "name": "Flourish Counseling Co.",
+      "address": {
+       "@type": "PostalAddress",
+       "streetAddress": "2431 Aloma Ave., Suite 111",
+       "addressLocality": "Winter Park",
+       "addressRegion": "FL",
+       "postalCode": "32792",
+       "addressCountry": "US"
+      }
+     },
+     "servicePhone": "+1-407-630-7529"
+    }
+   ],
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "50-minute therapy session",
+     "price": "185",
+     "priceCurrency": "USD",
+     "eligibleQuantity": {
+      "@type": "QuantitativeValue",
+      "value": 50,
+      "unitCode": "MIN"
+     },
+     "description": "Sand tray happens inside a regular individual session: $185 per 50-minute session, self-pay. A superbill is available on request for possible out-of-network reimbursement. HSA and FSA cards are accepted."
+    },
+    {
+     "@type": "Offer",
+     "name": "10-minute phone consultation",
+     "url": "https://flourish-counseling.clientsecure.me/",
+     "description": "The first step: a 10-minute phone consultation to see if we're a good fit, requested through the client portal."
+    }
+   ],
+   "potentialAction": {
+    "@type": "ReserveAction",
+    "name": "Request a 10-minute phone consultation",
+    "target": "https://flourish-counseling.clientsecure.me/"
+   }
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://flourish-counseling.co/#practice",
+   "name": "Flourish Counseling Co.",
+   "url": "https://flourish-counseling.co/",
+   "telephone": "+1-407-630-7529",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2431 Aloma Ave., Suite 111",
+    "addressLocality": "Winter Park",
+    "addressRegion": "FL",
+    "postalCode": "32792",
+    "addressCountry": "US"
+   },
+   "areaServed": [
+    {
+     "@type": "City",
+     "name": "Winter Park"
+    },
+    {
+     "@type": "City",
+     "name": "Orlando"
+    },
+    {
+     "@type": "State",
+     "name": "Florida",
+     "description": "Secure telehealth for clients anywhere in Florida"
+    }
+   ],
+   "paymentAccepted": "Self-pay; HSA and FSA cards accepted; superbill on request",
+   "currenciesAccepted": "USD",
+   "founder": {
+    "@id": "https://flourish-counseling.co/about#cristina"
+   },
+   "employee": {
+    "@id": "https://flourish-counseling.co/about#cristina"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://flourish-counseling.co/about#cristina",
+   "name": "Cristina Ally",
+   "honorificSuffix": "LMHC, NCC",
+   "jobTitle": "Licensed Mental Health Counselor",
+   "url": "https://flourish-counseling.co/about",
+   "description": "Licensed Mental Health Counselor and National Certified Counselor, trained in EMDR, Accelerated Resolution Therapy (ART), and the Reconsolidation of Traumatic Memories. Owner of Flourish Counseling Co.",
+   "worksFor": {
+    "@id": "https://flourish-counseling.co/#practice"
+   },
+   "knowsAbout": [
+    "Trauma therapy",
+    "EMDR",
+    "Accelerated Resolution Therapy",
+    "Reconsolidation of Traumatic Memories",
+    "Sand tray therapy"
+   ],
+   "hasCredential": [
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "license",
+     "name": "Licensed Mental Health Counselor (LMHC), Florida"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "certification",
+     "name": "National Certified Counselor (NCC)"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "EMDR trained"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "Accelerated Resolution Therapy (ART) trained"
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://flourish-counseling.co/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Services",
+     "item": "https://flourish-counseling.co/services"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Sand Tray",
+     "item": "https://flourish-counseling.co/services/sand-tray"
+    }
+   ]
+  }
+ ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -164,6 +252,7 @@
 {
  "@context": "https://schema.org",
  "@type": "FAQPage",
+ "@id": "https://flourish-counseling.co/services/sand-tray#faq",
  "mainEntity": [
   {
    "@type": "Question",
@@ -255,7 +344,12 @@
     <p class="crumb reveal"><a href="/services">Services</a><span class="sep">/</span>Sand Tray</p>
     <span class="eyebrow reveal">Sand Tray</span>
     <h1 class="t-title reveal">Sand tray, for what words keep missing.</h1>
-    <p class="reveal">An expressive, hands-on modality for adults, offered in person at the Winter Park office and serving the greater Orlando area.</p>
+    <p class="reveal">A gentle, hands-on way in for adults, offered in person at the Winter Park office and serving the greater Orlando area.</p>
+    <div class="cta-row reveal mt-m" style="display:flex;gap:14px;flex-wrap:wrap">
+      <a class="btn btn-solid spwidget-button" href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener"
+         data-spwidget-scope-id="4885eedf-a778-413e-b03f-e95c99540f27" data-spwidget-scope-uri="flourish-counseling"
+         data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b" data-spwidget-type="OAR" data-spwidget-scope-global data-spwidget-autobind>Request an appointment</a>
+    </div>
   </div>
 </section>
 
@@ -263,38 +357,24 @@
   <div class="wrap">
     <div class="svc reveal">
 
-<div class="glance reveal">
-  <h2>At a glance</h2>
-  <ul>
-    <li><b>Who it's for:</b> Adults who find some things hard to put into words; no art experience needed</li>
-    <li><b>Where:</b> In person only, at our Winter Park office on Aloma Avenue, because it uses a physical tray and miniatures</li>
-    <li><b>With:</b> Cristina Ally, LMHC, NCC, who uses expressive arts alongside EMDR and Accelerated Resolution Therapy (ART)</li>
-    <li><b>Fees:</b> A regular individual session: $185 per 50 minutes, self-pay. Superbill on request; HSA and FSA cards welcome.</li>
-    <li><b>First step:</b> A 10-minute phone consultation. You can request one through the <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">client portal</a>.</li>
-  </ul>
-</div>
-
 <!-- CONFIRM (PRE-PUBLISH A4): sand tray is adults only, inside individual sessions, in person only;
      Cristina doesn't interpret the scene; nothing built is kept, photographed, or shown; the tray
      is never required. These describe her room, so each needs her yes before publishing. -->
 
-<p class="lead-in">Some things are hard to explain. You can describe what happened clearly, in order, with all the right words, and still walk out carrying exactly what you walked in with. Sand tray is another way in.</p>
+<p class="lead-in">Some things are hard to explain. You can describe what happened clearly, in order, with all the right words, and still walk out carrying exactly what you walked in with. If that's been your experience, I understand, and sand tray might be another way in.</p>
 
-<h2>What sand tray is</h2>
-<p>Sand tray is a gentle, hands-on form of expressive therapy. There's a shallow tray of sand and a shelf of small objects: figures, animals, buildings, bridges, trees, ordinary things and strange ones. You choose what goes in the tray and where it goes.</p>
-<p>What you build becomes something we look at together. Nothing is graded, nothing has to be pretty, and there's no correct arrangement. I stay alongside you without interpreting your scene for you, and what it means is yours to say.</p>
+<h2>Who tends to find it useful</h2>
+<p>I offer sand tray to <b>adults</b>, as part of individual counseling. It reaches the same things talking does, by a different route.</p>
+<p>It can help if you've told your story many times, clearly and calmly, and never felt it move. It can help if you go analytical under pressure and notice you're narrating your feelings instead of feeling them. Some people get more articulate under stress, until being articulate becomes its own kind of distance, and building a scene lets you skip the explanation and go straight to the thing itself.</p>
+<p>It's also a gentle way in for something that started before you had words for it, for a decision or relationship that won't resolve on paper, and for a loss that feels bigger than any sentence. And some people would simply rather build something than describe it.</p>
 
 <div class="pullout">
   <p><b>You don't need any experience with art or crafts.</b> If you can set an object down in sand, you can do this.</p>
 </div>
 
-<h2>Sand tray for adults</h2>
-<p>At Flourish, I offer sand tray to <b>adults</b>, as part of individual counseling. It reaches the same things talking does, by a different route.</p>
-<p>It can be especially helpful for people who get more articulate under stress, where being articulate quietly becomes its own kind of distance. Building a scene lets you skip the explanation and go straight to the thing itself.</p>
-
-<h2>Who tends to find it useful</h2>
-<p>Sand tray can help if you've told your story many times, clearly and calmly, and never felt it move. It can help if you go analytical under pressure and notice you're narrating your feelings instead of feeling them. It's also a gentle way in for something that started before you had words for it, for a decision or relationship that won't resolve on paper, and for a loss that feels bigger than any sentence. And some people would simply rather build something than describe it.</p>
-<p>It's fine to be curious and skeptical at the same time.</p>
+<h2>What sand tray is</h2>
+<p>Sand tray is a gentle, hands-on form of expressive therapy. There's a shallow tray of sand and a shelf of small objects: figures, animals, buildings, bridges, trees, ordinary things and strange ones. You choose what goes in the tray and where it goes.</p>
+<p>What you build becomes something we look at together. Nothing is graded, nothing has to be pretty, and there's no correct arrangement. I stay alongside you without interpreting your scene for you, and what it means is yours to say.</p>
 
 <h2>What a session looks like</h2>
 <p>A sand tray session is a regular individual session that happens to include the tray. We talk first, the way we would anyway, and when it seems useful, you build. Some people work quietly for a long stretch and some talk the whole way through. Both are fine.</p>
@@ -305,11 +385,20 @@
 <p>Trauma can damage the connection between an experience and the words for it, which is part of why retelling a story so often doesn't shift it. Some clients carry trauma from before they could put things into words, called preverbal trauma, and that's often when I reach for expressive arts.</p>
 <p>I use sand tray alongside the structured protocols in <a href="/services/trauma-recovery">trauma recovery</a>, including <a href="/services/emdr">EMDR</a>. I also use it in everyday <a href="/services/individual-therapy">individual therapy</a> when nothing traumatic is in view at all.</p>
 
-<h2>Expressive arts more broadly</h2>
-<p>Sand tray belongs to a wider family of expressive work, like drawing, painting, image, and metaphor. I'm passionate about using expressive arts in healing, because creativity reaches parts of experience that words have a hard time getting to. The making comes first, and the conversation afterward builds on it.</p>
+<h2>A little about me</h2>
+<p>I'm Cristina, and I'm the owner of Flourish. I'm passionate about using expressive arts in healing, because creativity reaches parts of experience that words have a hard time getting to. Sand tray belongs to a wider family of expressive work, like drawing, painting, image, and metaphor. In all of it, the making comes first, and the conversation afterward builds on it. <a href="/about">Read more about me</a>.</p>
+<p>It's fine to be curious and skeptical at the same time. Bring both, and we'll find out together whether the tray is a good way in for you.</p>
 
-<h2>Start when you're ready</h2>
-<p>If you've been explaining yourself perfectly and getting nowhere, this may be a different way in. You can <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">request an appointment</a> through the client portal and mention that you're interested in sand tray.</p>
+<div class="glance reveal">
+  <h2>The practical details</h2>
+  <ul>
+    <li><b>Who I see:</b> Adults who find some things hard to put into words. No art experience needed.</li>
+    <li><b>Where:</b> In person only, at 2431 Aloma Ave., Suite 111, Winter Park, because it uses a physical tray and miniatures.</li>
+    <li><b>Who you'll see:</b> Cristina Ally, Licensed Mental Health Counselor (LMHC) and National Certified Counselor (NCC), who uses expressive arts alongside EMDR and Accelerated Resolution Therapy (ART).</li>
+    <li><b>Fees:</b> A regular individual session: $185 per 50 minutes, self-pay. Superbill on request; HSA and FSA cards welcome.</li>
+    <li><b>How to start:</b> A 10-minute phone consultation. You can request one through the <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">client portal</a> and mention that you're interested in sand tray.</li>
+  </ul>
+</div>
 
     </div>
   </div>
@@ -320,7 +409,7 @@
     <div class="reveal">
       <span class="eyebrow muted">Where We Meet</span>
       <h2 class="t-section mt-s">In person in Winter Park, serving the Orlando area.</h2>
-      <p class="lead mt-m">Sand tray uses a physical tray and a shelf of miniatures, so it's offered in person at the Winter Park office, 2431 Aloma Ave., Suite 111, a short drive from Orlando, Maitland, Baldwin Park, Oviedo, and Casselberry. Talk-based individual sessions are still available by secure telehealth to clients anywhere in Florida.</p>
+      <p class="lead mt-m">Sand tray uses a physical tray and a shelf of miniatures, so we do it together in person at the Winter Park office, 2431 Aloma Ave., Suite 111, a short drive from Orlando, Maitland, Baldwin Park, Oviedo, and Casselberry. Talk-based individual sessions are still available by secure telehealth to clients anywhere in Florida.</p>
       <p class="note mt-s"><b>All sessions are self-pay.</b> A superbill can be provided on request for possible out-of-network reimbursement. See <a href="/rates" style="color:var(--espresso)">rates &amp; insurance</a> for current fees, or read our <a href="/faq" style="color:var(--espresso)">FAQ</a>.</p>
     </div>
     <div class="reveal">
