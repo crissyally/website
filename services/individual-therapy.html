@@ -22,103 +22,233 @@
 <meta name="twitter:image" content="https://flourish-counseling.co/assets/photos/welcome-calm.jpg">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Service",
+   "@id": "https://flourish-counseling.co/services/individual-therapy#service",
+   "name": "Individual Therapy for Adults",
+   "serviceType": "Individual psychotherapy",
+   "category": [
+    "Individual psychotherapy",
+    "Counseling for anxiety and depression"
+   ],
+   "description": "One-on-one counseling for adults in Winter Park and Orlando, Florida, for anxiety, depression, self-esteem, relationships, post-traumatic stress, and life transitions, with secure telehealth available statewide.",
+   "url": "https://flourish-counseling.co/services/individual-therapy",
+   "audience": {
+    "@type": "PeopleAudience",
+    "audienceType": "Adults, with a special focus on women navigating anxiety, relationships, and heavy seasons"
+   },
+   "provider": {
+    "@id": "https://flourish-counseling.co/#practice"
+   },
+   "areaServed": [
     {
-      "@type": "Service",
-      "@id": "https://flourish-counseling.co/services/individual-therapy#service",
-      "name": "Individual Therapy for Adults",
-      "serviceType": "Individual psychotherapy",
-      "url": "https://flourish-counseling.co/services/individual-therapy",
-      "description": "One-on-one counseling for adults in Winter Park and Orlando, Florida, for anxiety, depression, self-esteem, relationships, post-traumatic stress, and life transitions, with secure telehealth available statewide.",
-      "provider": {
-        "@type": "ProfessionalService",
-        "@id": "https://flourish-counseling.co/#practice",
-        "name": "Flourish Counseling Co.",
-        "url": "https://flourish-counseling.co/",
-        "telephone": "+1-407-630-7529",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "2431 Aloma Ave., Suite 111",
-          "addressLocality": "Winter Park",
-          "addressRegion": "FL",
-          "postalCode": "32792",
-          "addressCountry": "US"
-        }
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Winter Park"
-        },
-        {
-          "@type": "City",
-          "name": "Orlando"
-        },
-        {
-          "@type": "State",
-          "name": "Florida"
-        }
-      ],
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "Adults"
-      },
-      "category": "Mental health counseling",
-      "availableChannel": [
-        {
-          "@type": "ServiceChannel",
-          "name": "In-person sessions",
-          "serviceLocation": {
-            "@type": "Place",
-            "name": "Flourish Counseling Co.",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "2431 Aloma Ave., Suite 111",
-              "addressLocality": "Winter Park",
-              "addressRegion": "FL",
-              "postalCode": "32792",
-              "addressCountry": "US"
-            }
-          },
-          "servicePhone": "+1-407-630-7529",
-          "serviceUrl": "https://flourish-counseling.clientsecure.me/"
-        },
-        {
-          "@type": "ServiceChannel",
-          "name": "Telehealth, anywhere in Florida",
-          "availableLanguage": {
-            "@type": "Language",
-            "name": "English"
-          },
-          "serviceUrl": "https://flourish-counseling.clientsecure.me/"
-        }
-      ]
+     "@type": "City",
+     "name": "Winter Park"
     },
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://flourish-counseling.co/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://flourish-counseling.co/services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Individual Therapy",
-          "item": "https://flourish-counseling.co/services/individual-therapy"
-        }
-      ]
+     "@type": "City",
+     "name": "Orlando"
+    },
+    {
+     "@type": "State",
+     "name": "Florida",
+     "description": "Secure telehealth for clients anywhere in Florida"
     }
-  ]
+   ],
+   "availableChannel": [
+    {
+     "@type": "ServiceChannel",
+     "name": "In person",
+     "serviceLocation": {
+      "@type": "Place",
+      "name": "Flourish Counseling Co.",
+      "address": {
+       "@type": "PostalAddress",
+       "streetAddress": "2431 Aloma Ave., Suite 111",
+       "addressLocality": "Winter Park",
+       "addressRegion": "FL",
+       "postalCode": "32792",
+       "addressCountry": "US"
+      }
+     },
+     "servicePhone": "+1-407-630-7529"
+    },
+    {
+     "@type": "ServiceChannel",
+     "name": "Secure telehealth anywhere in Florida",
+     "availableLanguage": {
+      "@type": "Language",
+      "name": "English"
+     },
+     "serviceUrl": "https://flourish-counseling.clientsecure.me/"
+    }
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Approaches used in individual therapy",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Trauma recovery",
+       "url": "https://flourish-counseling.co/services/trauma-recovery"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "EMDR therapy",
+       "url": "https://flourish-counseling.co/services/emdr"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Accelerated Resolution Therapy (ART)"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Sand tray therapy",
+       "url": "https://flourish-counseling.co/services/sand-tray"
+      }
+     }
+    ]
+   },
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "50-minute therapy session",
+     "price": "185",
+     "priceCurrency": "USD",
+     "eligibleQuantity": {
+      "@type": "QuantitativeValue",
+      "value": 50,
+      "unitCode": "MIN"
+     },
+     "description": "$185 per 50-minute session, self-pay. A superbill is available on request for possible out-of-network reimbursement. HSA and FSA cards are accepted."
+    },
+    {
+     "@type": "Offer",
+     "name": "10-minute phone consultation",
+     "url": "https://flourish-counseling.clientsecure.me/",
+     "description": "The first step: a 10-minute phone consultation to see if we're a good fit, requested through the client portal."
+    }
+   ],
+   "potentialAction": {
+    "@type": "ReserveAction",
+    "name": "Request a 10-minute phone consultation",
+    "target": "https://flourish-counseling.clientsecure.me/"
+   }
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://flourish-counseling.co/#practice",
+   "name": "Flourish Counseling Co.",
+   "url": "https://flourish-counseling.co/",
+   "telephone": "+1-407-630-7529",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2431 Aloma Ave., Suite 111",
+    "addressLocality": "Winter Park",
+    "addressRegion": "FL",
+    "postalCode": "32792",
+    "addressCountry": "US"
+   },
+   "areaServed": [
+    {
+     "@type": "City",
+     "name": "Winter Park"
+    },
+    {
+     "@type": "City",
+     "name": "Orlando"
+    },
+    {
+     "@type": "State",
+     "name": "Florida",
+     "description": "Secure telehealth for clients anywhere in Florida"
+    }
+   ],
+   "paymentAccepted": "Self-pay; HSA and FSA cards accepted; superbill on request",
+   "currenciesAccepted": "USD",
+   "founder": {
+    "@id": "https://flourish-counseling.co/about#cristina"
+   },
+   "employee": {
+    "@id": "https://flourish-counseling.co/about#cristina"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://flourish-counseling.co/about#cristina",
+   "name": "Cristina Ally",
+   "honorificSuffix": "LMHC, NCC",
+   "jobTitle": "Licensed Mental Health Counselor",
+   "url": "https://flourish-counseling.co/about",
+   "description": "Licensed Mental Health Counselor and National Certified Counselor, trained in EMDR, Accelerated Resolution Therapy (ART), and the Reconsolidation of Traumatic Memories. Owner of Flourish Counseling Co.",
+   "worksFor": {
+    "@id": "https://flourish-counseling.co/#practice"
+   },
+   "knowsAbout": [
+    "Trauma therapy",
+    "EMDR",
+    "Accelerated Resolution Therapy",
+    "Reconsolidation of Traumatic Memories",
+    "Sand tray therapy"
+   ],
+   "hasCredential": [
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "license",
+     "name": "Licensed Mental Health Counselor (LMHC), Florida"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "certification",
+     "name": "National Certified Counselor (NCC)"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "EMDR trained"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "Accelerated Resolution Therapy (ART) trained"
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://flourish-counseling.co/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Services",
+     "item": "https://flourish-counseling.co/services"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Individual Therapy",
+     "item": "https://flourish-counseling.co/services/individual-therapy"
+    }
+   ]
+  }
+ ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -173,6 +303,7 @@
 {
  "@context": "https://schema.org",
  "@type": "FAQPage",
+ "@id": "https://flourish-counseling.co/services/individual-therapy#faq",
  "mainEntity": [
   {
    "@type": "Question",
@@ -204,6 +335,14 @@
    "acceptedAnswer": {
     "@type": "Answer",
     "text": "Sessions are self-pay, $185 for 50 minutes, so insurance stays out of your care unless you choose to bring it in. If you'd like to, I can give you a superbill on request to submit for out-of-network reimbursement. HSA and FSA cards are welcome."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why are sessions self-pay?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "We're not on insurance panels, and that's on purpose. Paying privately means you choose your own therapist instead of picking from a network list. No mental health diagnosis goes to an insurer or onto your record, no insurer asks for your treatment plan or progress notes, and how long we work together is up to you and me. If you do use a superbill for out-of-network benefits, just know that submitting it shares the billing and diagnosis information on it with your insurer. Current fees and more detail are on rates & insurance."
    }
   },
   {
@@ -264,7 +403,12 @@
     <p class="crumb reveal"><a href="/services">Services</a><span class="sep">/</span>Individual Therapy</p>
     <span class="eyebrow reveal">Individual Therapy</span>
     <h1 class="t-title reveal">Individual therapy, at your pace.</h1>
-    <p class="reveal">One-on-one counseling for adults in Winter Park and Orlando, and by secure telehealth anywhere in Florida.</p>
+    <p class="reveal">A warm, unhurried space that's all about you, in Winter Park and Orlando, and by secure telehealth anywhere in Florida.</p>
+    <div class="cta-row reveal mt-m" style="display:flex;gap:14px;flex-wrap:wrap">
+      <a class="btn btn-solid spwidget-button" href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener"
+         data-spwidget-scope-id="4885eedf-a778-413e-b03f-e95c99540f27" data-spwidget-scope-uri="flourish-counseling"
+         data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b" data-spwidget-type="OAR" data-spwidget-scope-global data-spwidget-autobind>Request an appointment</a>
+    </div>
   </div>
 </section>
 
@@ -272,39 +416,17 @@
   <div class="wrap">
     <div class="svc reveal">
 
-<div class="glance reveal">
-  <h2>At a glance</h2>
-  <ul>
-    <li><b>Who it's for:</b> Adults, with a special focus on women navigating anxiety, relationships, and heavy seasons</li>
-    <li><b>Where:</b> In person in Winter Park (2431 Aloma Ave., near Orlando) or by secure telehealth anywhere in Florida</li>
-    <li><b>With:</b> Cristina Ally, LMHC, NCC, trained in EMDR and Accelerated Resolution Therapy (ART)</li>
-    <li><b>Fees:</b> $185 per 50-minute session, self-pay. Superbills on request for out-of-network reimbursement, and HSA and FSA cards are welcome.</li>
-    <li><b>First step:</b> A 10-minute phone consultation through the <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">client portal</a>, to see if it feels like a good fit.</li>
-  </ul>
-</div>
-
-
 <p class="lead-in">Are you having a hard time handling something in your life right now? Could you use an expert opinion on what you're going through, or a non-judgmental ear that just listens? Would it help to have someone's full attention?</p>
 
-<p>If any of that sounds like you, individual therapy may be what you've been looking for.</p>
+<p>If any of that sounds like you, I'm glad you're here. Individual therapy may be what you've been looking for.</p>
 
-<h2>What individual therapy is</h2>
-<p>In individual therapy, you're the sole focus of one therapist who helps you define and reach your own goals. You get a say in how fast we go, which methods we use, how much feedback you get, and when your sessions happen. Every person comes in with different goals, so there's no single script. I tailor the work to you.</p>
+<h2>Who this is for</h2>
+<p>I see adults, with a special focus on women navigating anxiety, relationships, and heavy seasons. People come to me for anxiety, depression, self-esteem, relationships and boundaries, post-traumatic stress, and life transitions, like a move, a breakup, a new role, or a career that stopped fitting.</p>
+<p>Maybe you keep circling the same problem and can't get out from under it, or this one thing has started pulling down other parts of your life. Maybe you don't know who you could trust with what you're really struggling with, and you need someone to listen to you, and to your feelings, for once. You might wish someone could help you understand why you feel the way you do.</p>
+<p>Or maybe you're interested in therapy but can't picture how it would fit into your life, or you don't want to hand over control of the process. That's okay too. You don't need a diagnosis or a crisis to start.</p>
 
-<h2>This may be the right fit if</h2>
-<ul>
-  <li>You keep circling the same problem and can't get out from under it</li>
-  <li>You don't know who you could trust with what you're really struggling with</li>
-  <li>You wish someone could help you understand why you feel the way you do</li>
-  <li>You're interested in therapy but don't want to hand over control of the process</li>
-  <li>Other parts of your life are being pulled down by this one thing</li>
-  <li>You need someone to listen to you, and to your feelings, for once</li>
-  <li>You're interested in therapy but can't picture how it would fit into your life</li>
-</ul>
-<p>You don't need a diagnosis or a crisis to start.</p>
-
-<h2>What people bring to individual work</h2>
-<p>People come to me for anxiety, depression, self-esteem, relationships and boundaries, post-traumatic stress, and life transitions, like a move, a breakup, a new role, or a career that stopped fitting.</p>
+<h2>What individual therapy looks like here</h2>
+<p>In individual therapy, you're my sole focus, and the work is about helping you define and reach your own goals. You get a say in how fast we go, which methods we use, how much feedback you get, and when your sessions happen. Every person comes in with different goals, so there's no single script. I tailor the work to you.</p>
 <p>If trauma is part of the picture, our individual sessions are also where <a href="/services/trauma-recovery">trauma recovery work</a> happens, including <a href="/services/emdr">EMDR</a> and Accelerated Resolution Therapy. And when words aren't the easiest way in, we can use <a href="/services/sand-tray">sand tray</a> in an individual session.</p>
 
 <h2>Questions people ask before they start</h2>
@@ -321,16 +443,24 @@
 <h3>How long will this take?</h3>
 <p>It depends on you, your goals, your commitment, and what brought you in. I'll never keep you longer than is helpful, and we'll set the pace together.</p>
 
+<h2>A little about me</h2>
+<p>I'm Cristina, and I'm the owner of Flourish. I built the practice around women's healing. I'm trained in trauma approaches like EMDR and Accelerated Resolution Therapy, and I'm passionate about using expressive arts in healing, so if something heavier comes up along the way, we can make room for it right here. <a href="/about">Read more about me</a>.</p>
+<p>Reaching out can feel like the hardest part. I'd love to hear what's been going on for you.</p>
+
 <div class="pullout">
   <p><b>Much of your growth happens between sessions,</b> in the small things you practice in everyday life.</p>
 </div>
 
-<h2>Why self-pay</h2>
-<p>We're not on insurance panels, and that's on purpose. Paying privately means you choose your own therapist instead of picking from a network list. No mental health diagnosis goes to an insurer or onto your record, and no insurer asks for your treatment plan or progress notes. The length of your treatment is up to you and me.</p>
-<p>If you'd like to use out-of-network benefits, I can give you a superbill on request. Just know that submitting it shares the billing and diagnosis information on it with your insurer. Current fees and more detail are on <a href="/rates">rates &amp; insurance</a>.</p>
-
-<h2>Start when you're ready</h2>
-<p>Reaching out can feel like the hardest part. You can <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">request an appointment</a> through the client portal whenever you're ready, and we'll help you find the right fit.</p>
+<div class="glance reveal">
+  <h2>The practical details</h2>
+  <ul>
+    <li><b>Who I see:</b> Adults, with a special focus on women navigating anxiety, relationships, and heavy seasons.</li>
+    <li><b>Where:</b> In person at 2431 Aloma Ave., Suite 111, Winter Park, near Orlando, or by secure telehealth anywhere in Florida.</li>
+    <li><b>Who you'll see:</b> Cristina Ally, Licensed Mental Health Counselor (LMHC) and National Certified Counselor (NCC), trained in EMDR and Accelerated Resolution Therapy (ART).</li>
+    <li><b>Fees:</b> $185 per 50-minute session, self-pay. We're not on insurance panels, and I can give you a superbill on request for out-of-network reimbursement. HSA and FSA cards are welcome.</li>
+    <li><b>How to start:</b> A 10-minute phone consultation through the <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">client portal</a>, to see if it feels like a good fit.</li>
+  </ul>
+</div>
 
 <p class="related-reading">Related reading: <a href="/post-10-ways-to-increase-self-care">10 Ways to Increase Self-Care</a></p>
 
@@ -343,7 +473,7 @@
     <div class="reveal">
       <span class="eyebrow muted">Where We Meet</span>
       <h2 class="t-section mt-s">Winter Park, Orlando, or anywhere in Florida.</h2>
-      <p class="lead mt-m">Individual sessions are available in person at the Winter Park office, 2431 Aloma Ave., Suite 111, a short drive from Orlando, Maitland, Baldwin Park, Oviedo, and Casselberry. They're also available by secure, private telehealth to clients anywhere in Florida.</p>
+      <p class="lead mt-m">You can see me in person at the Winter Park office, 2431 Aloma Ave., Suite 111, a short drive from Orlando, Maitland, Baldwin Park, Oviedo, and Casselberry. If your week is full or coming in isn't easy, we can meet by secure, private telehealth from anywhere in Florida.</p>
       <p class="note mt-s"><b>All sessions are self-pay.</b> A superbill can be provided on request for possible out-of-network reimbursement. See <a href="/rates" style="color:var(--espresso)">rates &amp; insurance</a> for current fees, or read our <a href="/faq" style="color:var(--espresso)">FAQ</a>.</p>
     </div>
     <div class="reveal">
@@ -378,6 +508,7 @@
     <details><summary>Is individual therapy at Flourish focused on women?</summary><p>Much of my work is with women, and I built the practice around women's healing. You'll find a warm, unhurried space where you don't have to explain the basics first.</p></details>
     <details><summary>Can I do therapy online?</summary><p>Yes. I see clients in person in Winter Park or by secure telehealth anywhere in Florida, whichever feels most comfortable to you.</p></details>
     <details><summary>Do you take insurance?</summary><p>Sessions are self-pay, $185 for 50 minutes, so insurance stays out of your care unless you choose to bring it in. If you'd like to, I can give you a superbill on request to submit for out-of-network reimbursement. HSA and FSA cards are welcome.</p></details>
+    <details><summary>Why are sessions self-pay?</summary><p>We're not on insurance panels, and that's on purpose. Paying privately means you choose your own therapist instead of picking from a network list. No mental health diagnosis goes to an insurer or onto your record, no insurer asks for your treatment plan or progress notes, and how long we work together is up to you and me. If you do use a superbill for out-of-network benefits, just know that submitting it shares the billing and diagnosis information on it with your insurer. Current fees and more detail are on <a href="/rates">rates &amp; insurance</a>.</p></details>
     <details><summary>How do I get started?</summary><p>Request a 10-minute phone consultation through the <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">client portal</a>. Bring any questions you have, and we'll figure out together if this feels like the right fit.</p></details>
     </div>
   </div>
