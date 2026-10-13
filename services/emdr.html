@@ -22,103 +22,231 @@
 <meta name="twitter:image" content="https://flourish-counseling.co/assets/photos/hero-calm.jpg">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Service",
+   "@id": "https://flourish-counseling.co/services/emdr#service",
+   "name": "EMDR Therapy",
+   "serviceType": "EMDR therapy",
+   "category": [
+    "EMDR therapy",
+    "Trauma therapy"
+   ],
+   "description": "Eye Movement Desensitization and Reprocessing (EMDR) for adults in Winter Park and Orlando, Florida, delivered by an EMDR-trained Licensed Mental Health Counselor, with secure telehealth available statewide.",
+   "url": "https://flourish-counseling.co/services/emdr",
+   "audience": {
+    "@type": "PeopleAudience",
+    "audienceType": "Adults, especially women and trauma survivors, with memories that still feel raw"
+   },
+   "provider": {
+    "@id": "https://flourish-counseling.co/#practice"
+   },
+   "areaServed": [
     {
-      "@type": "Service",
-      "@id": "https://flourish-counseling.co/services/emdr#service",
-      "name": "EMDR Therapy",
-      "serviceType": "EMDR therapy",
-      "url": "https://flourish-counseling.co/services/emdr",
-      "description": "Eye Movement Desensitization and Reprocessing (EMDR) for adults in Winter Park and Orlando, Florida, delivered by an EMDR-trained Licensed Mental Health Counselor, with secure telehealth available statewide.",
-      "provider": {
-        "@type": "ProfessionalService",
-        "@id": "https://flourish-counseling.co/#practice",
-        "name": "Flourish Counseling Co.",
-        "url": "https://flourish-counseling.co/",
-        "telephone": "+1-407-630-7529",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "2431 Aloma Ave., Suite 111",
-          "addressLocality": "Winter Park",
-          "addressRegion": "FL",
-          "postalCode": "32792",
-          "addressCountry": "US"
-        }
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Winter Park"
-        },
-        {
-          "@type": "City",
-          "name": "Orlando"
-        },
-        {
-          "@type": "State",
-          "name": "Florida"
-        }
-      ],
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "Adults"
-      },
-      "category": "Mental health counseling",
-      "availableChannel": [
-        {
-          "@type": "ServiceChannel",
-          "name": "In-person sessions",
-          "serviceLocation": {
-            "@type": "Place",
-            "name": "Flourish Counseling Co.",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "2431 Aloma Ave., Suite 111",
-              "addressLocality": "Winter Park",
-              "addressRegion": "FL",
-              "postalCode": "32792",
-              "addressCountry": "US"
-            }
-          },
-          "servicePhone": "+1-407-630-7529",
-          "serviceUrl": "https://flourish-counseling.clientsecure.me/"
-        },
-        {
-          "@type": "ServiceChannel",
-          "name": "Telehealth, anywhere in Florida",
-          "availableLanguage": {
-            "@type": "Language",
-            "name": "English"
-          },
-          "serviceUrl": "https://flourish-counseling.clientsecure.me/"
-        }
-      ]
+     "@type": "City",
+     "name": "Winter Park"
     },
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://flourish-counseling.co/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://flourish-counseling.co/services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "EMDR",
-          "item": "https://flourish-counseling.co/services/emdr"
-        }
-      ]
+     "@type": "City",
+     "name": "Orlando"
+    },
+    {
+     "@type": "State",
+     "name": "Florida",
+     "description": "Secure telehealth for clients anywhere in Florida"
     }
-  ]
+   ],
+   "availableChannel": [
+    {
+     "@type": "ServiceChannel",
+     "name": "In person",
+     "serviceLocation": {
+      "@type": "Place",
+      "name": "Flourish Counseling Co.",
+      "address": {
+       "@type": "PostalAddress",
+       "streetAddress": "2431 Aloma Ave., Suite 111",
+       "addressLocality": "Winter Park",
+       "addressRegion": "FL",
+       "postalCode": "32792",
+       "addressCountry": "US"
+      }
+     },
+     "servicePhone": "+1-407-630-7529"
+    },
+    {
+     "@type": "ServiceChannel",
+     "name": "Secure telehealth anywhere in Florida",
+     "availableLanguage": {
+      "@type": "Language",
+      "name": "English"
+     },
+     "serviceUrl": "https://flourish-counseling.clientsecure.me/"
+    }
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Approaches used alongside EMDR",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "EMDR therapy",
+       "url": "https://flourish-counseling.co/services/emdr"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Accelerated Resolution Therapy (ART)"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Reconsolidation of Traumatic Memories"
+      }
+     }
+    ]
+   },
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "50-minute therapy session",
+     "price": "185",
+     "priceCurrency": "USD",
+     "eligibleQuantity": {
+      "@type": "QuantitativeValue",
+      "value": 50,
+      "unitCode": "MIN"
+     },
+     "description": "$185 per 50-minute session, self-pay. A superbill is available on request for possible out-of-network reimbursement. HSA and FSA cards are accepted."
+    },
+    {
+     "@type": "Offer",
+     "name": "Extended (double) EMDR session",
+     "price": "370",
+     "priceCurrency": "USD",
+     "description": "EMDR is often scheduled as an extended (double) session, $370, self-pay."
+    },
+    {
+     "@type": "Offer",
+     "name": "10-minute phone consultation",
+     "url": "https://flourish-counseling.clientsecure.me/",
+     "description": "The first step: a 10-minute phone consultation to see if we're a good fit, requested through the client portal."
+    }
+   ],
+   "potentialAction": {
+    "@type": "ReserveAction",
+    "name": "Request a 10-minute phone consultation",
+    "target": "https://flourish-counseling.clientsecure.me/"
+   }
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://flourish-counseling.co/#practice",
+   "name": "Flourish Counseling Co.",
+   "url": "https://flourish-counseling.co/",
+   "telephone": "+1-407-630-7529",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2431 Aloma Ave., Suite 111",
+    "addressLocality": "Winter Park",
+    "addressRegion": "FL",
+    "postalCode": "32792",
+    "addressCountry": "US"
+   },
+   "areaServed": [
+    {
+     "@type": "City",
+     "name": "Winter Park"
+    },
+    {
+     "@type": "City",
+     "name": "Orlando"
+    },
+    {
+     "@type": "State",
+     "name": "Florida",
+     "description": "Secure telehealth for clients anywhere in Florida"
+    }
+   ],
+   "paymentAccepted": "Self-pay; HSA and FSA cards accepted; superbill on request",
+   "currenciesAccepted": "USD",
+   "founder": {
+    "@id": "https://flourish-counseling.co/about#cristina"
+   },
+   "employee": {
+    "@id": "https://flourish-counseling.co/about#cristina"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://flourish-counseling.co/about#cristina",
+   "name": "Cristina Ally",
+   "honorificSuffix": "LMHC, NCC",
+   "jobTitle": "Licensed Mental Health Counselor",
+   "url": "https://flourish-counseling.co/about",
+   "description": "Licensed Mental Health Counselor and National Certified Counselor, trained in EMDR, Accelerated Resolution Therapy (ART), and the Reconsolidation of Traumatic Memories. Owner of Flourish Counseling Co.",
+   "worksFor": {
+    "@id": "https://flourish-counseling.co/#practice"
+   },
+   "knowsAbout": [
+    "Trauma therapy",
+    "EMDR",
+    "Accelerated Resolution Therapy",
+    "Reconsolidation of Traumatic Memories",
+    "Sand tray therapy"
+   ],
+   "hasCredential": [
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "license",
+     "name": "Licensed Mental Health Counselor (LMHC), Florida"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "certification",
+     "name": "National Certified Counselor (NCC)"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "EMDR trained"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "Accelerated Resolution Therapy (ART) trained"
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://flourish-counseling.co/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Services",
+     "item": "https://flourish-counseling.co/services"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "EMDR",
+     "item": "https://flourish-counseling.co/services/emdr"
+    }
+   ]
+  }
+ ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -173,6 +301,7 @@
 {
  "@context": "https://schema.org",
  "@type": "FAQPage",
+ "@id": "https://flourish-counseling.co/services/emdr#faq",
  "mainEntity": [
   {
    "@type": "Question",
@@ -264,7 +393,12 @@
     <p class="crumb reveal"><a href="/services">Services</a><span class="sep">/</span>EMDR</p>
     <span class="eyebrow reveal">EMDR</span>
     <h1 class="t-title reveal">EMDR, for memories that never settled.</h1>
-    <p class="reveal">EMDR therapy for adults in Winter Park and Orlando, and by secure telehealth anywhere in Florida.</p>
+    <p class="reveal">A gentle, structured way to help painful memories finally feel like the past, in Winter Park and Orlando, and by secure telehealth anywhere in Florida.</p>
+    <div class="cta-row reveal mt-m" style="display:flex;gap:14px;flex-wrap:wrap">
+      <a class="btn btn-solid spwidget-button" href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener"
+         data-spwidget-scope-id="4885eedf-a778-413e-b03f-e95c99540f27" data-spwidget-scope-uri="flourish-counseling"
+         data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b" data-spwidget-type="OAR" data-spwidget-scope-global data-spwidget-autobind>Request an appointment</a>
+    </div>
   </div>
 </section>
 
@@ -272,19 +406,16 @@
   <div class="wrap">
     <div class="svc reveal">
 
-<div class="glance reveal">
-  <h2>At a glance</h2>
-  <ul>
-    <li><b>Who it's for:</b> Adults, especially women and trauma survivors, with memories that still feel raw</li>
-    <li><b>Where:</b> In person at our Winter Park office on Aloma Avenue, near Orlando, or by secure telehealth anywhere in Florida<!-- CONFIRM: EMDR protocol sessions are offered by telehealth (PRE-PUBLISH B1); if in person only, say so here and in the first FAQ answer. --></li>
-    <li><b>With:</b> Cristina Ally, LMHC, NCC, EMDR trained and also trained in Accelerated Resolution Therapy (ART)</li>
-    <li><b>Fees:</b> $185 per 50-minute session, self-pay. EMDR is often scheduled as an extended (double) session at $370. Superbill on request; HSA and FSA cards welcome.</li>
-    <li><b>First step:</b> A 10-minute phone consultation, which you can request through the <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">client portal</a>.</li>
-  </ul>
-</div>
+<p class="lead-in">Some memories don't settle. Years go by, life moves on, and a sound or a smell or an offhand comment still drops you right back into a moment you'd rather not visit. If that sounds familiar, I'm glad you found your way here. This is the kind of thing EMDR can help with.</p>
 
-
-<p class="lead-in">Some memories don't settle. Years go by, life moves on, and a sound or a smell or an offhand comment still drops you right back into a moment you'd rather not visit. That's where EMDR can help.</p>
+<h2>Who EMDR is for</h2>
+<p>I use EMDR with adults, especially women and trauma survivors whose memories still feel raw. A lot of people come to EMDR after years of talking. They know their history, and they can explain exactly why they react the way they do. They still react that way. When there's a gap between what you know and what you feel, it often means a memory hasn't finished being processed, and that gap is what EMDR works on.</p>
+<p>It might be worth a conversation if any of this sounds like you:</p>
+<ul>
+  <li>Your feelings sometimes seem bigger than the moment in front of you</li>
+  <li>Certain triggers set you off in a way you can't talk yourself out of</li>
+  <li>There's something you believe about yourself that you know isn't true</li>
+</ul>
 
 <h2>What EMDR is</h2>
 <p>Eye Movement Desensitization and Reprocessing (EMDR) is a structured therapy that has been extensively researched and is widely used in the treatment of trauma. It follows a set of standardized steps, so you can know ahead of time roughly what a session will involve. For a lot of people, that predictability is what makes it feel safe enough to try.</p>
@@ -292,43 +423,35 @@
 <h2>How EMDR works</h2>
 <p>EMDR uses bilateral stimulation, which means gently activating both sides of the brain in turn, often with guided eye movements. Those eye movements resemble REM sleep, when the mind is thought to sort through the day, and EMDR appears to help the brain reprocess stuck memories in a similar way.</p>
 <p>The memory doesn't disappear. What I hope for with you is that it finally feels like the past.</p>
-<p>EMDR can also help with the beliefs that grew out of relational trauma, or out of abuse and neglect in childhood: that you're not safe, that it was somehow your fault, that you're too much or not enough. For a fuller explanation of the approach, see the <a href="https://www.emdr.com/" target="_blank" rel="noopener">EMDR Institute</a>.</p>
+<p>EMDR can also help with the beliefs that grew out of relational trauma, or out of abuse and neglect in childhood: that you're not safe, that it was somehow your fault, that you're too much or not enough. If you'd like a fuller explanation of the approach, the <a href="https://www.emdr.com/" target="_blank" rel="noopener">EMDR Institute</a> has one.</p>
 
-<h2>What EMDR is used for</h2>
-<p>EMDR was originally established as a treatment for PTSD. It has since been used in work with:</p>
-<ul>
-  <li>Panic attacks</li>
-  <li>Complicated grief</li>
-  <li>Dissociative disorders</li>
-  <li>Disturbing memories</li>
-  <li>Phobias</li>
-  <li>Pain disorders</li>
-  <li>Performance anxiety</li>
-  <li>Addictions</li>
-  <li>Stress reduction</li>
-  <li>The effects of sexual or physical abuse</li>
-  <li>Body dysmorphic disorders</li>
-  <li>Personality disorders</li>
-</ul>
-<p>You don't have to see yourself on that list. EMDR may still be a good fit if your feelings sometimes seem bigger than the moment in front of you, if certain triggers set you off in a way you can't talk yourself out of, or if there's something you believe about yourself that you know isn't true.</p>
+<h2>What EMDR can help with</h2>
+<p>EMDR was first established as a treatment for PTSD. Since then it's been used in work with panic attacks, phobias, performance anxiety, disturbing memories, complicated grief, stress reduction, the effects of sexual or physical abuse, addictions, pain disorders, dissociative disorders, body dysmorphic disorders, and personality disorders.</p>
+<p>You don't have to see yourself on that list for EMDR to be worth asking about.</p>
 
-<h2>Coming to EMDR after other therapy</h2>
-<p>A lot of people come to EMDR after years of talking. They know their history, and they can explain exactly why they react the way they do. They still react that way. When there's a gap between what you know and what you feel, it often means a memory hasn't finished being processed, and that gap is what EMDR works on.</p>
-
-<h2>How long does EMDR take?</h2>
-<p>It depends on you, your goals, your commitment, and what brought you in. I'll never keep you longer than is helpful, and you'll always know what the plan is.</p>
-
-<h2>How I use EMDR</h2>
-<p>I'm EMDR trained, and I use it alongside Accelerated Resolution Therapy and the Reconsolidation of Traumatic Memories. I enjoy using these tools to resolve traumatic memories with my adult clients.</p>
-<p>We don't start EMDR on day one. First comes safety and stabilization: building trust, and making sure you have grounding skills in place before we do any memory work. Protocol sessions are scheduled as extended sessions so we have room to finish. You set the pace, and nothing happens before you're ready.</p>
+<h2>How we'll work together</h2>
+<p>We don't start EMDR on day one. First comes safety and stabilization: building trust, and making sure you have grounding skills in place before we do any memory work. When we get there, protocol sessions are scheduled as extended sessions so we have room to finish. You set the pace, and nothing happens before you're ready.</p>
+<p>How long it takes depends on you, your goals, your commitment, and what brought you in. I'll never keep you longer than is helpful, and you'll always know what the plan is.</p>
 <p>EMDR is one part of my broader approach to <a href="/services/trauma-recovery">trauma recovery</a>, which also makes room for the life that comes after a memory is resolved.</p>
 
+<h2>A little about me</h2>
+<p>I'm Cristina, and I'm the owner of Flourish. I'm EMDR trained, and I use it alongside Accelerated Resolution Therapy and the Reconsolidation of Traumatic Memories. I enjoy using these tools to resolve traumatic memories with my adult clients, and I'm passionate about using expressive arts in healing, too. <a href="/about">Read more about me</a>.</p>
+<p>If something has been stuck for a long time, it would be an honor to help it finally feel like the past.</p>
+
 <div class="pullout">
-  <p><b>You don't have to retell your story over and over to be free of it.</b> We work with the memory itself, gently, at a pace that feels right to you.</p>
+  <p><b>You don't have to retell your story over and over to get some distance from it.</b> We work with the memory itself, gently, at a pace that feels right to you.</p>
 </div>
 
-<h2>Start when you're ready</h2>
-<p>If you've been carrying something for a long time and talking about it hasn't moved it, EMDR might be a different way in. You can <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">request an appointment</a> through the client portal whenever you're ready.</p>
+<div class="glance reveal">
+  <h2>The practical details</h2>
+  <ul>
+    <li><b>Who I see:</b> Adults, especially women and trauma survivors, with memories that still feel raw.</li>
+    <li><b>Where:</b> In person at 2431 Aloma Ave., Suite 111, Winter Park, near Orlando, or by secure telehealth anywhere in Florida.<!-- CONFIRM: EMDR protocol sessions are offered by telehealth (PRE-PUBLISH B1); if in person only, say so here and in the first FAQ answer. --></li>
+    <li><b>Who you'll see:</b> Cristina Ally, Licensed Mental Health Counselor (LMHC) and National Certified Counselor (NCC), EMDR trained and also trained in Accelerated Resolution Therapy (ART) and the Reconsolidation of Traumatic Memories.</li>
+    <li><b>Fees:</b> $185 per 50-minute session, self-pay. EMDR is often scheduled as an extended (double) session at $370. I can give you a superbill on request, and HSA and FSA cards are welcome.</li>
+    <li><b>How to start:</b> A 10-minute phone consultation, which you can request through the <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener">client portal</a>.</li>
+  </ul>
+</div>
 
 <p class="related-reading">Related reading: <a href="/post-somatic-therapy-for-trauma">Somatic Therapy for Trauma: When Talking Has Not Been Enough</a> &middot; <a href="/post-how-meditation-can-help-manage-symptoms-of-trauma">How Meditation Can Help Manage Symptoms of Trauma</a> &middot; <a href="/post-trauma-care-voo-breathing">Trauma Care: Voo Breathing</a></p>
 
@@ -341,7 +464,7 @@
     <div class="reveal">
       <span class="eyebrow muted">Where We Meet</span>
       <h2 class="t-section mt-s">Winter Park, Orlando, or anywhere in Florida.</h2>
-      <p class="lead mt-m">Sessions are available in person at the Winter Park office, 2431 Aloma Ave., Suite 111, a short drive from Orlando, Maitland, Baldwin Park, Oviedo, and Casselberry. They're also available by secure, private telehealth to clients anywhere in Florida.</p>
+      <p class="lead mt-m">You can see me in person at the Winter Park office, 2431 Aloma Ave., Suite 111, a short drive from Orlando, Maitland, Baldwin Park, Oviedo, and Casselberry. If getting here is hard, we can meet by secure, private telehealth from anywhere in Florida.</p>
       <p class="note mt-s"><b>All sessions are self-pay.</b> A superbill can be provided on request for possible out-of-network reimbursement. See <a href="/rates" style="color:var(--espresso)">rates &amp; insurance</a> for current fees, or read our <a href="/faq" style="color:var(--espresso)">FAQ</a>.</p>
     </div>
     <div class="reveal">
