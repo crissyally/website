@@ -32,6 +32,14 @@ http://flourish-counseling.co/*       https://flourish-counseling.co/:splat  301
 /post-10-ways-to-increase-self-care.html /post-10-ways-to-increase-self-care 301!
 /post-trauma-care-voo-breathing.html /post-trauma-care-voo-breathing 301!
 
+# --- card:qr ---
+# /card is the address printed in the QR code on Crissy's business cards. It shows the
+# homepage (a 200 rewrite, not a redirect) so the Cloudflare beacon records the visit as
+# /card and card scans can be counted. The homepage's canonical tag points to /, so
+# search engines do not treat /card as a duplicate page. Added 2026-10-16.
+/card  /index.html  200
+# --- /card:qr ---
+
 # Internal files: kept in the repository for Crissy and her assistant to read,
 # but not served publicly. Added 2026-09-17 when publishing moved to Git.
 /START-HERE.md     /404.html  404!
