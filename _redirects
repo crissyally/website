@@ -38,13 +38,13 @@ http://flourish-counseling.co/*       https://flourish-counseling.co/:splat  301
 # The recovery groups and Christian counseling pages are held back, so /groups and
 # /group-therapy are deliberately absent. /play-therapy and /family-counseling go to the
 # hub on purpose: neither is a current service page.
-/services/individual-therapy.html    /services/individual-therapy    301
-/services/trauma-recovery.html       /services/trauma-recovery       301
-/services/emdr.html                  /services/emdr                  301
-/services/sand-tray.html             /services/sand-tray             301
-/services/grief-counseling.html      /services/grief-counseling      301
-/services/trauma-therapy-for-women.html  /services/trauma-therapy-for-women  301
-/post-when-talking-to-chatgpt-isnt-enough.html  /post-when-talking-to-chatgpt-isnt-enough  301
+/services/individual-therapy.html    /services/individual-therapy    301!
+/services/trauma-recovery.html       /services/trauma-recovery       301!
+/services/emdr.html                  /services/emdr                  301!
+/services/sand-tray.html             /services/sand-tray             301!
+/services/grief-counseling.html      /services/grief-counseling      301!
+/services/trauma-therapy-for-women.html  /services/trauma-therapy-for-women  301!
+/post-when-talking-to-chatgpt-isnt-enough.html  /post-when-talking-to-chatgpt-isnt-enough  301!
 /individual-therapy                  /services/individual-therapy    301
 /counseling-for-trauma               /services/trauma-recovery       301
 /emdr                                /services/emdr                  301
