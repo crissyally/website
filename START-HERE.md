@@ -75,14 +75,67 @@ this folder. See the content rules below.
 1. **Always publish with `.deploy/deploy.sh`.** Never run `netlify deploy` by hand, and never upload
    this folder to Netlify through the website. Doing either puts a version live that GitHub does not
    know about, and the next person to publish will silently wipe it out.
-2. **Before you start editing, run `git pull`.** Someone else may have published since Crissy last
-   worked here. If `git pull` reports a conflict, stop and tell Crissy to contact Kevin rather than
-   guessing.
+2. **Before you start editing, update `main` and start a branch.** See "Working on a branch" below.
+   Someone else may have published since Crissy last worked here. If `git pull` reports a conflict,
+   stop and tell Crissy to contact Kevin rather than guessing.
 3. **If `.deploy/deploy.sh` fails, nothing was published.** The changes are still saved on this
    computer, so nothing is lost. Read the message it printed and follow it.
 4. **Never commit `.env`.** Publishing no longer needs it, but it still exists for
    `.deploy/preview.sh` and it holds a private key to Crissy's hosting account. It is already
    excluded by `.gitignore`. Do not go around that, and never paste its contents anywhere.
+
+---
+
+## Working on a branch 🌿
+
+**Added 2026-10-31. Every piece of work happens on its own branch, never directly on `main`.**
+`main` is the live website: Netlify publishes whatever lands on `main`. A branch is a safe working
+copy that is backed up to GitHub, keeps a record of every change, and never goes live by itself.
+
+**Why it costs nothing.** Netlify only builds `main`. Pushing a branch does not publish anything and
+does not spend a credit. Every commit on a branch also carries `[skip ci]`, as a second guard.
+
+**Starting work:**
+
+```sh
+git switch main
+git pull
+git switch -c drafts/short-name-for-the-work
+```
+
+Use a short, plain name such as `drafts/podcast-signup`. If the work is a continuation, switch to the
+existing branch instead (`git switch drafts/...`) and run `git merge main` so it is current.
+
+**While working:** commit at natural stopping points and push, so the work is backed up off this
+computer:
+
+```sh
+git add --all
+git commit -m "What changed [skip ci]"
+git push -u origin HEAD
+```
+
+**Every commit message on a branch must contain `[skip ci]`.** Crissy previews locally as usual.
+
+**Never open a pull request on GitHub.** A pull request makes Netlify build a preview, and previews
+cost credits.
+
+**Publishing, only when Crissy says she is ready:**
+
+```sh
+git switch main
+git pull
+git merge --squash drafts/short-name-for-the-work
+.deploy/budget.sh
+.deploy/deploy.sh "What changed, in plain words"
+```
+
+`git merge --squash` brings every change from the branch onto `main` without committing it, and
+`deploy.sh` then makes one commit and publishes it as one deploy. The deploy description must NOT
+contain `[skip ci]`, or nothing will go live. The branch stays on GitHub as the full record of how
+the work got there; delete it only if Kevin asks.
+
+If the merge reports a conflict, stop and tell Crissy to contact Kevin rather than guessing.
 
 ---
 
@@ -120,6 +173,7 @@ removed, which is why the footer scripts are on the do-not-touch list above.
 | `_redirects` | Hosting rules. Keeps old `.html` web addresses working, and keeps internal files private. Do not edit without asking Kevin. |
 | `.deploy/` | The publish and undo commands, plus `budget.sh` (publishes left this month) and `traffic.sh` (visitor numbers) |
 | `AGENTS.md` | Short pointer that tells an AI assistant to read this file first |
+| `SEO-AND-AEO.md` | How pages get found by Google and quoted by AI tools. Read before creating or rewriting a page |
 | `HOW-THIS-IS-SET-UP.md` | Who owns what, who has access, and how to change or remove it. **Read this if Crissy asks any question about ownership, access, or independence.** |
 | `css/brand.css` | The entire design system: colors, fonts, spacing, buttons |
 | `js/site.js` | Small script: mobile menu, FAQ accordion, sprig animation |
@@ -159,6 +213,9 @@ removed, which is why the footer scripts are on the do-not-touch list above.
 
 - Voice: warm, professional, welcoming. This is a therapy practice for trauma recovery. No hype, no pressure language.
 - Do not add contact forms. All booking and contact goes through the SimplePractice buttons (this is a HIPAA thing, it is deliberate).
+  This covers clients and people seeking therapy. Podcast and newsletter forms (Kit signups, the
+  listener question form) are fine, as long as they are clearly about the podcast and are never a way
+  to reach Crissy as a therapist.
 - The phone number lives in the footer only. Do not add it to page bodies or CTA bands (also deliberate).
 - **Services: read them from `services.html`. Do not work from a list in this file.** What she offers
   changes; the page is what is true. The one standing rule that does not change: **Cristina is not a
@@ -178,6 +235,7 @@ removed, which is why the footer scripts are on the do-not-touch list above.
 Getting this wrong is how a page ends up invisible to Google, which has already happened once on
 this site and took six weeks to spot. Follow all of it.
 
+0. **Read `SEO-AND-AEO.md` first.** It covers titles, headings, FAQ blocks and structured data.
 1. **Start by copying an existing page**, not from a blank file. That gives you the navigation, the
    footer, and all three scripts above without having to remember them.
 2. Update `<title>`, the meta description, and the `og:` and `twitter:` tags.
@@ -205,13 +263,14 @@ its address somewhere sensible rather than leaving a dead end.
 
 ### Workflow for every edit
 
-1. `git pull` first, so you are working from the current version.
-2. Make the change.
+1. Start or continue a branch (see "Working on a branch"), so you are working from the current version.
+2. Make the change. For a new or rewritten page, follow `SEO-AND-AEO.md`. Commit to the branch with `[skip ci]`.
 3. Tell Crissy to double-click `index.html` and check it in her browser **before** publishing.
    Note that the visitor counter and the Psychology Today badge will not work when opened this way,
    because the page is not being served from the real address. That is normal and not a fault.
-4. Run `.deploy/budget.sh`, tell Crissy how many publishes are left, and agree it is worth one.
-   Then publish with `.deploy/deploy.sh "what changed"`.
+4. When she is ready, run `.deploy/budget.sh`, tell Crissy how many publishes are left, and agree it
+   is worth one. Then squash-merge the branch into `main` and publish with `.deploy/deploy.sh "what changed"`
+   (steps in "Working on a branch").
 5. Tell her to check the live site a minute later.
 6. If it looks wrong, run `.deploy/undo.sh`. Never leave the folder in a broken state.
 

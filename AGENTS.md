@@ -1,6 +1,9 @@
 # For AI assistants working on this website
 
 Read `START-HERE.md` in full before changing anything. It holds every rule for this folder.
+Before creating or rewriting a page, also read `SEO-AND-AEO.md` (how pages get found by Google and quoted by AI tools).
+
+**Work on a branch, never directly on `main`.** See "Working on a branch" in `START-HERE.md`.
 
 The one rule that can take the website offline if it is broken:
 
