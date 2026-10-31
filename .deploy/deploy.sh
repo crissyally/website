@@ -18,6 +18,15 @@ if [ "$#" -lt 1 ] || [ -z "$*" ]; then
 fi
 DESCRIPTION=$*
 
+# Only main is the live site. Work happens on branches (see "Working on a branch" in START-HERE.md);
+# publishing from a branch would only push the branch, so refuse instead of pretending.
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+if [ "$BRANCH" != "main" ]; then
+  echo "You are on the branch \"$BRANCH\", not main, so NOTHING was published." >&2
+  echo "To publish it: git switch main, git pull, git merge --squash $BRANCH, then run this again." >&2
+  exit 1
+fi
+
 git remote get-url origin >/dev/null 2>&1 || {
   echo "This folder is not connected to GitHub, so nothing can be published. Ask Kevin." >&2; exit 1; }
 
