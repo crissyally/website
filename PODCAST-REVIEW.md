@@ -34,11 +34,11 @@ Checked on this podcast page, not a claim about a complete site-wide audit:
 
 This is a sound technical foundation. Search ranking, indexing, rich results and AI citations are not guaranteed. The next content improvement after launch would be substantive episode notes and accurate transcripts, rather than more decorative content on this page.
 
-Kevin added the missing guidance to `SEO-AND-AEO.md` and `START-HERE.md` on main. Both files have now been read in full and merged into this review branch. The page has not yet had the following proposed copy changes applied.
+Kevin added the missing guidance to `SEO-AND-AEO.md` and `START-HERE.md` on main. Both files have now been read in full and merged into this review branch. The approved H1 and subtitle below have been applied. Other proposed copy changes remain recommendations.
 
 ### Changes recommended against SEO-AND-AEO.md
 
-1. Replace the poetic H1 with **Podcasts on healing and sexuality**. Keep **Room to listen. Space to grow.** directly below as the warm subtitle. There is already exactly one H1, but it does not carry a plain search phrase.
+1. **Completed after approval:** H1 is **Podcasts exploring mental health and authentic sexuality**, followed by **Cozy, comfortable, authentic conversations.** This replaces the poetic-only H1 with a plain topic phrase and retains the approved warm tone.
 2. Reorder the title to topic, place, brand, for example **Podcasts | Winter Park, FL | Flourish Counseling Co.** The existing title puts the brand before the place.
 3. Expand the current 135-character description to 140 to 160 characters, naming the audience/topic, host/location and next action. Suggested draft: **Explore mental health and sexuality podcasts with Cristina Ally in Winter Park, Florida. Listen to The Art of Flourishing and subscribe for new show updates.**
 4. Add two or three useful in-body links to relevant existing pages, such as Cristina's About page, educational Resources, and Contact for practice information. Current internal body links only jump to signup. Add one contextual incoming link from an existing page, such as About or the homepage. Navigation/footer links alone do not meet the playbook.
