@@ -38,7 +38,7 @@ Kevin added the missing guidance to `SEO-AND-AEO.md` and `START-HERE.md` on main
 
 ### Changes recommended against SEO-AND-AEO.md
 
-1. **Updated at Crissy's explicit request:** H1 is **Cozy, comfortable, authentic conversations.**, followed immediately by the smaller topic line **Podcasts exploring mental health and authentic sexuality**. Crissy chose this visible hierarchy after reviewing the longer topic H1. This is an approved exception to the playbook's plain-topic H1 preference; the topic remains visible supporting text.
+1. **Updated at Crissy's explicit request:** H1 is **Cozy. Comfortable. Authentic.**, followed immediately by the smaller topic line **Podcasts exploring mental health and authentic sexuality**. Crissy chose this visible hierarchy after reviewing the longer topic H1. This is an approved exception to the playbook's plain-topic H1 preference; the topic remains visible supporting text.
 2. Reorder the title to topic, place, brand, for example **Podcasts | Winter Park, FL | Flourish Counseling Co.** The existing title puts the brand before the place.
 3. Expand the current 135-character description to 140 to 160 characters, naming the audience/topic, host/location and next action. Suggested draft: **Explore mental health and sexuality podcasts with Cristina Ally in Winter Park, Florida. Listen to The Art of Flourishing and subscribe for new show updates.**
 4. Add two or three useful in-body links to relevant existing pages, such as Cristina's About page, educational Resources, and Contact for practice information. Current internal body links only jump to signup. Add one contextual incoming link from an existing page, such as About or the homepage. Navigation/footer links alone do not meet the playbook.
