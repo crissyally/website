@@ -1,5 +1,7 @@
 # Podcast audience updates for review
 
+For continuation from another device, start with `HANDOFF-PODCAST.md`.
+
 Website changes are on `codex/podcast-audience-updates`. They are not approved for production.
 
 ## Review without a Netlify deploy
@@ -40,7 +42,7 @@ Kevin added the missing guidance to `SEO-AND-AEO.md` and `START-HERE.md` on main
 
 1. **Updated at Crissy's explicit request:** H1 is **Cozy. Comfortable. Authentic.**, followed immediately by the smaller topic line **Podcasts exploring mental health and authentic sexuality**. Crissy chose this visible hierarchy after reviewing the longer topic H1. This is an approved exception to the playbook's plain-topic H1 preference; the topic remains visible supporting text.
 2. **Completed after approval:** Search title is **Mental Health & Sexuality Podcasts | Flourish Counseling Co.** (60 characters). Topic and brand take priority over location for this podcast audience, as approved in this conversation.
-3. **Completed after approval:** Description is **Explore mental health and authentic sexuality with Cristina Ally. Listen to The Art of Flourishing; get launch news for Sexology Explained and Sex on the Couch.** (160 characters). The approved opening and all three show names are included; "launch news" keeps the description within the playbook length target. Open Graph and Twitter metadata use the same wording.
+3. **Completed with Crissy's exact latest wording:** Description is **Explore mental health and authentic sexuality with Cristina Ally, LMHC. Listen to The Art of Flourishing, Sexology Explained, and Sex on the Couch.** (147 characters). LMHC was checked against the local and live About page. Open Graph and Twitter descriptions use the same wording. The show cards continue to distinguish the live show from the two upcoming shows.
 4. Add two or three useful in-body links to relevant existing pages, such as Cristina's About page, educational Resources, and Contact for practice information. Current internal body links only jump to signup. Add one contextual incoming link from an existing page, such as About or the homepage. Navigation/footer links alone do not meet the playbook.
 5. Add a small, optional three-question accordion answering where to listen, which shows are live, and how to submit a question. A podcast page is not explicitly required to have the service/resource FAQ block, but direct answers would help here. If added, FAQPage JSON-LD must match the visible questions and answers word for word.
 
