@@ -22,7 +22,7 @@
 <meta name="twitter:image" content="https://flourish-counseling.co/assets/brand/flourish-horizontal-dark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/brand.css?v=3">
+<link rel="stylesheet" href="css/brand.css?v=4">
 <style>
 .page-hero{padding-bottom:24px}
 .page-hero + .section{padding-top:0}
@@ -38,6 +38,63 @@
 .podcast-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:28px}
 .podcast-rss{font-size:.86rem;color:var(--espresso);text-underline-offset:4px}
 .podcast-player{display:block;width:100%;height:152px;border:0;border-radius:12px;margin-top:28px}
+.podcast-signup-form{scroll-margin-top:110px}
+.podcast-signup-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,64px);align-items:start}
+.podcast-signup-intro p{margin-top:18px;color:var(--stone)}
+.podcast-signup-intro{padding-top:16px}
+.podcast-mail-art{width:132px;height:132px;display:grid;place-items:center;background:var(--blush);border-radius:46% 54% 56% 44%;margin-bottom:28px;transform:rotate(-6deg)}
+.podcast-mail-art svg{width:92px;height:92px;transform:rotate(6deg)}
+.podcast-signup-intro .podcast-handwritten{font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--espresso);margin-top:24px}
+.podcast-signup .formkit-form .formkit-header h2{max-width:18ch;margin-inline:auto}
+.podcast-signup .formkit-form .formkit-header:before{font-family:var(--sans);font-size:.62rem;letter-spacing:.16em}
+.podcast-signup .formkit-form .formkit-checkboxes{transition:background .2s,border-color .2s}
+.podcast-signup .formkit-form .formkit-checkboxes:has(input:checked){background:var(--blush)!important;border-color:var(--blush-deep)!important}
+.podcast-signup .formkit-form .formkit-checkboxes label{cursor:pointer}
+.podcast-signup .formkit-form .formkit-column{border-radius:20px!important}
+.podcast-signup .formkit-form .formkit-powered-by-convertkit-container{margin-top:20px}
+.podcast-signup-form{min-width:0}
+.podcast-signup .formkit-form{width:100%;max-width:none!important;font-family:var(--sans)!important;background:var(--blush)!important;border:1px solid var(--blush-deep)!important;border-radius:28px!important;padding:12px!important;box-shadow:0 18px 40px -28px var(--shadow)!important}
+.podcast-signup .formkit-form .formkit-background{display:none!important}
+.podcast-signup .formkit-form .formkit-column{padding:clamp(24px,4vw,40px)!important;min-width:0;flex-basis:100%!important}
+.podcast-signup .formkit-form .formkit-header h2{font-size:clamp(1.7rem,3vw,2.1rem);line-height:1.2}
+.podcast-signup .formkit-form legend{color:var(--espresso)!important;font-weight:500!important;margin-bottom:12px}
+.podcast-signup .formkit-form .formkit-input{font-family:var(--sans)!important;color:var(--espresso)!important;background:var(--white)!important;border:1px solid var(--taupe)!important;border-radius:14px!important;padding:14px 16px!important}
+.podcast-signup .formkit-form .formkit-input::placeholder{color:var(--stone)!important;opacity:1}
+.podcast-signup .formkit-form .formkit-checkboxes{font-size:.94rem;line-height:1.6;margin:10px 0!important}
+.podcast-signup .formkit-form .formkit-checkboxes{display:flex;align-items:flex-start;gap:10px}
+.podcast-signup .formkit-form .formkit-checkboxes input[type="checkbox"]{display:inline-block!important;position:static;width:18px;height:18px;margin:4px 0 0;flex-shrink:0;accent-color:var(--espresso)}
+.podcast-signup .formkit-form .formkit-checkboxes label{padding-left:0!important}
+.podcast-signup .formkit-form .formkit-checkboxes label::before,.podcast-signup .formkit-form .formkit-checkboxes label::after{display:none!important}
+.podcast-signup .formkit-form .formkit-checkboxes input:focus-visible+label{outline:2px solid var(--espresso);outline-offset:4px}
+.podcast-signup .formkit-form .formkit-submit{font-family:var(--sans)!important;letter-spacing:.04em}
+.podcast-signup .formkit-form .formkit-guarantee,.podcast-signup .formkit-form .formkit-disclaimer{color:var(--stone)!important}
+.podcast-signup-fallback{margin-top:16px;color:var(--stone);font-size:.86rem}
+.podcast-signup-error{margin-bottom:14px;padding:12px 16px;border:1px solid var(--espresso);border-radius:8px;color:var(--espresso);background:var(--blush)}
+@media(max-width:860px){.podcast-signup-layout{grid-template-columns:1fr}}
+
+/* Softer podcast actions keep the artwork and conversations in focus. */
+.nav-actions .btn-solid{background:var(--blush);color:var(--espresso)}
+.nav-actions .btn-solid:hover{background:var(--blush-deep)}
+.podcast-actions .btn,.podcast-card-actions .btn{white-space:normal;text-align:center}
+.podcast-soft{background:var(--blush);color:var(--espresso);border-color:var(--blush-deep)}
+.podcast-soft:hover{background:var(--blush-deep)}
+.podcast-outline{background:var(--cream);color:var(--espresso);border-color:var(--taupe)}
+.podcast-outline:hover{background:var(--blush)}
+.podcast-feature-layout{display:grid;grid-template-columns:minmax(180px,.7fr) 1.3fr;gap:clamp(24px,4vw,40px);align-items:center}
+.podcast-feature-layout .podcast-artwork{margin:0}
+.podcast-feature h2{font-size:clamp(2rem,4vw,3rem)}
+.podcast-card-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;align-items:center}
+.podcast-instagram{display:inline-flex;align-items:center;gap:8px;color:var(--espresso);font-size:.84rem;text-decoration:none;border-bottom:1px solid var(--taupe);padding:4px 0}
+.podcast-instagram:hover{border-color:var(--espresso)}
+.podcast-instagram svg{width:19px;height:19px;flex:0 0 auto}
+.podcast-listen{margin-top:28px;border-top:1px solid var(--espresso-08);padding-top:18px}
+.podcast-listen summary{cursor:pointer;font-size:.92rem;color:var(--espresso);text-underline-offset:4px}
+.podcast-listen summary:hover{text-decoration:underline}
+.podcast-listen .podcast-player{margin-top:18px}
+.podcast-signup .formkit-form .formkit-submit{background:var(--blush)!important;color:var(--espresso)!important;border:1px solid var(--blush-deep)!important}
+.podcast-signup .formkit-form .formkit-submit:hover{background:var(--blush-deep)!important}
+@media(max-width:620px){.podcast-feature-layout{grid-template-columns:1fr}.podcast-feature-layout .podcast-artwork{max-width:320px;margin-inline:auto}.podcast-card-actions{align-items:flex-start;flex-direction:column}}
+.podcast-listener{padding-bottom:0}.podcast-listener-invite{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;align-items:center;padding:40px;border:1px solid var(--blush-deep);border-radius:28px;background:var(--white)}.podcast-listener-invite .t-section{font-size:clamp(30px,3.4vw,42px)}.podcast-listener-invite p{margin-top:16px}.podcast-listener-action{text-align:center}.podcast-listener-action .btn{max-width:100%;white-space:normal}.podcast-listener-action .note{font-size:.8rem}@media(max-width:760px){.podcast-listener-invite{grid-template-columns:1fr;gap:24px;padding:28px}.podcast-listener-action{text-align:left}}
 </style>
 <script>document.documentElement.classList.add('js');setTimeout(function(){if(window.__flourishReveal)return;var e=document.querySelectorAll('.reveal');for(var i=0;i<e.length;i++)e[i].classList.add('in');},2500);</script>
 <script type="application/ld+json">
@@ -47,6 +104,103 @@
   "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://flourish-counseling.co/"},
     {"@type": "ListItem", "position": 2, "name": "Podcasts", "item": "https://flourish-counseling.co/podcasts"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://flourish-counseling.co/podcasts#webpage",
+      "url": "https://flourish-counseling.co/podcasts",
+      "name": "Podcasts | Flourish Counseling Co.",
+      "description": "The Art of Flourishing on Spotify, plus upcoming shows Sexology Explained and Sex on the Couch.",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@id": "https://flourish-counseling.co/podcasts#the-art-of-flourishing"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@id": "https://flourish-counseling.co/podcasts#sexology-explained"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@id": "https://flourish-counseling.co/podcasts#sex-on-the-couch"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "PodcastSeries",
+      "@id": "https://flourish-counseling.co/podcasts#the-art-of-flourishing",
+      "name": "The Art of Flourishing",
+      "url": "https://flourish-counseling.co/podcasts#the-art-of-flourishing",
+      "description": "Conversations about mental health and trauma recovery with Cristina Ally. Available on Spotify.",
+      "image": "https://flourish-counseling.co/assets/podcasts/the-art-of-flourishing.png",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Flourish Counseling Co.",
+        "url": "https://flourish-counseling.co/"
+      },
+      "sameAs": [
+        "https://www.instagram.com/flourishcounseling.co/",
+        "https://open.spotify.com/show/67eiyIkdiSftBkrirGnDyy"
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Cristina Ally",
+        "url": "https://flourish-counseling.co/about"
+      },
+      "webFeed": "https://anchor.fm/s/118ee14e8/podcast/rss"
+    },
+    {
+      "@type": "PodcastSeries",
+      "@id": "https://flourish-counseling.co/podcasts#sexology-explained",
+      "name": "Sexology Explained",
+      "url": "https://flourish-counseling.co/podcasts#sexology-explained",
+      "description": "Currently in development. Coming to Spotify.",
+      "image": "https://flourish-counseling.co/assets/podcasts/sexology-explained.png",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Flourish Counseling Co.",
+        "url": "https://flourish-counseling.co/"
+      },
+      "sameAs": [
+        "https://www.instagram.com/sexologyexplained/"
+      ],
+      "creativeWorkStatus": "In development"
+    },
+    {
+      "@type": "PodcastSeries",
+      "@id": "https://flourish-counseling.co/podcasts#sex-on-the-couch",
+      "name": "Sex on the Couch",
+      "url": "https://flourish-counseling.co/podcasts#sex-on-the-couch",
+      "description": "Currently in development. Coming to Spotify.",
+      "image": "https://flourish-counseling.co/assets/podcasts/sex-on-the-couch.png",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Flourish Counseling Co.",
+        "url": "https://flourish-counseling.co/"
+      },
+      "sameAs": [
+        "https://www.instagram.com/sexonthecouchpodcast/"
+      ],
+      "creativeWorkStatus": "In development"
+    }
   ]
 }
 </script>
@@ -101,20 +255,33 @@
     <span class="eyebrow reveal">Podcasts</span>
     <h1 class="t-title reveal">Room to listen.<br>Space to grow.</h1>
     <p class="reveal">Explore The Art of Flourishing, and get a first look at two new shows in the works.</p>
+    <a class="btn podcast-soft mt-s reveal" href="#podcast-updates">Get podcast updates</a>
   </div>
 </section>
 
 <section class="section cream" aria-labelledby="live-podcast-title">
   <div class="wrap">
-    <article class="podcast-feature reveal">
-      <span class="podcast-status">Available now on Spotify</span>
-      <h2 class="t-section" id="live-podcast-title">The Art of Flourishing</h2>
-      <p>Conversations about mental health and trauma recovery with Cristina Ally. Listen at your own pace, wherever you are in your journey.</p>
-      <div class="podcast-actions">
-        <a class="btn btn-solid" href="https://open.spotify.com/show/67eiyIkdiSftBkrirGnDyy?utm_source=openai&amp;utm_medium=chatgpt&amp;go=1&amp;nap_web=1&amp;request_id=60ad644b-a86b-4ecc-8dce-96cd3b17c61a" target="_blank" rel="noopener">Listen on Spotify</a>
-        <a class="podcast-rss" href="https://anchor.fm/s/118ee14e8/podcast/rss" target="_blank" rel="noopener">Subscribe via RSS</a>
+    <article id="the-art-of-flourishing" class="podcast-feature reveal">
+      <div class="podcast-feature-layout">
+        <img class="podcast-artwork" src="assets/podcasts/the-art-of-flourishing.png" alt="The Art of Flourishing podcast cover featuring Cristina Ally with headphones and a microphone" width="500" height="500" loading="lazy" decoding="async">
+        <div>
+          <span class="podcast-status">Available now on Spotify</span>
+          <h2 class="t-section" id="live-podcast-title">The Art of Flourishing</h2>
+          <p>Conversations about mental health and trauma recovery with Cristina Ally. Listen at your own pace, wherever you are in your journey.</p>
+          <div class="podcast-actions">
+            <a class="btn podcast-outline" href="https://open.spotify.com/show/67eiyIkdiSftBkrirGnDyy" target="_blank" rel="noopener">Listen on Spotify</a>
+            <a class="podcast-rss" href="https://anchor.fm/s/118ee14e8/podcast/rss" target="_blank" rel="noopener">Subscribe via RSS</a>
+          </div>
+          <div class="podcast-card-actions">
+            <a class="btn podcast-soft subscribe-show" data-interest="25237706" href="#podcast-updates">Subscribe for updates</a>
+            <a class="podcast-instagram" href="https://www.instagram.com/flourishcounseling.co/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg><span>Follow on Instagram</span></a>
+          </div>
+        </div>
       </div>
-      <iframe class="podcast-player" title="The Art of Flourishing podcast player on Spotify" src="https://open.spotify.com/embed/show/67eiyIkdiSftBkrirGnDyy?utm_source=oembed" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      <details class="podcast-listen">
+        <summary>Play the latest episode here</summary>
+        <iframe class="podcast-player" title="The Art of Flourishing podcast player on Spotify" src="https://open.spotify.com/embed/show/67eiyIkdiSftBkrirGnDyy?utm_source=oembed" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </details>
     </article>
   </div>
 </section>
@@ -127,17 +294,67 @@
       <p>Two new podcasts are in the works. Check back here for launch details and Spotify listening links.</p>
     </div>
     <div class="grid-2 podcast-upcoming">
-      <article class="card cream reveal">
+      <article id="sexology-explained" class="card cream reveal">
         <span class="podcast-status">Coming soon</span>
+        <img class="podcast-artwork" src="assets/podcasts/sexology-explained.png" alt="Sexology Explained podcast artwork with pink lips and a striped border" width="1254" height="1254" loading="lazy" decoding="async">
         <h3>Sexology Explained</h3>
         <p>Currently in development. Coming to Spotify.</p>
+        <div class="podcast-card-actions">
+          <a class="btn podcast-soft subscribe-show" data-interest="25237709" href="#podcast-updates">Subscribe for updates</a>
+          <a class="podcast-instagram" href="https://www.instagram.com/sexologyexplained/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg><span>Follow on Instagram</span></a>
+        </div>
       </article>
-      <article class="card cream reveal">
+      <article id="sex-on-the-couch" class="card cream reveal">
         <span class="podcast-status">Coming soon</span>
         <img class="podcast-artwork" src="assets/podcasts/sex-on-the-couch.png" alt="Sex on the Couch podcast artwork with a pink couch and heart-shaped pillow" width="1254" height="1254" loading="lazy" decoding="async">
         <h3>Sex on the Couch</h3>
         <p>Currently in development. Coming to Spotify.</p>
+        <div class="podcast-card-actions">
+          <a class="btn podcast-soft subscribe-show" data-interest="25237711" href="#podcast-updates">Subscribe for updates</a>
+          <a class="podcast-instagram" href="https://www.instagram.com/sexonthecouchpodcast/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg><span>Follow on Instagram</span></a>
+        </div>
       </article>
+    </div>
+  </div>
+</section>
+<section class="section cream podcast-listener" id="podcast-questions" aria-labelledby="podcast-listener-title">
+  <div class="wrap">
+    <div class="podcast-listener-invite">
+      <div>
+        <span class="eyebrow muted">Let's Make It a Conversation</span>
+        <h2 class="t-section mt-s" id="podcast-listener-title">What's on your mind?</h2>
+        <p>A question you've been sitting with, a topic you're curious about, or a story about how a podcast has helped. There's room for your voice here.</p>
+        <p class="note">Choose your podcast and share privately, anonymously, or with a public credit. Permission to share is always your choice. Features and replies aren't guaranteed.</p>
+      </div>
+      <div class="podcast-listener-action">
+        <a class="btn podcast-soft" href="https://docs.google.com/forms/d/e/1FAIpQLSfv30Grlya9VW-ow5CYBo6oj9GSqFKPQPQiT_gL--Qj7-p_Qg/viewform" target="_blank" rel="noopener noreferrer">Share a question or story</a>
+        <p class="note">Opens our listener form in a new tab.<br>For podcast conversations, not therapy or urgent support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section cream podcast-signup" aria-labelledby="podcast-signup-title">
+  <div class="wrap podcast-signup-layout">
+    <div class="podcast-signup-intro">
+      <div class="podcast-mail-art" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 40 50 18 83 40v39a5 5 0 0 1-5 5H22a5 5 0 0 1-5-5V40Z" fill="var(--blush-deep)" stroke="var(--espresso)" stroke-width="1.8" stroke-linejoin="round"/>
+          <rect x="28" y="25" width="44" height="44" rx="4" fill="var(--cream)" stroke="var(--espresso)" stroke-width="1.8"/>
+          <path d="M50 55s-13-8-13-15a7 7 0 0 1 13-3 7 7 0 0 1 13 3c0 7-13 15-13 15Z" fill="var(--blush)" stroke="var(--espresso)" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="m17 42 33 23 33-23v37a5 5 0 0 1-5 5H22a5 5 0 0 1-5-5V42Z" fill="var(--cream)" stroke="var(--espresso)" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="m19 81 22-23m40 23L59 58M82 15v10m-5-5h10M17 17v7m-4-3h8" stroke="var(--espresso)" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="eyebrow muted">Let's Keep in Touch</span>
+      <h2 class="t-section mt-s" id="podcast-signup-title">A little connection,<br>between episodes.</h2>
+      <p>Get podcast launch news and new episode updates. Choose the shows you want to hear about, and add Flourish Counseling news and events if you'd like.</p>
+      <p class="note">All three shows, one favorite, or a little practice news. You choose what lands in your inbox.</p>
+      <p class="podcast-handwritten">Good things are growing here.</p>
+    </div>
+    <div class="podcast-signup-form" id="podcast-updates" tabindex="-1" aria-label="Podcast email updates signup">
+      <p class="podcast-signup-error" id="podcast-interest-error" role="alert" hidden>Please choose at least one type of update.</p>
+      <script async data-uid="0fb829734d" src="https://flourish-counseling-co.kit.com/0fb829734d/index.js?v=2"></script>
+      <p class="podcast-signup-fallback">Prefer a separate page? <a href="https://flourish-counseling-co.kit.com/0fb829734d" target="_blank" rel="noopener">Open the signup form</a>.</p>
     </div>
   </div>
 </section>
@@ -163,6 +380,7 @@
       <img class="flogo" src="assets/brand/flourish-horizontal-white.png" alt="Flourish Counseling Co." width="2389" height="637" loading="lazy" decoding="async">
       <p>2431 Aloma Ave., Suite 111<br>Winter Park, FL 32792</p>
       <p class="reach">Phone: <b>407-630-7529</b><br>New &amp; existing clients are best served through the <a href="https://flourish-counseling.clientsecure.me/" target="_blank" rel="noopener" style="display:inline;color:var(--cream)">client portal</a>.</p>
+      <nav class="social-links" aria-label="Follow Flourish Counseling Co."><a href="https://www.instagram.com/flourishcounseling.co/" target="_blank" rel="noopener noreferrer" aria-label="Flourish Counseling Co. on Instagram (opens in a new tab)" title="Instagram"><svg aria-hidden="true"><use href="/assets/icons/social.svg#instagram"></use></svg></a><a href="https://www.facebook.com/flourishcounseling.co/" target="_blank" rel="noopener noreferrer" aria-label="Flourish Counseling Co. on Facebook (opens in a new tab)" title="Facebook"><svg aria-hidden="true"><use href="/assets/icons/social.svg#facebook"></use></svg></a><a href="https://www.youtube.com/channel/UCExF19qUDZXvj4r_ivNf2Ww" target="_blank" rel="noopener noreferrer" aria-label="Flourish Counseling Co. on YouTube (opens in a new tab)" title="YouTube"><svg aria-hidden="true"><use href="/assets/icons/social.svg#youtube"></use></svg></a><a href="https://www.linkedin.com/in/flourishcounselingco/" target="_blank" rel="noopener noreferrer" aria-label="Flourish Counseling Co. on LinkedIn (opens in a new tab)" title="LinkedIn"><svg aria-hidden="true"><use href="/assets/icons/social.svg#linkedin"></use></svg></a><a href="https://share.google/cGf8UyFInybLpTWXj" target="_blank" rel="noopener noreferrer" aria-label="Flourish Counseling Co. on Google Business (opens in a new tab)" title="Google Business"><svg aria-hidden="true"><use href="/assets/icons/social.svg#google"></use></svg></a><a href="https://m.yelp.com/biz/flourish-counseling-winter-park-4" target="_blank" rel="noopener noreferrer" aria-label="Flourish Counseling Co. on Yelp (opens in a new tab)" title="Yelp"><svg aria-hidden="true"><use href="/assets/icons/social.svg#yelp"></use></svg></a></nav>
       <div class="professional-verification">
         <span class="verification-label">Professional verification</span>
         <!-- Professional verification provided by Psychology Today -->
@@ -178,6 +396,7 @@
 </footer>
 
 <script src="js/site.js?v=3"></script>
+<script src="js/podcast-signup.js?v=3"></script>
 <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js" async></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "662d7ea7f29842d891a2d545851a6481"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

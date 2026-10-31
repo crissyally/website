@@ -238,3 +238,13 @@ footer.site .professional-verification .sx-verified-seal{display:inline-block;pa
 
 .draft-flag{position:fixed;bottom:14px;right:14px;background:var(--espresso);color:var(--cream);font-size:.7rem;
   letter-spacing:.05em;padding:7px 13px;border-radius:30px;opacity:.85;z-index:200}
+
+/* Practice social profiles: compact footer icons and labeled Contact links. */
+.social-links{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:20px}
+.social-links svg{width:20px;height:20px;flex:0 0 auto}
+footer.site .social-links a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;padding:10px;border:1px solid var(--stone);border-radius:50%;color:var(--cream)}
+footer.site .social-links a:hover{background:var(--espresso);border-color:var(--taupe)}
+.social-links-contact{gap:12px;margin-top:28px}
+.social-links-contact a{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;background:var(--cream);border:1px solid var(--blush-deep);border-radius:40px;color:var(--espresso);font-size:.9rem;text-decoration:none}
+.social-links-contact a:hover{background:var(--white)}
+.social-links a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
