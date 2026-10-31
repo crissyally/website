@@ -4,12 +4,13 @@ Website changes are on `codex/podcast-audience-updates`. They are not approved f
 
 ## Review without a Netlify deploy
 
-- Commit review work with `[skip ci]` in every pushed commit message. Netlify documents this marker as preventing branch and production deploys for those commits.
-- Push only this review branch. Do not push or merge into `main` until Crissy approves publishing and the deploy budget has been checked.
-- Preview locally with `python3 -m http.server 8765 --bind 127.0.0.1`.
-- No pull request was opened as part of this branch setup, avoiding an automatic Deploy Preview.
-- For release, follow `AGENTS.md` and `START-HERE.md`: check `.deploy/budget.sh`, report the remaining publishes and reset date, agree on publication, then use the documented deployment workflow. A GitHub merge can trigger production, so treat merging as a publishing step. Review-only skip markers must not accidentally suppress the eventual approved production release.
-- Official Netlify source: https://docs.netlify.com/deploy/manage-deploys/manage-deploys-overview/
+Follow the "Working on a branch" section of `START-HERE.md`, merged from `origin/main` on October 31, 2026.
+
+- All review commits include `[skip ci]`. Push only `codex/podcast-audience-updates`.
+- Never open a pull request, because the repository instructions say Netlify Deploy Previews cost credits.
+- Preview locally. No production merge or deploy is authorized.
+- When Crissy approves publication, update `main`, squash-merge the review branch without committing, check `.deploy/budget.sh`, report the remaining publishes/reset date, and agree before running `.deploy/deploy.sh` with a release description that does not contain `[skip ci]`.
+- Keep the branch as the review history. Delete it only if Kevin asks.
 
 ## Podcast page changes
 
@@ -33,7 +34,19 @@ Checked on this podcast page, not a claim about a complete site-wide audit:
 
 This is a sound technical foundation. Search ranking, indexing, rich results and AI citations are not guaranteed. The next content improvement after launch would be substantive episode notes and accurate transcripts, rather than more decorative content on this page.
 
-The referenced vault notes were not available in the local memory files searched during this session. This review uses the repository rules and current official guidance, not an assumed vault checklist.
+Kevin added the missing guidance to `SEO-AND-AEO.md` and `START-HERE.md` on main. Both files have now been read in full and merged into this review branch. The page has not yet had the following proposed copy changes applied.
+
+### Changes recommended against SEO-AND-AEO.md
+
+1. Replace the poetic H1 with **Podcasts on healing and sexuality**. Keep **Room to listen. Space to grow.** directly below as the warm subtitle. There is already exactly one H1, but it does not carry a plain search phrase.
+2. Reorder the title to topic, place, brand, for example **Podcasts | Winter Park, FL | Flourish Counseling Co.** The existing title puts the brand before the place.
+3. Expand the current 135-character description to 140 to 160 characters, naming the audience/topic, host/location and next action. Suggested draft: **Explore mental health and sexuality podcasts with Cristina Ally in Winter Park, Florida. Listen to The Art of Flourishing and subscribe for new show updates.**
+4. Add two or three useful in-body links to relevant existing pages, such as Cristina's About page, educational Resources, and Contact for practice information. Current internal body links only jump to signup. Add one contextual incoming link from an existing page, such as About or the homepage. Navigation/footer links alone do not meet the playbook.
+5. Add a small, optional three-question accordion answering where to listen, which shows are live, and how to submit a question. A podcast page is not explicitly required to have the service/resource FAQ block, but direct answers would help here. If added, FAQPage JSON-LD must match the visible questions and answers word for word.
+
+Already passing: canonical and Open Graph URL, sitemap/redirect, descriptive image alt text and dimensions, clean outbound links, PodcastSeries data for every show, BreadcrumbList, parsable JSON-LD, no invented episodes or dates, and preserved protected scripts. Do not add PodcastEpisode records until actual episodes are listed in page content. Keep listener feedback about podcast content separate from counseling reviews or treatment-outcome testimonials.
+
+After an approved release, use the playbook's Search Console and IndexNow steps. Those steps have not been run for this unpublished batch.
 
 Sources:
 - https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
