@@ -36,7 +36,7 @@ Checked on this podcast page, not a claim about a complete site-wide audit:
 
 This is a sound technical foundation. Search ranking, indexing, rich results and AI citations are not guaranteed. The next content improvement after launch would be substantive episode notes and accurate transcripts, rather than more decorative content on this page.
 
-Kevin added the missing guidance to `SEO-AND-AEO.md` and `START-HERE.md` on main. Both files have now been read in full and merged into this review branch. The approved headline, subtitle, search title and description below have been applied. The contextual-link and FAQ items remain recommendations.
+Kevin added the missing guidance to `SEO-AND-AEO.md` and `START-HERE.md` on main. Both files have now been read in full and merged into this review branch. The approved headline, subtitle, search title and description below have been applied. The contextual-link wording is proposed in `HANDOFF-PODCAST.md` section 12, awaiting Crissy's approval. The FAQ (item 5) is decided: skip it on this page for now.
 
 ### Changes recommended against SEO-AND-AEO.md
 

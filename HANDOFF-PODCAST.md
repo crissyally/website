@@ -1,6 +1,6 @@
 # Start here: podcast website and audience setup handoff
 
-Last updated: October 31, 2026 (America/New_York).
+Last updated: October 31, 2026, evening (America/New_York), by Kevin's Claude after Codex reached its usage limit.
 
 This is the current continuation record for Crissy and Kevin's Claude, Codex, or another assistant. It supersedes older chat summaries and local draft documents outside this repository. It contains no account credentials, client details or listener response contents.
 
@@ -16,7 +16,7 @@ This is the current continuation record for Crissy and Kevin's Claude, Codex, or
 
 Crissy wants to work through ONE TOPIC AT A TIME, with an explanation and concrete proposed wording before moving to the next decision. Do not dump a whole SEO checklist on her or implement unapproved optional copy/design changes in bulk. After she approves a specific edit, apply it and back it up to this branch without publishing.
 
-The currently active topic is finishing SEO/AEO item 1 from her remaining-work list. She has just finalized the search title and description. NEXT: explain and propose the contextual internal links. After that, discuss the optional compact FAQ. Do not jump straight to publication.
+The currently active topic is finishing SEO/AEO item 1 from her remaining-work list. She has finalized the search title and description. Kevin's Claude has since proposed the exact wording for the contextual internal links (section 12). NEXT: show Crissy that wording, get her approval or tweaks, then apply it on this branch. The FAQ is decided: skip it for now (section 12). Then move to item 2 in section 9. Do not jump straight to publication.
 
 ## 2. Read these before work
 
@@ -210,7 +210,7 @@ Both public/private routes were tested without sign-in. One clearly synthetic TE
 
 ## 9. What remains, in review order
 
-1. Finish SEO/AEO item 1: propose two or three useful in-body internal links and one contextual incoming link from About/homepage, beyond navigation/footer. Then discuss a small optional FAQ (three questions: where to listen, which shows are live, submitting a question). Do not add FAQPage schema unless its text matches visible approved Q&A word for word. Keep the page uncluttered.
+1. Finish SEO/AEO item 1: walk Crissy through the proposed link wording in section 12, apply what she approves, commit with `[skip ci]` and push this branch. No FAQ (decided, section 12).
 2. Walk Crissy through the Google Form branding, privacy/credit choices and thank-you message one topic at a time. They work, but the guided review is not finished.
 3. Clarify whether Crissy wants an automatic podcast submission thank-you email, or simply the ability to reply manually as the podcast address. Explain required account/alias/automation setup before building it. Kit newsletter confirmation is already separate. No automatic form email was built.
 4. Final review of the full batch on phone/desktop, followed only by an explicitly approved, budget-checked release.
@@ -246,3 +246,37 @@ Do NOT publish as part of reading or continuing this handoff. Do not run Netlify
 - Only after release: live checks, Search Console/IndexNow steps from `SEO-AND-AEO.md`.
 
 No deployment budget was spent during this branch work. No final budget check or release approval has occurred for this batch.
+
+## 12. Added October 31 evening by Kevin's Claude: link wording and the FAQ decision
+
+**FAQ: skip it on the podcast page for now.** Kevin agreed on October 31. The page already answers
+"where can I listen" with its Spotify buttons, an FAQ would mostly add length, and Crissy wants the
+page uncluttered. FAQ blocks pay off on service pages, which already have them. Revisit once the two
+new shows launch and listeners ask real questions. Do not add an FAQ or `FAQPage` schema here.
+
+**Contextual links: proposed, NOT yet approved by Crissy.** Present them one at a time in plain
+words, then apply only what she approves. All targets are existing pages; use the clean addresses.
+
+Podcast page, The Art of Flourishing description (two links in one sentence):
+
+> Conversations about mental health and **trauma recovery** with **Cristina Ally, LMHC**. Listen at your own pace, wherever you are in your journey.
+
+- "Cristina Ally, LMHC" links to `/about` (lets a curious listener learn who the host is).
+- "trauma recovery" links to `/services/trauma-recovery` (ties the show to the main thing she treats).
+- Keep "LMHC" only because it was verified on `about.html` today; do not add other credentials.
+
+Podcast page, a new sentence directly after "For podcast conversations, not therapy or urgent support.":
+
+> Looking for support of your own? **Explore therapy at Flourish.**
+
+- "Explore therapy at Flourish" links to `/services` (the bridge for a listener who does want therapy).
+
+About page, a new last sentence of the paragraph beginning "I'm passionate about walking alongside trauma survivors":
+
+> I also host **The Art of Flourishing**, a podcast about mental health and trauma recovery.
+
+- "The Art of Flourishing" links to `/podcasts` (the one incoming link from an existing page; the About page is in Cristina's first person, so the sentence is too).
+
+Internal links open in the same tab (no `target="_blank"`). Style them with the site's existing in-body
+link style; do not add new colors. After applying, check phone and desktop, run `git diff --check`,
+confirm the three protected scripts are unchanged on both pages, then commit with `[skip ci]` and push.
