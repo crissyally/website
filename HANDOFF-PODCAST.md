@@ -288,3 +288,24 @@ Crissy approved the Art of Flourishing description in section 12. It now links "
 ## 14. November 1: remaining contextual-link decisions
 
 Crissy declined the proposed therapy-support link on the podcast page. Do not add it. She approved a broader About-page invitation, now appended to the trauma-survivor paragraph: "I also host podcasts exploring mental health and authentic sexuality. Check out our latest episodes on our podcast page!" The second sentence links to `/podcasts` in the same tab. About-page scripts are unchanged. Contextual-link review is complete. Next: review Google Form branding, submission choices and thank-you message together. Crissy now prefers seeing more related items at a time, rather than approving every tiny item separately. Nothing published.
+
+## 15. November 1: Google Form feedback applied
+
+Crissy requested a microphone instead of the speech bubble, direct signup links, guidance about multiple questions, and clearer optional-email expectations. These changes are saved in the existing Google Form service and the new header assets are backed up here. No website deploy occurred.
+
+- Header SVG and 1600x400 PNG now show a simple blush/espresso microphone. Existing wordmark retained. PNG uploaded and saved in Google Forms. Upload auto-selected a gray accent; restored espresso #413e39 and verified on the public form.
+- Intro now asks for one question, idea or story per submission, and another submission for another question/podcast. Enabled native "Show link to submit another response". The show stays single choice so each item has its own routing/permission.
+- Intro ends: "Sharing here does not subscribe you to emails. Want podcast updates? Join our email list". Last phrase is a native clickable link to https://flourish-counseling-co.kit.com/0fb829734d . Click tested: opens a NEW TAB (Google click handler, no HTML target attribute), leaves form open, and arrives at existing Kit form with first name, email and interest choices. No signup submitted. Standalone Kit form does not use website JS enhancements; website embed remains preferred for onsite visitors.
+- Section 3 description: "You may leave your email if you are open to a follow-up about this submission. We may or may not contact you, and a personal reply is not guaranteed. Your email is never shared publicly. Leaving it here does not subscribe you to updates." Followed by "Want podcast news and new episode updates? Join our email list." Last phrase links to the same standalone Kit form.
+- Three sections retained: submission/sharing permission, public credit (skipped for private submissions), optional follow-up/acknowledgement. Explained this reasoning to Crissy. She has not requested collapsing them.
+- Revised confirmation message, saved in Presentation settings:
+
+> Thank you for adding your voice to the conversation! We cannot promise a feature or personal reply, but we appreciate you being here.
+>
+> Have more to share? Submit another response using the link below.
+>
+> Questions? podcast@flourish-counseling.co
+>
+> This submission does not subscribe you to emails. Join our podcast updates here: https://flourish-counseling-co.kit.com/0fb829734d
+
+QA: public intro/banner inspected; direct signup click tested in new tab; private route with synthetic unsubmitted text reaches section 3 and displays reminder/link; test answers cleared and clean public form left open. No new test response submitted and no email sent. Confirmation text and submit-another toggle checked in editor; new end screen has not been submitted again to verify. Proof screenshots outside repo: google-form-microphone-preview.png and google-form-follow-up-preview.png in workspace parent. Next: Crissy reviews these changes; automatic submission email versus manual replies remains undecided and unbuilt. Do not publish website yet.
