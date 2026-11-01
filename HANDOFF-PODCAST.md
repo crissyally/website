@@ -309,3 +309,28 @@ Crissy requested a microphone instead of the speech bubble, direct signup links,
 > This submission does not subscribe you to emails. Join our podcast updates here: https://flourish-counseling-co.kit.com/0fb829734d
 
 QA: public intro/banner inspected; direct signup click tested in new tab; private route with synthetic unsubmitted text reaches section 3 and displays reminder/link; test answers cleared and clean public form left open. No new test response submitted and no email sent. Confirmation text and submit-another toggle checked in editor; new end screen has not been submitted again to verify. Proof screenshots outside repo: google-form-microphone-preview.png and google-form-follow-up-preview.png in workspace parent. Next: Crissy reviews these changes; automatic submission email versus manual replies remains undecided and unbuilt. Do not publish website yet.
+
+## 16. November 1: larger mic, pink form and podcast answer artwork
+
+Crissy requested a doubled microphone, pale pink background, artwork to identify the podcast, and clarification of response storage/confirmation.
+
+Applied and saved in Google Forms:
+- Doubled microphone with `translate(-246 -70) scale(2)` in header SVG, rendered 1600x400 native PNG and uploaded. Mic is now roughly the height of the central wordmark/text block.
+- Native theme accent changed to brand blush #f8d9ca. Background uses Google-generated pale shade #fcf0ea (native "Dark" variant, still very pale). Google Forms ties background choices to accent; espresso accent with independent pink background is not exposed. Website CSS unchanged. Header upload resets accent; restored blush and pink after upload.
+- Each of the three existing multiple-choice podcast answers now has its corresponding cover image, uploaded from assets/podcasts. "Not sure, you choose" retained. Required single-choice behavior and all other questions preserved. Logos satisfy recognition request without inventing show descriptions for upcoming shows.
+- Confirmation now reads:
+
+> Your voice is part of the conversation. Thank you!
+>
+> With appreciation,
+> Cristina + the Flourish podcast team
+>
+> We cannot promise a feature or personal reply. Have more to share? Submit another response below.
+>
+> Questions? podcast@flourish-counseling.co
+>
+> This submission does not subscribe you to emails. Join our podcast updates: https://flourish-counseling-co.kit.com/0fb829734d
+
+Storage/receipts verified in signed-in editor: Responses tab has one existing synthetic test record. Button says "Link to Sheets", so no linked spreadsheet. Responses live in Google Form owned by cristina@flourish-counseling.co, accessible via Drive or editor Responses tab. Native automatic email collection remains "Do not collect" and response copies "Off" (disabled, requires email collection). Optional follow-up question is separate from Google email-collection setting. No new sheet, notification, email automation or required email collection enabled. Native confirmation supports text and shared header/theme, limited layout control; no custom thank-you page built.
+
+QA: public header/pink background and all three images verified; selection works. Confirmation saved and re-read in editor, not test-submitted again. No emails or new responses sent. Proof screenshots outside repo: google-form-pink-header-preview.png, google-form-podcast-choices-preview.png. Website remains unpublished. Next: Crissy reviews refinements; decide about optional response-copy email only if she wants it, preserving separation from Kit subscriptions.
