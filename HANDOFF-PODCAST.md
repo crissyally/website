@@ -280,3 +280,7 @@ About page, a new last sentence of the paragraph beginning "I'm passionate about
 Internal links open in the same tab (no `target="_blank"`). Style them with the site's existing in-body
 link style; do not add new colors. After applying, check phone and desktop, run `git diff --check`,
 confirm the three protected scripts are unchanged on both pages, then commit with `[skip ci]` and push.
+
+## 13. November 1: first contextual links approved and applied
+
+Crissy approved the Art of Flourishing description in section 12. It now links "trauma recovery" to `/services/trauma-recovery` and "Cristina Ally, LMHC" to `/about`, in the same tab. Only this first proposal is applied. The therapy-support sentence and incoming About-page sentence remain proposed, awaiting review one at a time. Next: present the therapy-support sentence for approval. Nothing published.
