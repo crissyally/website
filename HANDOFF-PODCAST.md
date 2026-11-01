@@ -1,6 +1,6 @@
 # Start here: podcast website and audience setup handoff
 
-Last updated: October 31, 2026, evening (America/New_York), by Kevin's Claude after Codex reached its usage limit.
+Last updated: November 1, 2026 (America/New_York). Latest decisions and QA are in section 17; later numbered sections supersede earlier snapshots.
 
 This is the current continuation record for Crissy and Kevin's Claude, Codex, or another assistant. It supersedes older chat summaries and local draft documents outside this repository. It contains no account credentials, client details or listener response contents.
 
@@ -16,7 +16,7 @@ This is the current continuation record for Crissy and Kevin's Claude, Codex, or
 
 Crissy wants to work through ONE TOPIC AT A TIME, with an explanation and concrete proposed wording before moving to the next decision. Do not dump a whole SEO checklist on her or implement unapproved optional copy/design changes in bulk. After she approves a specific edit, apply it and back it up to this branch without publishing.
 
-The currently active topic is finishing SEO/AEO item 1 from her remaining-work list. She has finalized the search title and description. Kevin's Claude has since proposed the exact wording for the contextual internal links (section 12). NEXT: show Crissy that wording, get her approval or tweaks, then apply it on this branch. The FAQ is decided: skip it for now (section 12). Then move to item 2 in section 9. Do not jump straight to publication.
+The contextual links and Google Form reviews are complete. Crissy decided to retain optional email with no automatic response copy or submission thank-you email. Phone/desktop checks are complete with one Contact-page wrapping fix (section 17). Remaining before a release decision: fresh delivery test of the branded Kit subscription confirmation, if authorized. No publication or deployment-budget agreement yet.
 
 ## 2. Read these before work
 
@@ -334,3 +334,21 @@ Applied and saved in Google Forms:
 Storage/receipts verified in signed-in editor: Responses tab has one existing synthetic test record. Button says "Link to Sheets", so no linked spreadsheet. Responses live in Google Form owned by cristina@flourish-counseling.co, accessible via Drive or editor Responses tab. Native automatic email collection remains "Do not collect" and response copies "Off" (disabled, requires email collection). Optional follow-up question is separate from Google email-collection setting. No new sheet, notification, email automation or required email collection enabled. Native confirmation supports text and shared header/theme, limited layout control; no custom thank-you page built.
 
 QA: public header/pink background and all three images verified; selection works. Confirmation saved and re-read in editor, not test-submitted again. No emails or new responses sent. Proof screenshots outside repo: google-form-pink-header-preview.png, google-form-podcast-choices-preview.png. Website remains unpublished. Next: Crissy reviews refinements; decide about optional response-copy email only if she wants it, preserving separation from Kit subscriptions.
+
+## 17. November 1: Google Form review completed and final website QA
+
+Crissy approved the Google Form refinements and ended that topic. She decided to keep email optional, with no automatic emailed response copy. No submission email automation is needed now. Ability to manually send as podcast address has not been verified or configured. Do not conflate Google Form submissions with Kit subscription confirmation.
+
+Website QA at measured desktop 1280x900 and phone 390x844:
+- Podcast headline/artwork and signup rendered without horizontal overflow. Subscribe landing is about 110 px below viewport top, below sticky header. All three show CTAs select the correct native tag, preserve existing selections, and do not automatically select All Podcasts.
+- First name remains optional and before required email, with given-name/email autocomplete. Empty-interest validation tested with reserved example.com address and no choices; capture handler blocked submission and focused its error. Test address removed. No signup/email sent.
+- Mobile menu opens/closes; Spotify player disclosure opens/closes. Actual Listen on Spotify click opens correct show and episodes. No audio playback attempted. Actual question CTA opens the correct public Google Form in a separate tab.
+- Three Instagram hrefs match approved handles and target new tabs. No fresh end-to-end authentication/profile review of each Instagram account, no Eventbrite registration/payment test, and no RSS app subscription performed in this pass.
+- About approved podcast invitation present; About/Events have no overflow at measured phone/desktop widths. Eventbrite organizer hrefs retained.
+- Contact social SVGs render 20 px. Found pre-existing narrow-phone overflow caused by appointment-button min-content width. Fixed ONLY inline CSS in contact.html: grid columns use minmax(0,1fr), portal-card buttons allow normal whitespace and centered wrapping. Verified Contact now has no overflow at 390 and 320 px and desktop. Booking markup/scripts untouched.
+- Actual podcast-header New Clients click opened SimplePractice Find a clinician interface, then closed without choosing clinician, entering data, or booking.
+- Static check of 26 changed HTML pages: JSON-LD parses, unique IDs, internal clean-link destinations exist, protected booking/analytics/verification scripts and clientsecure links match origin/main. JS syntax and git diff --check passed. Python local preview does not implement Netlify clean-route rewrites; route existence checked against HTML files, production rewrites must be checked after authorized release.
+
+Screenshots outside Git in workspace parent: qa-podcast-desktop.png, qa-podcast-phone.png, qa-signup-desktop.png, qa-signup-phone.png, qa-contact-phone-fixed.png. User-facing screenshots are browser captures, not real-device Safari tests. No claim of exhaustive whole-site device testing.
+
+Kit recap provided: saved branded confirmation has subject "Your Flourish updates are almost here 🌿", logo, warm welcome, blush dynamic confirmation button, Cristina sign-off. Earlier original-email double opt-in/name/tag test passed, but redesigned email has not been delivered/tested in inbox. New send is NOT yet authorized. This is the remaining check before final release discussion. Generic post-confirmation Kit destination remains unchanged. Website not published; no deployment budget spent or approval obtained.
