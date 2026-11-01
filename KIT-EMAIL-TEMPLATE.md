@@ -25,3 +25,29 @@ This is a backup of the native HTML blocks, not a website page. The template wra
 ```
 
 Body paragraph and link color: #413e39, system sans-serif. Headings: Georgia (website serif fallback), #413e39. Kit did not offer Fraunces. Dynamic unsubscribe_url, subscriber_preferences_url, address and Built with Kit badge retained. A transient missing-unsubscribe warning during replacement cleared after block saving. Reopened confirmation displays preview.kit-mail3.com/unsubscribe and /preferences and resolves mailing address. No send performed. Inbox/mobile mail-client rendering remains to be tested with authorized fresh signup.
+
+## Confirmation body wording, updated manually by Crissy and preserved November 1
+
+A LITTLE FLOURISH FOR YOUR INBOX
+
+### Our connection starts here.
+
+Hi there,
+
+I'm so glad you're here. There's room for thoughtful questions, honest conversations, and a little more understanding as you cozy up and listen in.
+
+One small step before we begin: confirm your email below, and I'll send the podcast updates and practice news you chose.
+
+[Native dynamic button: Confirm your subscription]
+
+It's good to have you!
+
+Warmly,
+
+[User-supplied Cristina Ally signature image, 220 px wide, left aligned, no caption, alt text: Cristina Ally signature]
+
+Flourish Counseling Co. | Flourish Family of Podcasts
+
+*Your inbox, your choice, your voice. You can update your interests or unsubscribe whenever you like. If you didn't request these updates, you can leave this email as it is.*
+
+The signature is stored in Kit's media library, not backed up as image data or a media URL in this public repository. Current account has a disabled Show Built with Kit checkbox and an upgrade-to-Creator notice. No plan changed. Subject remains Your Flourish updates are almost here 💌. No email sent. Saved and reopened to verify signature and exact manual wording.

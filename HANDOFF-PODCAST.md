@@ -369,3 +369,11 @@ Saved in Kit:
 Backup of the EXACT header/footer HTML and design details: KIT-EMAIL-TEMPLATE.md. These live in Kit as two HTML blocks; editing that Markdown alone does NOT update Kit. Editor link https://app.kit.com/editor/templates/5162740/edit . Form link https://app.kit.com/forms/designers/10125230/edit?iframe=false .
 
 Screenshots outside repo: kit-pink-banner-white-email.png, kit-pink-footer-confirm-button.png. These are screenshots of saved Kit editor rendering, not delivered inbox screenshots. Next: Crissy reviews design, then an authorized fresh-delivery inbox test. No website publishing performed, no Netlify credits spent.
+
+## 19. November 1: signature and manual email copy preserved
+
+Crissy supplied her signature image and requested it replace the typed name. Uploaded that exact file to Kit (no image editing). Native image block replaces only "Cristina" after Warmly, width 220 px, left aligned, caption OFF, alt "Cristina Ally signature". Image looks legible on white. Do not commit the signature image or its Kit media URL into public Git.
+
+Captured and preserved Crissy's manual changes: H2 "Our connection starts here."; welcome paragraph now ends "as you cozy up and listen in."; italic final paragraph begins "Your inbox, your choice, your voice." Other warm copy and dynamic confirmation button retained. Exact text is now in KIT-EMAIL-TEMPLATE.md. Saved email and outer form settings, refreshed and reopened: all wording and signature persisted. Screenshot outside repo kit-email-signature-preview.png.
+
+Verified template UI again: Show "Built with Kit" checkbox is disabled and checked; upgrade-to-Creator notice. Official explanation https://help.kit.com/en/articles/4375211-the-built-with-kit-badge confirms removal requires paid plan. Badge retained, no upgrade or purchase made. No new email sent and website unpublished. Fresh delivery test remains outstanding if authorized.
