@@ -352,3 +352,20 @@ Website QA at measured desktop 1280x900 and phone 390x844:
 Screenshots outside Git in workspace parent: qa-podcast-desktop.png, qa-podcast-phone.png, qa-signup-desktop.png, qa-signup-phone.png, qa-contact-phone-fixed.png. User-facing screenshots are browser captures, not real-device Safari tests. No claim of exhaustive whole-site device testing.
 
 Kit recap provided: saved branded confirmation has subject "Your Flourish updates are almost here 🌿", logo, warm welcome, blush dynamic confirmation button, Cristina sign-off. Earlier original-email double opt-in/name/tag test passed, but redesigned email has not been delivered/tested in inbox. New send is NOT yet authorized. This is the remaining check before final release discussion. Generic post-confirmation Kit destination remains unchanged. Website not published; no deployment budget spent or approval obtained.
+
+## 18. November 1: Kit email redesigned to Crissy's explicit banner/white-body/footer reference
+
+Crissy clarified the desired email design using her Flourish_CE_Organizational_Structure.pdf as a visual reference: pink Flourish banner (no portrait), WHITE body, pink confirmation button, pink footer with general practice social links. This supersedes the intermediate cream-frame/pink-body styling from the interrupted turn. No PDF contents copied to the website and no PDF uploaded to Kit.
+
+Saved in Kit:
+- Subject is now "Your Flourish updates are almost here 💌". Crissy allowed either pink flower or heart envelope; chose envelope to match signup artwork.
+- Edited existing ACCOUNT DEFAULT template ID 5162740 (formerly Text only), renamed "Flourish | Pink banner and footer". This is account-level reusable template styling, not limited to one form. No broadcasts or sequences created/sent. Native template editor auto-saves.
+- Header native HTML block: blush #f8d9ca table, original public Flourish wordmark at 260 px, small Flourish Family of Podcasts line. No face/photo. CSS keeps email body WHITE #ffffff, espresso text #413e39, Georgia serif headings (website fallback because Kit font picker returned no Fraunces), blush button with rounded corners. System sans body remains email-safe fallback.
+- Footer native HTML block: blush table, "A LITTLE FLOURISH, WHEREVER YOU ARE.", three compact text links (practice Instagram, YouTube, LinkedIn), Visit Flourish online link to /contact. Suggested three links to avoid a crowded confirmation footer, rather than every review/social listing.
+- Original rich footer was replaced with HTML retaining Kit's SAME dynamic unsubscribe_url, subscriber_preferences_url and address variables. Built with Kit badge retained. Transient missing-unsubscribe warning cleared after HTML saving. Freshly reopened confirmation resolves preview unsubscribe/preferences URLs and the pre-existing account mailing address. Do not replace address from memory or assume it is practice address.
+- Removed duplicate original logo image from confirmation BODY, since template header now supplies it. Existing body copy, dynamic Confirm your subscription button and its native URL, sign-off and interests/unsubscribe explanation retained.
+- Saved confirmation email, saved form settings and refreshed/reopened to verify subject, one banner, white body, pink button/footer. No subscriber email was sent, no fresh signup performed. Native double opt-in remains on, auto-confirm off. Generic post-confirmation URL unchanged.
+
+Backup of the EXACT header/footer HTML and design details: KIT-EMAIL-TEMPLATE.md. These live in Kit as two HTML blocks; editing that Markdown alone does NOT update Kit. Editor link https://app.kit.com/editor/templates/5162740/edit . Form link https://app.kit.com/forms/designers/10125230/edit?iframe=false .
+
+Screenshots outside repo: kit-pink-banner-white-email.png, kit-pink-footer-confirm-button.png. These are screenshots of saved Kit editor rendering, not delivered inbox screenshots. Next: Crissy reviews design, then an authorized fresh-delivery inbox test. No website publishing performed, no Netlify credits spent.
