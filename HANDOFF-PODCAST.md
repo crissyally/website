@@ -284,3 +284,7 @@ confirm the three protected scripts are unchanged on both pages, then commit wit
 ## 13. November 1: first contextual links approved and applied
 
 Crissy approved the Art of Flourishing description in section 12. It now links "trauma recovery" to `/services/trauma-recovery` and "Cristina Ally, LMHC" to `/about`, in the same tab. Only this first proposal is applied. The therapy-support sentence and incoming About-page sentence remain proposed, awaiting review one at a time. Next: present the therapy-support sentence for approval. Nothing published.
+
+## 14. November 1: remaining contextual-link decisions
+
+Crissy declined the proposed therapy-support link on the podcast page. Do not add it. She approved a broader About-page invitation, now appended to the trauma-survivor paragraph: "I also host podcasts exploring mental health and authentic sexuality. Check out our latest episodes on our podcast page!" The second sentence links to `/podcasts` in the same tab. About-page scripts are unchanged. Contextual-link review is complete. Next: review Google Form branding, submission choices and thank-you message together. Crissy now prefers seeing more related items at a time, rather than approving every tiny item separately. Nothing published.
