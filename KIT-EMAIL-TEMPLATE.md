@@ -51,3 +51,7 @@ Flourish Counseling Co. | Flourish Family of Podcasts
 *Your inbox, your choice, your voice. You can update your interests or unsubscribe whenever you like. If you didn't request these updates, you can leave this email as it is.*
 
 The signature is stored in Kit's media library, not backed up as image data or a media URL in this public repository. Current account has a disabled Show Built with Kit checkbox and an upgrade-to-Creator notice. No plan changed. Subject remains Your Flourish updates are almost here 💌. No email sent. Saved and reopened to verify signature and exact manual wording.
+
+## Mailing address update
+
+Kit account mailing address was changed with Crissy's approval to 2431 Aloma Ave., Suite 111, Winter Park, FL 32792, USA on November 1. The existing dynamic address token is retained, so future emails resolve this office address. Previously delivered email content does not change.
