@@ -443,3 +443,8 @@ At Crissy’s request, prepared the three suggested copy refinements for preview
 ## 28. November 2: Crissy’s podcast copy refinements, UNPUBLISHED
 
 Capitalized Clinical Sexology in the Sexology Explained introduction. Its About the show begins “Cristina has turned her independent study into shared learning” and ends “while documenting her own growing knowledge.” Sex on the Couch introduction now identifies “Cristina Ally, LMHC,” matching About/Team credentials, and “fellow Clinical Sexology students.” Corresponding structured descriptions updated. No candidate-title change. Crissy also discussed a human introduction to Sexology Explained featuring herself and possibly Kevin; this is discussion only, no social publication authorized. Website remains unpublished.
+
+
+## 29. November 2: descriptive Sex on the Couch About wording
+
+At Crissy’s request, changed its About the show paragraph to: “Your host, Cristina Ally, brings together the people and ideas shaping sexology through approachable, human conversations that invite curiosity and deepen understanding of sexuality.” This replaces the imperative “Bring...” with a description. Local preview only, still unpublished.
