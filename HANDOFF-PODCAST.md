@@ -419,3 +419,12 @@ Live verification:
 - Post-release budget.sh confirms 30/300 used, 270 credits left, reserve 30, 16 safe publishes remain, reset November 30. No second release needed.
 
 Returned checkout to codex/podcast-audience-updates, merged origin/main back with [skip ci] so future branch work includes published commit. This handoff update is branch-only [skip ci], does not publish. Preserve the branch/history. Latest Kit email delivery was received and subscriber confirmed; initial email landed in spam BEFORE Crissy verified domain. No fresh post-authentication inbox test sent. No guarantee future inbox placement. Future optional work is separate from this finished release.
+
+
+## 25. November 2: podcast descriptions and icon links, UNPUBLISHED preview
+
+Crissy approved adding the proposed Sexology Explained and Sex on the Couch descriptions to a local preview, explicitly before any publication. Both descriptions are now on podcasts.html. Missions are in native expandable details; Sexology Explained also explains Cristina’s selection of topics/sources, AI summarization assistance, script curation/review and two AI presenting voices. Both remain marked coming soon/in development. Art of Flourishing’s previously approved description remains intact.
+
+Podcast Instagram links now use icons only, with accessible labels, hover titles and 44 px link targets. Added clean user-supplied LinkedIn Showcase URLs for /showcase/sexology-explained-podcast/ and /showcase/sex-on-the-couch-podcast/. Art of Flourishing still uses the practice Instagram; its separate LinkedIn URL has not been supplied. Do not guess or substitute the practice LinkedIn. Machine-readable descriptions and sameAs updated to match. Shared styles and protected scripts unchanged.
+
+Local browser preview checked at desktop and phone viewport settings with no horizontal overflow. Sexology Explained disclosure opened and its mission/process text verified. JSON-LD parses and protected markup comparison passed. Desktop screenshot outside Git: podcast-descriptions-desktop-preview.jpg. Preview: http://127.0.0.1:8765/podcasts.html#upcoming-podcasts-title. No publication, production merge, PR or deploy budget used. Await Crissy’s visual review and missing Art of Flourishing LinkedIn URL.
