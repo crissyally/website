@@ -448,3 +448,10 @@ Capitalized Clinical Sexology in the Sexology Explained introduction. Its About 
 ## 29. November 2: descriptive Sex on the Couch About wording
 
 At Crissy’s request, changed its About the show paragraph to: “Your host, Cristina Ally, brings together the people and ideas shaping sexology through approachable, human conversations that invite curiosity and deepen understanding of sexuality.” This replaces the imperative “Bring...” with a description. Local preview only, still unpublished.
+
+
+## 30. November 2: descriptions and social icons PUBLISHED
+
+Crissy explicitly requested publication. Budget check: 270 credits available, 16 safe publishes, reset November 30; reported one release would leave 15 safe publishes. Updated main and squash-merged the podcast work branch, then ran only .deploy/deploy.sh. Release commit 542c9d0: Publish podcast descriptions, show details and social icons. Script confirmed every changed page live. One publish only.
+
+Public browser verified new Clinical Sexology description, LMHC interview-host wording, all six per-show Instagram/LinkedIn icon links, both About the show controls, full AI process text and final “Your host, Cristina Ally, brings together...” wording. Both native disclosures opened and closed successfully. Screenshot outside repo: published-podcast-descriptions.jpg. No social post was published. Candidate wording remains unchanged as discussed. Returned to this work branch and synced release. All earlier unpublished notes for this batch are superseded.
