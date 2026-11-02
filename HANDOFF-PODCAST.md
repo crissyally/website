@@ -1,6 +1,6 @@
 # Start here: podcast website and audience setup handoff
 
-Last updated: November 1, 2026 (America/New_York). Latest decisions and QA are in section 17; later numbered sections supersede earlier snapshots.
+Last updated: November 1, 2026 (America/New_York). The batch is PUBLISHED. See section 24 for the release, verification and remaining optional checks; later numbered sections supersede earlier snapshots.
 
 This is the current continuation record for Crissy and Kevin's Claude, Codex, or another assistant. It supersedes older chat summaries and local draft documents outside this repository. It contains no account credentials, client details or listener response contents.
 
@@ -9,14 +9,14 @@ This is the current continuation record for Crissy and Kevin's Claude, Codex, or
 - Repository: https://github.com/crissyally/website
 - Continue this branch: `codex/podcast-audience-updates`.
 - Everything in this handoff is committed and pushed with `[skip ci]`. Use `git log -1` for the latest handoff commit, rather than relying on a hash copied into this file.
-- Website changes have NOT been published. Crissy has not approved production publication of this batch.
+- Website changes ARE PUBLISHED on main in release commit 7af27e1, explicitly approved by Crissy on November 1. Do not publish this batch again.
 - Google Forms and Kit changes ARE saved in their respective services. Git only versions the website and this documentation; it does not stage or roll back those services.
 - Kevin's new main documentation (commit `33dbe8f`) was merged into the review branch with merge commit `4e2e359`. Later headline/search wording refinements are also on this branch.
 - No pull request has been opened. Do not open one.
 
 Crissy wants to work through ONE TOPIC AT A TIME, with an explanation and concrete proposed wording before moving to the next decision. Do not dump a whole SEO checklist on her or implement unapproved optional copy/design changes in bulk. After she approves a specific edit, apply it and back it up to this branch without publishing.
 
-The contextual links and Google Form reviews are complete. Crissy decided to retain optional email with no automatic response copy or submission thank-you email. Phone/desktop checks are complete with one Contact-page wrapping fix (section 17). Remaining before a release decision: fresh delivery test of the branded Kit subscription confirmation, if authorized. No publication or deployment-budget agreement yet.
+The approved website batch is PUBLISHED and live verification passed (section 24). Kit signup, confirmation, domain verification, office address and signature setup are saved. No required work remains for this release. A fresh post-domain-authentication inbox-placement test and Google Search Console indexing request are optional follow-ups, not reasons to deploy again.
 
 ## 2. Read these before work
 
@@ -405,3 +405,46 @@ Crissy reported clicking Confirm your subscription. Verified actual test subscri
 Kit Settings > Email now lists flourish-counseling.co under Verified sending domains. Crissy completed verification herself. Sender display name has also been changed manually to "Flourish Counseling Co. 🌸", still podcast@flourish-counseling.co confirmed/default. Preserve this manual display name. Office mailing address persists. No domain/DNS mutations performed by agent.
 
 Read-only .deploy/budget.sh returned: 15 credits used out of 300, 285 left, 30 reserve, 17 safe publishes left, reset November 30. One release costs 15 and would leave 270 credits, 16 safe publishes. Budget check is not itself publication authorization. Branch up to date and no website changes since QA other than documentation. No PR, merge to main, or deploy done. Next: obtain explicit final budget-aware approval, then follow START-HERE.md squash-merge/deploy.sh workflow. Delivery before domain verification reached spam; no fresh post-authentication inbox-placement test was sent. Successful subscription confirmation verified, no guarantee future inbox placement.
+
+## 24. November 1: APPROVED BATCH PUBLISHED, LIVE VERIFIED
+
+Crissy explicitly said "yes publish!" after the budget report. Updated main, squash-merged codex/podcast-audience-updates, and ran ONLY .deploy/deploy.sh "Publish podcast audience signup, listener form, artwork and social links". Production release commit: 7af27e1. Origin/main points to that release. ONE Netlify publish occurred. Do not deploy again for this batch.
+
+Live verification:
+- All 33 changed deployable files returned the exact released bytes, including 6 nested /services/... routes and image/CSS/JS assets, independently checked using correct full paths.
+- Built-in verify-live.sh returned a FALSE timeout listing the 6 nested service HTML files: its url_for function strips directory components with basename, incorrectly checking /emdr instead of /services/emdr, etc. Correct nested pages were HTTP 200 and exact-byte matches in the independent check. Do not rerun deploy or undo the successful release because of this checker bug. Future maintenance item for Kevin: fix verification URL mapping to preserve subdirectories. No verifier script edit made in this batch.
+- Browser https://flourish-counseling.co/podcasts displays the new headline, artwork, coming-soon cards, Kit embed, listener CTA and social links. Live per-show subscribe click selected expected tag and landed form at about 110 px, no horizontal overflow at actual 504 px browser panel. Listener button opened correct Google Form in a new tab. No new signup submitted during post-deploy checks.
+- Screenshot outside Git: published-podcast-signup.png. This is actual live site.
+- IndexNow update for /podcasts returned HTTP 200. This notifies participating search engines; not an indexing/ranking guarantee. Optional user action: request recrawl in Google Search Console.
+- Post-release budget.sh confirms 30/300 used, 270 credits left, reserve 30, 16 safe publishes remain, reset November 30. No second release needed.
+
+Returned checkout to codex/podcast-audience-updates, merged origin/main back with [skip ci] so future branch work includes published commit. This handoff update is branch-only [skip ci], does not publish. Preserve the branch/history. Latest Kit email delivery was received and subscriber confirmed; initial email landed in spam BEFORE Crissy verified domain. No fresh post-authentication inbox test sent. No guarantee future inbox placement. Future optional work is separate from this finished release.
+
+
+## 25. November 2: podcast descriptions and icon links, UNPUBLISHED preview
+
+Crissy approved adding the proposed Sexology Explained and Sex on the Couch descriptions to a local preview, explicitly before any publication. Both descriptions are now on podcasts.html. Missions are in native expandable details; Sexology Explained also explains Cristina’s selection of topics/sources, AI summarization assistance, script curation/review and two AI presenting voices. Both remain marked coming soon/in development. Art of Flourishing’s previously approved description remains intact.
+
+Podcast Instagram links now use icons only, with accessible labels, hover titles and 44 px link targets. Added clean user-supplied LinkedIn Showcase URLs for /showcase/sexology-explained-podcast/ and /showcase/sex-on-the-couch-podcast/. Art of Flourishing still uses the practice Instagram; its separate LinkedIn URL has not been supplied. Do not guess or substitute the practice LinkedIn. Machine-readable descriptions and sameAs updated to match. Shared styles and protected scripts unchanged.
+
+Local browser preview checked at desktop and phone viewport settings with no horizontal overflow. Sexology Explained disclosure opened and its mission/process text verified. JSON-LD parses and protected markup comparison passed. Desktop screenshot outside Git: podcast-descriptions-desktop-preview.jpg. Preview: http://127.0.0.1:8765/podcasts.html#upcoming-podcasts-title. No publication, production merge, PR or deploy budget used. Await Crissy’s visual review and missing Art of Flourishing LinkedIn URL.
+
+
+## 26. November 2: Art of Flourishing LinkedIn supplied
+
+Crissy supplied the missing Showcase URL. Added https://www.linkedin.com/showcase/the-art-of-flourishing-a-mental-health-trauma-recovery-podcast/ as an accessible icon beside the existing practice Instagram icon on its podcast card, and included it in the show’s sameAs structured data. Removed the posts suffix and member-view query from the supplied link. All three shows now have Instagram and LinkedIn icons. This supersedes section 25’s missing-link note. Still UNPUBLISHED, pending visual review.
+
+
+## 27. November 2: lighter podcast card wording, UNPUBLISHED
+
+At Crissy’s request, prepared the three suggested copy refinements for preview: Sexology Explained’s second description sentence is now “Presented by two AI voices, curated and reviewed by Cristina Ally.” Both mission/process disclosures use “About the show.” The launch note is now “Coming to Spotify.” Both coming-soon badges and in-development structured status remain. Full AI process explanation remains inside the disclosure. No change to student/candidate wording while IICS terminology is unresolved. Structured descriptions follow the revised visible wording. No deployment authorized or performed.
+
+
+## 28. November 2: Crissy’s podcast copy refinements, UNPUBLISHED
+
+Capitalized Clinical Sexology in the Sexology Explained introduction. Its About the show begins “Cristina has turned her independent study into shared learning” and ends “while documenting her own growing knowledge.” Sex on the Couch introduction now identifies “Cristina Ally, LMHC,” matching About/Team credentials, and “fellow Clinical Sexology students.” Corresponding structured descriptions updated. No candidate-title change. Crissy also discussed a human introduction to Sexology Explained featuring herself and possibly Kevin; this is discussion only, no social publication authorized. Website remains unpublished.
+
+
+## 29. November 2: descriptive Sex on the Couch About wording
+
+At Crissy’s request, changed its About the show paragraph to: “Your host, Cristina Ally, brings together the people and ideas shaping sexology through approachable, human conversations that invite curiosity and deepen understanding of sexuality.” This replaces the imperative “Bring...” with a description. Local preview only, still unpublished.

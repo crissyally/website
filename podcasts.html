@@ -86,9 +86,16 @@
 .podcast-feature-layout .podcast-artwork{margin:0}
 .podcast-feature h2{font-size:clamp(2rem,4vw,3rem)}
 .podcast-card-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;align-items:center}
-.podcast-instagram{display:inline-flex;align-items:center;gap:8px;color:var(--espresso);font-size:.84rem;text-decoration:none;border-bottom:1px solid var(--taupe);padding:4px 0}
-.podcast-instagram:hover{border-color:var(--espresso)}
-.podcast-instagram svg{width:19px;height:19px;flex:0 0 auto}
+.podcast-socials{display:flex;gap:6px;align-items:center}
+.podcast-social{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;color:var(--espresso);text-decoration:none}
+.podcast-social:hover{background:var(--blush)}
+.podcast-social:focus-visible,.podcast-about summary:focus-visible{outline:2px solid var(--espresso);outline-offset:3px}
+.podcast-social svg{width:22px;height:22px;flex:0 0 auto}
+.podcast-about{margin-top:18px;color:var(--espresso);font-size:.86rem}
+.podcast-about summary{cursor:pointer;text-underline-offset:4px}
+.podcast-about summary:hover{text-decoration:underline}
+.podcast-about p{margin-top:12px}
+.podcast-launch{margin-top:18px}
 .podcast-listen{margin-top:28px;border-top:1px solid var(--espresso-08);padding-top:18px}
 .podcast-listen summary{cursor:pointer;font-size:.92rem;color:var(--espresso);text-underline-offset:4px}
 .podcast-listen summary:hover{text-decoration:underline}
@@ -104,8 +111,18 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://flourish-counseling.co/"},
-    {"@type": "ListItem", "position": 2, "name": "Podcasts", "item": "https://flourish-counseling.co/podcasts"}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://flourish-counseling.co/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Podcasts",
+      "item": "https://flourish-counseling.co/podcasts"
+    }
   ]
 }
 </script>
@@ -160,7 +177,8 @@
       },
       "sameAs": [
         "https://www.instagram.com/flourishcounseling.co/",
-        "https://open.spotify.com/show/67eiyIkdiSftBkrirGnDyy"
+        "https://open.spotify.com/show/67eiyIkdiSftBkrirGnDyy",
+        "https://www.linkedin.com/showcase/the-art-of-flourishing-a-mental-health-trauma-recovery-podcast/"
       ],
       "author": {
         "@type": "Person",
@@ -174,7 +192,7 @@
       "@id": "https://flourish-counseling.co/podcasts#sexology-explained",
       "name": "Sexology Explained",
       "url": "https://flourish-counseling.co/podcasts#sexology-explained",
-      "description": "Currently in development. Coming to Spotify.",
+      "description": "Learn alongside Clinical Sexology PhD student Cristina Ally as she explores the research, history, and ideas behind human sexuality. Presented by two AI voices, curated and reviewed by Cristina Ally. Coming to Spotify.",
       "image": "https://flourish-counseling.co/assets/podcasts/sexology-explained.png",
       "publisher": {
         "@type": "Organization",
@@ -182,7 +200,8 @@
         "url": "https://flourish-counseling.co/"
       },
       "sameAs": [
-        "https://www.instagram.com/sexologyexplained/"
+        "https://www.instagram.com/sexologyexplained/",
+        "https://www.linkedin.com/showcase/sexology-explained-podcast/"
       ],
       "creativeWorkStatus": "In development"
     },
@@ -191,7 +210,7 @@
       "@id": "https://flourish-counseling.co/podcasts#sex-on-the-couch",
       "name": "Sex on the Couch",
       "url": "https://flourish-counseling.co/podcasts#sex-on-the-couch",
-      "description": "Currently in development. Coming to Spotify.",
+      "description": "Get comfortable and curious with Cristina Ally, LMHC, as she interviews researchers, therapists, educators, authors, and fellow Clinical Sexology students. Explore the ideas, experiences, and approaches shaping how we understand sex, intimacy, and relationships. Coming to Spotify.",
       "image": "https://flourish-counseling.co/assets/podcasts/sex-on-the-couch.png",
       "publisher": {
         "@type": "Organization",
@@ -199,7 +218,8 @@
         "url": "https://flourish-counseling.co/"
       },
       "sameAs": [
-        "https://www.instagram.com/sexonthecouchpodcast/"
+        "https://www.instagram.com/sexonthecouchpodcast/",
+        "https://www.linkedin.com/showcase/sex-on-the-couch-podcast/"
       ],
       "creativeWorkStatus": "In development"
     }
@@ -277,7 +297,8 @@
           </div>
           <div class="podcast-card-actions">
             <a class="btn podcast-soft subscribe-show" data-interest="25237706" href="#podcast-updates">Subscribe for updates</a>
-            <a class="podcast-instagram" href="https://www.instagram.com/flourishcounseling.co/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg><span>Follow on Instagram</span></a>
+            <div class="podcast-socials" role="group" aria-label="Connect with The Art of Flourishing"><a class="podcast-social" href="https://www.instagram.com/flourishcounseling.co/" target="_blank" rel="noopener noreferrer" aria-label="The Art of Flourishing on Instagram (opens in a new tab)" title="Instagram"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="assets/icons/social.svg#instagram"></use></svg></a>
+            <a class="podcast-social" href="https://www.linkedin.com/showcase/the-art-of-flourishing-a-mental-health-trauma-recovery-podcast/" target="_blank" rel="noopener noreferrer" aria-label="The Art of Flourishing on LinkedIn (opens in a new tab)" title="LinkedIn"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="assets/icons/social.svg#linkedin"></use></svg></a></div>
           </div>
         </div>
       </div>
@@ -301,20 +322,26 @@
         <span class="podcast-status">Coming soon</span>
         <img class="podcast-artwork" src="assets/podcasts/sexology-explained.png" alt="Sexology Explained podcast artwork with pink lips and a striped border" width="1254" height="1254" loading="lazy" decoding="async">
         <h3>Sexology Explained</h3>
-        <p>Currently in development. Coming to Spotify.</p>
+        <p>Learn alongside Clinical Sexology PhD student Cristina Ally as she explores the research, history, and ideas behind human sexuality. Presented by two AI voices, curated and reviewed by Cristina Ally.</p>
+        <details class="podcast-about"><summary>About the show</summary><p>Cristina has turned her independent study into shared learning, making sexology’s research, history, and concepts easier to understand while documenting her own growing knowledge.</p><p>Topics and source materials are selected by Cristina Ally. AI helps organize and summarize the material, and Cristina curates and reviews each script as part of her learning process.</p></details>
+        <p class="podcast-launch note">Coming to Spotify.</p>
         <div class="podcast-card-actions">
           <a class="btn podcast-soft subscribe-show" data-interest="25237709" href="#podcast-updates">Subscribe for updates</a>
-          <a class="podcast-instagram" href="https://www.instagram.com/sexologyexplained/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg><span>Follow on Instagram</span></a>
+          <div class="podcast-socials" role="group" aria-label="Connect with Sexology Explained"><a class="podcast-social" href="https://www.instagram.com/sexologyexplained/" target="_blank" rel="noopener noreferrer" aria-label="Sexology Explained on Instagram (opens in a new tab)" title="Instagram"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="assets/icons/social.svg#instagram"></use></svg></a>
+            <a class="podcast-social" href="https://www.linkedin.com/showcase/sexology-explained-podcast/" target="_blank" rel="noopener noreferrer" aria-label="Sexology Explained on LinkedIn (opens in a new tab)" title="LinkedIn"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="assets/icons/social.svg#linkedin"></use></svg></a></div>
         </div>
       </article>
       <article id="sex-on-the-couch" class="card cream reveal">
         <span class="podcast-status">Coming soon</span>
         <img class="podcast-artwork" src="assets/podcasts/sex-on-the-couch.png" alt="Sex on the Couch podcast artwork with a pink couch and heart-shaped pillow" width="1254" height="1254" loading="lazy" decoding="async">
         <h3>Sex on the Couch</h3>
-        <p>Currently in development. Coming to Spotify.</p>
+        <p>Get comfortable and curious with Cristina Ally, LMHC, as she interviews researchers, therapists, educators, authors, and fellow Clinical Sexology students. Explore the ideas, experiences, and approaches shaping how we understand sex, intimacy, and relationships.</p>
+        <details class="podcast-about"><summary>About the show</summary><p>Your host, Cristina Ally, brings together the people and ideas shaping sexology through approachable, human conversations that invite curiosity and deepen understanding of sexuality.</p></details>
+        <p class="podcast-launch note">Coming to Spotify.</p>
         <div class="podcast-card-actions">
           <a class="btn podcast-soft subscribe-show" data-interest="25237711" href="#podcast-updates">Subscribe for updates</a>
-          <a class="podcast-instagram" href="https://www.instagram.com/sexonthecouchpodcast/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg><span>Follow on Instagram</span></a>
+          <div class="podcast-socials" role="group" aria-label="Connect with Sex on the Couch"><a class="podcast-social" href="https://www.instagram.com/sexonthecouchpodcast/" target="_blank" rel="noopener noreferrer" aria-label="Sex on the Couch on Instagram (opens in a new tab)" title="Instagram"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="assets/icons/social.svg#instagram"></use></svg></a>
+            <a class="podcast-social" href="https://www.linkedin.com/showcase/sex-on-the-couch-podcast/" target="_blank" rel="noopener noreferrer" aria-label="Sex on the Couch on LinkedIn (opens in a new tab)" title="LinkedIn"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="assets/icons/social.svg#linkedin"></use></svg></a></div>
         </div>
       </article>
     </div>
