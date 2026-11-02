@@ -438,3 +438,8 @@ Crissy supplied the missing Showcase URL. Added https://www.linkedin.com/showcas
 ## 27. November 2: lighter podcast card wording, UNPUBLISHED
 
 At Crissy’s request, prepared the three suggested copy refinements for preview: Sexology Explained’s second description sentence is now “Presented by two AI voices, curated and reviewed by Cristina Ally.” Both mission/process disclosures use “About the show.” The launch note is now “Coming to Spotify.” Both coming-soon badges and in-development structured status remain. Full AI process explanation remains inside the disclosure. No change to student/candidate wording while IICS terminology is unresolved. Structured descriptions follow the revised visible wording. No deployment authorized or performed.
+
+
+## 28. November 2: Crissy’s podcast copy refinements, UNPUBLISHED
+
+Capitalized Clinical Sexology in the Sexology Explained introduction. Its About the show begins “Cristina has turned her independent study into shared learning” and ends “while documenting her own growing knowledge.” Sex on the Couch introduction now identifies “Cristina Ally, LMHC,” matching About/Team credentials, and “fellow Clinical Sexology students.” Corresponding structured descriptions updated. No candidate-title change. Crissy also discussed a human introduction to Sexology Explained featuring herself and possibly Kevin; this is discussion only, no social publication authorized. Website remains unpublished.
