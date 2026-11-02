@@ -433,3 +433,8 @@ Local browser preview checked at desktop and phone viewport settings with no hor
 ## 26. November 2: Art of Flourishing LinkedIn supplied
 
 Crissy supplied the missing Showcase URL. Added https://www.linkedin.com/showcase/the-art-of-flourishing-a-mental-health-trauma-recovery-podcast/ as an accessible icon beside the existing practice Instagram icon on its podcast card, and included it in the show’s sameAs structured data. Removed the posts suffix and member-view query from the supplied link. All three shows now have Instagram and LinkedIn icons. This supersedes section 25’s missing-link note. Still UNPUBLISHED, pending visual review.
+
+
+## 27. November 2: lighter podcast card wording, UNPUBLISHED
+
+At Crissy’s request, prepared the three suggested copy refinements for preview: Sexology Explained’s second description sentence is now “Presented by two AI voices, curated and reviewed by Cristina Ally.” Both mission/process disclosures use “About the show.” The launch note is now “Coming to Spotify.” Both coming-soon badges and in-development structured status remain. Full AI process explanation remains inside the disclosure. No change to student/candidate wording while IICS terminology is unresolved. Structured descriptions follow the revised visible wording. No deployment authorized or performed.
