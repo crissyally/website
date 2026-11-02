@@ -428,3 +428,8 @@ Crissy approved adding the proposed Sexology Explained and Sex on the Couch desc
 Podcast Instagram links now use icons only, with accessible labels, hover titles and 44 px link targets. Added clean user-supplied LinkedIn Showcase URLs for /showcase/sexology-explained-podcast/ and /showcase/sex-on-the-couch-podcast/. Art of Flourishing still uses the practice Instagram; its separate LinkedIn URL has not been supplied. Do not guess or substitute the practice LinkedIn. Machine-readable descriptions and sameAs updated to match. Shared styles and protected scripts unchanged.
 
 Local browser preview checked at desktop and phone viewport settings with no horizontal overflow. Sexology Explained disclosure opened and its mission/process text verified. JSON-LD parses and protected markup comparison passed. Desktop screenshot outside Git: podcast-descriptions-desktop-preview.jpg. Preview: http://127.0.0.1:8765/podcasts.html#upcoming-podcasts-title. No publication, production merge, PR or deploy budget used. Await Crissy’s visual review and missing Art of Flourishing LinkedIn URL.
+
+
+## 26. November 2: Art of Flourishing LinkedIn supplied
+
+Crissy supplied the missing Showcase URL. Added https://www.linkedin.com/showcase/the-art-of-flourishing-a-mental-health-trauma-recovery-podcast/ as an accessible icon beside the existing practice Instagram icon on its podcast card, and included it in the show’s sameAs structured data. Removed the posts suffix and member-view query from the supplied link. All three shows now have Instagram and LinkedIn icons. This supersedes section 25’s missing-link note. Still UNPUBLISHED, pending visual review.
