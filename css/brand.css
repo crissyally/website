@@ -209,7 +209,7 @@ header.scrolled{background:rgba(248,248,236,.92);backdrop-filter:blur(12px);box-
 
 /* ---- footer ---- */
 footer.site{background:var(--black);color:var(--taupe);padding:64px var(--gut) 36px}
-footer.site .foot{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1.7fr 1fr 1fr;gap:40px}
+footer.site .foot{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px}
 @media(max-width:760px){footer.site .foot{grid-template-columns:1fr;gap:30px}}
 footer.site .flogo{height:34px;width:auto;margin-bottom:16px}
 footer.site h4{color:var(--cream);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:14px;font-family:var(--sans)}
