@@ -39,6 +39,12 @@
 .podcast-artwork{width:100%;height:auto;aspect-ratio:1;object-fit:contain;border-radius:12px;margin-bottom:24px}
 .podcast-feature .note{margin-top:24px}
 .podcast-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:28px}
+.podcast-platforms{margin-top:28px}
+.podcast-platforms-label{font-size:.88rem;font-weight:600;color:var(--espresso)}
+.podcast-platforms .podcast-actions{gap:8px;margin-top:8px}
+.podcast-platforms .btn{min-width:44px;height:48px;padding:8px 12px}
+.podcast-platforms svg{display:block;width:24px;height:24px}
+.podcast-platforms .amazon-music-logo{width:52px;height:30px}
 .podcast-rss{font-size:.86rem;color:var(--espresso);text-underline-offset:4px}
 .podcast-player{display:block;width:100%;height:152px;border:0;border-radius:12px;margin-top:28px}
 #sexology-explained .podcast-player{opacity:.86}
@@ -200,7 +206,7 @@
       "@id": "https://flourish-counseling.co/podcasts#sexology-explained",
       "name": "Sexology Explained",
       "url": "https://flourish-counseling.co/podcasts#sexology-explained",
-      "description": "Learn alongside Clinical Sexology PhD student Cristina Ally as she explores the research, history, and ideas behind human sexuality. Presented by two AI voices, curated and reviewed by Cristina Ally. Available on Spotify and Amazon Music.",
+      "description": "Learn alongside Clinical Sexology PhD student Cristina Ally as she explores the research, history, and ideas behind human sexuality. Presented by two AI voices, curated and reviewed by Cristina Ally. Available on Spotify, Amazon Music, and YouTube.",
       "image": "https://flourish-counseling.co/assets/podcasts/sexology-explained.png",
       "publisher": {
         "@type": "Organization",
@@ -211,7 +217,8 @@
         "https://www.instagram.com/sexologyexplained/",
         "https://www.linkedin.com/showcase/sexology-explained-podcast/",
         "https://open.spotify.com/show/2F3AlIwNgT03l53OwR0XLW",
-        "https://music.amazon.com/podcasts/e9305a6a-3d95-4604-aa6a-d42124d9891f/sexology-explained"
+        "https://music.amazon.com/podcasts/e9305a6a-3d95-4604-aa6a-d42124d9891f/sexology-explained",
+        "https://www.youtube.com/playlist?list=PLY-Q2Dwyt9CI"
       ]
     },
     {
@@ -300,9 +307,19 @@
           <span class="podcast-status">Available now</span>
           <h2 class="t-section" id="sexology-explained-title">Sexology Explained</h2>
           <p>Learn alongside Clinical Sexology PhD student Cristina Ally as she explores the research, history, and ideas behind human sexuality. Presented by two AI voices, curated and reviewed by Cristina Ally.</p>
-          <div class="podcast-actions">
-            <a class="btn podcast-outline" href="https://open.spotify.com/show/2F3AlIwNgT03l53OwR0XLW" target="_blank" rel="noopener">Listen on Spotify</a>
-            <a class="btn podcast-outline" href="https://music.amazon.com/podcasts/e9305a6a-3d95-4604-aa6a-d42124d9891f/sexology-explained" target="_blank" rel="noopener">Listen on Amazon Music</a>
+          <div class="podcast-platforms" role="group" aria-labelledby="sexology-listen-label">
+            <span id="sexology-listen-label" class="podcast-platforms-label">Listen on:</span>
+            <div class="podcast-actions">
+              <a class="btn podcast-outline" href="https://open.spotify.com/show/2F3AlIwNgT03l53OwR0XLW" target="_blank" rel="noopener" aria-label="Listen on Spotify" title="Spotify">
+                <svg aria-hidden="true"><use href="assets/icons/podcast-platforms.svg#spotify"></use></svg>
+              </a>
+              <a class="btn podcast-outline" href="https://music.amazon.com/podcasts/e9305a6a-3d95-4604-aa6a-d42124d9891f/sexology-explained" target="_blank" rel="noopener" aria-label="Listen on Amazon Music" title="Amazon Music">
+                <svg class="amazon-music-logo" aria-hidden="true"><use href="assets/icons/podcast-platforms.svg#amazon-music"></use></svg>
+              </a>
+              <a class="btn podcast-outline" href="https://www.youtube.com/playlist?list=PLY-Q2Dwyt9CI" target="_blank" rel="noopener" aria-label="Listen on YouTube" title="YouTube">
+                <svg aria-hidden="true"><use href="assets/icons/podcast-platforms.svg#youtube"></use></svg>
+              </a>
+            </div>
           </div>
           <div class="podcast-card-actions">
             <a class="btn podcast-soft subscribe-show" data-interest="25237709" href="#podcast-updates">Subscribe for updates</a>
