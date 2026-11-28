@@ -17,7 +17,7 @@ DEADLINE=$(( $(date +%s) + 150 ))
 url_for() {
   case "$1" in
     index.html) echo "$SITE/" ;;
-    *.html)     echo "$SITE/$(basename "$1" .html)" ;;
+    *.html)     echo "$SITE/${1%.html}" ;;   # keep the folder: services/emdr.html -> /services/emdr
     *)          echo "$SITE/$1" ;;
   esac
 }
@@ -42,12 +42,14 @@ while :; do
   for f in $CHANGED; do
     u=$(url_for "$f")
     if [ -f "$f" ]; then
-      # file should exist live and match this computer's copy
-      if ! curl -s --max-time 20 "$u" -o /tmp/.flourish-live 2>/dev/null \
+      # file should exist live and match this computer's copy. -L follows any redirect
+      # (Netlify serves pages at their address without .html) instead of comparing the
+      # redirect notice, which reported a false "not updated yet".
+      if ! curl -sL --max-time 20 "$u" -o /tmp/.flourish-live 2>/dev/null \
          || ! cmp -s "$f" /tmp/.flourish-live; then PENDING="$PENDING $f"; fi
     else
       # file was deleted, so the address should now be gone
-      code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "$u" || echo 000)
+      code=$(curl -sL -o /dev/null -w "%{http_code}" --max-time 20 "$u" || echo 000)
       [ "$code" = "404" ] || PENDING="$PENDING $f"
     fi
   done

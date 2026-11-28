@@ -5,33 +5,18 @@ This branch collects every site change waiting for the next publish, so the site
 
 ## What is in it
 
-1. **EMDR page, search fix** (MoCo's Pixel, Sun 11/22): "EMDR therapy in Winter Park, FL" becomes the
-   page's main heading and "EMDR Therapist in Winter Park, FL" its title, so the page can rank for the
-   search people use (it sits around page 7 today). The about page links "EMDR" to the EMDR page.
-   No new claims or credentials; her words otherwise unchanged. Files: `services/emdr.html`, `about.html`.
-2. **Sexology Explained listener guides** (Sun 11/22): the three free listener's guide PDFs, one per
-   episode, at `/assets/podcasts/guides/sexology-explained-01-guide.pdf` (and `-02-`, `-03-`), plus a
-   "Free listener's guides" box on the Sexology Explained card linking all three. sexologyexplained.com
-   forwards to this page, and every episode's closing sends listeners there, so this must be live before
-   the episodes go out on Tue 12/01. The card keeps "Coming to Spotify" until Crissy has the show's
-   Spotify link (the "Listen on Spotify" button gets added here then). Files: `podcasts.html`,
-   `assets/podcasts/guides/` (3 PDFs).
-3. **Footer services column** (MoCo's Pixel, Sun 11/22): every page's footer lists the six service
-   pages by name, so visitors and Google can reach them from anywhere on the site. Files: every page.
-4. ~~**Homepage service cards** (MoCo's Pixel, Sun 11/22): the six service cards from the services page,~~ *(dropped Sun 11/22 by Kevin: visual change to her homepage; the footer covers the links)*
-   same wording, now also sit under "Care shaped to where you are." on the homepage, each linking to its
-   page. Files: `index.html`.
-5. **Blog posts link their service page** (MoCo's Pixel, Sun 11/22): five posts link words already in
-   them to the matching page (C-PTSD and healing after trauma to trauma recovery, grief or depression to
-   grief counseling, abusive relationship to trauma therapy for women, somatic to EMDR). No sentences
-   added. Files: those five `post-*.html`.
-6. **Page titles** (MoCo's Pixel, Sun 11/22): browser tab and search result titles now start with the
-   topic, then the place, then the practice name, and the long dashes are gone. "Women's Counseling"
-   stays on the homepage. Files: 18 pages (titles only).
-7. **Google Maps and podcast in the homepage's search data** (MoCo's Pixel, Sun 11/22): the hidden
-   practice details that search engines read now include her Google Maps listing and The Art of
-   Flourishing on Spotify, so Google can tie them to the practice. Nothing visible changes. Files:
-   `index.html`.
+*Published Sun 11/22 (commit 0505d5c): the EMDR search fix, the Sexology Explained listener guides,
+and Batch A (footer services, blog links, titles, search data). The list starts fresh below.*
+
+1. **Publish checker fix** (Sun 11/22): `.deploy/verify-live.sh` built the wrong address for pages in
+   a folder (`services/sand-tray.html` became `/sand-tray`), so after every publish it falsely reported
+   service pages as "not updated yet". It now keeps the folder and follows redirects. Tested against
+   the 11/22 publish: every page confirmed live. Tooling only; visitors see no change.
+   File: `.deploy/verify-live.sh`.
+2. **Episode 3 listener's guide wording** (Mon 11/23): the timeline no longer says DSM-5 "merges"
+   women's desire and arousal (the DSM-5 authors call that a misconception); it now says the manual
+   replaced both diagnoses with one new diagnosis. Same layout, same pages. The episode audio is
+   unchanged (already on Spotify). File: `assets/podcasts/guides/sexology-explained-03-guide.pdf`.
 
 ## How to add a change
 
