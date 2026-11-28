@@ -5,18 +5,11 @@ This branch collects every site change waiting for the next publish, so the site
 
 ## What is in it
 
-*Published Sun 11/22 (commit 0505d5c): the EMDR search fix, the Sexology Explained listener guides,
-and Batch A (footer services, blog links, titles, search data). The list starts fresh below.*
+*Sun 11/22's batch published (commit 0505d5c). Fri 11/27: the Episode 3 guide wording fix and the
+publish checker fix were folded into `main` (commit 6ae90e8, not live yet); they go out with the
+next publish from `main`. The list starts fresh below.*
 
-1. **Publish checker fix** (Sun 11/22): `.deploy/verify-live.sh` built the wrong address for pages in
-   a folder (`services/sand-tray.html` became `/sand-tray`), so after every publish it falsely reported
-   service pages as "not updated yet". It now keeps the folder and follows redirects. Tested against
-   the 11/22 publish: every page confirmed live. Tooling only; visitors see no change.
-   File: `.deploy/verify-live.sh`.
-2. **Episode 3 listener's guide wording** (Mon 11/23): the timeline no longer says DSM-5 "merges"
-   women's desire and arousal (the DSM-5 authors call that a misconception); it now says the manual
-   replaced both diagnoses with one new diagnosis. Same layout, same pages. The episode audio is
-   unchanged (already on Spotify). File: `assets/podcasts/guides/sexology-explained-03-guide.pdf`.
+Nothing waiting.
 
 ## How to add a change
 
